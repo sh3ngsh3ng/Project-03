@@ -5,7 +5,7 @@ import {sample01, sample02} from "../images"
 export default function FeaturedCarousel() {
     return (
         <React.Fragment>
-            <Carousel>
+            <Carousel className="w-50">
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
