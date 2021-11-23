@@ -2,8 +2,9 @@ import './App.css';
 import FeaturedCarousel from './components/Carousel'
 import NavBar from "./components/NavBar"
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link, useHistory} from "react-router-dom"
-
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import "bootstrap/dist/css/bootstrap.min.css"
+import ProductSection from "./components/ProductSection"
 
 function App() {
 
@@ -16,8 +17,7 @@ function App() {
         {/* Start of Main Page */}
         <Route exact path="/">
           <FeaturedCarousel />
-          <h1>ProductListings Component</h1>
-          <h1>Reviews</h1>
+          <ProductSection />
         </Route>
         {/* End of Main Page */}
 
