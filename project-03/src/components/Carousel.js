@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap"
-import {sample01, sample02} from "../images"
+import {sample01, spidey01, spidey02} from "../images"
 
 export default function FeaturedCarousel() {
     return (
@@ -20,7 +20,7 @@ export default function FeaturedCarousel() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={sample02}
+                        src={spidey02}
                         alt="Second slide"
                     />
 
@@ -32,7 +32,7 @@ export default function FeaturedCarousel() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="holder.js/800x400?text=Third slide&bg=20232a"
+                        src={spidey01}
                         alt="Third slide"
                     />
 
