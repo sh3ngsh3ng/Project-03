@@ -2,6 +2,7 @@ import React from 'react'
 import {Navbar, NavDropdown, Nav, Container} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+
 export default function NavBar() {
     return (
         <React.Fragment>
