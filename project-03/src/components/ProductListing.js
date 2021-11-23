@@ -8,6 +8,7 @@ export default function ProductListing() {
 
     return (
         <div>
+            {/* list rendering of cards here */}
             <Card style={{ width: '18rem', display:"inline-block"}}>
                 <Card.Img variant="top" src={spidey01} />
                 <Card.Body>
