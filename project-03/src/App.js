@@ -5,6 +5,10 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
 import ProductSection from "./components/ProductSection"
+import SignUpPage from './pages/SignUpPage';
+import LoginPage from "./pages/LoginPage"
+import CartPage from './pages/CartPage'
+
 
 function App() {
 
@@ -29,15 +33,21 @@ function App() {
 
         {/* Start of Login Page */}
         <Route exact path="/login">
-          <h1>You can login here!</h1>
+          <LoginPage />
         </Route>
         {/* End of login page */}
 
         {/* start of Sign up page */}
         <Route exact path="/sign-up">
-          <h1>You can sign up here!</h1>
+          <SignUpPage />
         </Route>
         {/* End of sign up page */}
+
+        <Route exact path="/cart">
+          <CartPage />
+        </Route>
+
+
 
         {/* Start of Product Display Page + Product Context*/}
         <Route exact path="/products/:product_id">
