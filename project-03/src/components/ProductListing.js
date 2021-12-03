@@ -1,7 +1,7 @@
 import {React, useContext, useEffect, useState} from 'react'
-// import {Card, Button} from 'react-bootstrap'
+import {Card, Button} from 'react-bootstrap'
 import ProductContext from "./ProductContext"
-// import {spidey01, spidey02, spidey03} from "../images"
+
 
 
 
@@ -15,15 +15,21 @@ export default function ProductListing() {
 
     return (
         <div>
-            <ul>
-                {activeListings.map((listing) => (
-                    <li>{listing.product_name}</li>
-                ))}
-            </ul>
+            {activeListings.map((listing) => (
+                // card
+                <Card style={{ width: '18rem', display: "inline-block" }}>
+                    <Card.Img variant="top" src={listing.thumbnail_url} />
+                    <Card.Body>
+                        <Card.Title>{listing.product_name}</Card.Title>
+                        <Card.Text>
+                            {listing.product_description}
+                        </Card.Text>
+                        <Button variant="primary">Book Now!</Button>
+                    </Card.Body>
+                </Card>
+            ))}
         </div>
     )
-
-
 }
 
 
