@@ -31,7 +31,7 @@ export default function LoginPage() {
     const submitForm = async(obj) => {
         let check = simpleClientValidation(obj)
         if (check) {
-            let loginUser = await axios.post("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/user/sign-up", {
+            let loginUser = await axios.post("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/user/login", {
                 ...obj
             })
 
