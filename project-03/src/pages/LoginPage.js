@@ -31,13 +31,24 @@ export default function LoginPage() {
     const submitForm = async(obj) => {
         let check = simpleClientValidation(obj)
         if (check) {
-            let loginUser = await axios.post("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/user/login", {
+            let result = await axios.post("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/user/login", {
                 ...obj
             })
-
-            history.push("/contact-us")
+            
+            
+            if (result.data.message == "success") {
+                localStorage.setItem("accessToken", result.data.accessToken)
+                history.push("/cart")
+            }
+            // let result2 = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/user/test", {
+            //     "headers": {
+            //         Authorization: `Bearer ${localStorage.getItem("accessToken")}`
+            //     }
+            // })
+            // console.log(result2)
 
         } else {
+            history.push("/sign-up")
             return null // give failed notification
         }
     }
