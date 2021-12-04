@@ -1,5 +1,5 @@
 import {React, useEffect, useState} from 'react'
-import {useParams} from "react-router-dom"
+import {useParams, useHistory} from "react-router-dom"
 import axios from "axios"
 import CartItemsContext from "../context/CartItemsContext"
 import CartItemsList from '../components/CartItemsList'
@@ -11,6 +11,9 @@ export default function CartPage(){
     const [user, setUser] = useState(userId)
     const [cartItems, setCartItems] = useState([])
     const [quantityUpdate, setQuantityUpdate] = useState(false)
+    const history = useHistory()
+
+    
 
     const BASE_URL = "https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/cart/"
 
@@ -59,7 +62,8 @@ export default function CartPage(){
             setQuantityUpdate(true)
         },
         'checkOut': async () => {
-
+            // let response = await axios.get(BASE_URL + "checkout/" + userId)
+            window.location.assign(BASE_URL + "checkout/" + userId)
         }
     }
 
@@ -67,7 +71,7 @@ export default function CartPage(){
         <CartItemsContext.Provider value={context}>
             <h1>User's Cart Page</h1>
             <p className="btn btn-danger" onClick={() => context.deleteCart()}>Clear Cart</p>
-            <p className="btn btn-success">CheckOut</p>
+            <p className="btn btn-success" onClick={() => context.checkOut()}>CheckOut</p>
             <CartItemsList />
         </CartItemsContext.Provider>
 

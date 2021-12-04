@@ -8,7 +8,7 @@ import ProductSection from "./components/ProductSection"
 import SignUpPage from './pages/SignUpPage';
 import LoginPage from "./pages/LoginPage"
 import CartPage from './pages/CartPage'
-
+// import CheckoutPage from "./pages/CheckoutPage"
 
 function App() {
 
@@ -46,6 +46,10 @@ function App() {
         <Route exact path="/cart/:userId">
           <CartPage />
         </Route>
+
+        {/* <Route exact path="/checkout">
+          <CheckoutPage/>
+        </Route> */}
 
 
 
