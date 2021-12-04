@@ -1,5 +1,5 @@
 import {React, useContext} from 'react'
-import ProductContext from "./ProductContext"
+import ProductContext from "../context/ProductContext"
 
 export default function ProductListingTab() {
 

@@ -1,2 +1,0 @@
-import ProductContext from "./ProductContext"
-

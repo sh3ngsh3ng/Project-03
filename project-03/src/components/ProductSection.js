@@ -1,7 +1,7 @@
 import {React, useState} from 'react'
 import ProductListing from "./ProductListing"
 import ProductListingTab from "./ProductListingTab"
-import ProductContext from './ProductContext'
+import ProductContext from '../context/ProductContext'
 import axios from "axios"
 
 export default function ProductSection() {

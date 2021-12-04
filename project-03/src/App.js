@@ -43,7 +43,7 @@ function App() {
         </Route>
         {/* End of sign up page */}
 
-        <Route exact path="/cart">
+        <Route exact path="/cart/:userId">
           <CartPage />
         </Route>
 
