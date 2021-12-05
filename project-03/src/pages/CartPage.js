@@ -20,7 +20,7 @@ export default function CartPage(){
     // use effect to fetch cart items on load
     useEffect( async()=> {
         const fetchCart = async(user_id) => {
-            let response = await axios.get(BASE_URL + user_id)
+            let response = await axios.get(BASE_URL + user_id, sendJwt())
             setCartItems(response.data)
         }
         if(parseInt(userId)) {
@@ -31,7 +31,7 @@ export default function CartPage(){
     // use effect to refetch the updated quantity on adding, deleting, etc
     useEffect( async()=> {
         const fetchCart = async(user_id) => {
-            let response = await axios.get(BASE_URL + user_id, sendJwt())
+            let response = await axios.get(BASE_URL + user_id, )
             setCartItems(response.data)
         }
         if(parseInt(userId)) {
@@ -62,8 +62,8 @@ export default function CartPage(){
             setQuantityUpdate(true)
         },
         'checkOut': async () => {
-            // let response = await axios.get(BASE_URL + "checkout/" + userId)
-            window.location.assign(BASE_URL + "checkout/" + userId, sendJwt())
+            let response = await axios.get(BASE_URL + "checkout/" + userId, sendJwt())
+            window.location.replace(BASE_URL + "checkout/" + userId)
         }
     }
 

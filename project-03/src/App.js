@@ -1,14 +1,15 @@
 import './App.css';
 import NavBar from "./components/NavBar"
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
 import SignUpPage from './pages/SignUpPage';
 import LoginPage from "./pages/LoginPage"
 import CartPage from './pages/CartPage'
 import MainPage from "./pages/MainPage"
 import ProductInfoPage from "./pages/ProductInfoPage"
-// import CheckoutPage from "./pages/CheckoutPage"
+
+
 
 function App() {
 

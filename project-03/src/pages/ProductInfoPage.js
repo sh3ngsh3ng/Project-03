@@ -21,6 +21,7 @@ export default function ProductInfoPage() {
                     )
                 })}
             </select>
+            <button className="btn btn-success">Add To Cart</button>
 
             <p>{product.productslots.length > 0? product.productslots[0].slot_quantity + "/" + product.productslots[0].slot_quantity : "no slots avail"}</p>
         </div>

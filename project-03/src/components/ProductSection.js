@@ -13,7 +13,7 @@ export default function ProductSection() {
         let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/products/active-listings")
         setListings(response.data)
         console.log(listings)
-    }, [setListings])
+    }, [])
 
 
     const context = {

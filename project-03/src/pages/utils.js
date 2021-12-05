@@ -1,8 +1,4 @@
-
-
-// example of protecting route
-// let result2 = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/user/test", jwtToken())
-// console.log("see this", result2)
+import jwt_decode from "../../node_modules/jwt-decode"
 
 
 export const sendJwt = () => {
@@ -10,6 +6,16 @@ export const sendJwt = () => {
         "headers": {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`
         }
+    }
+}
+
+export const getUserId = () => {
+    let accessToken = localStorage.getItem("accessToken")
+    if (accessToken) {
+        let userDetails = jwt_decode(accessToken)
+        return userDetails.id
+    } else {
+        return ""
     }
 }
 

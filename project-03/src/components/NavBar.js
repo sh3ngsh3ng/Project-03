@@ -1,7 +1,7 @@
 import React from 'react'
 import {Navbar, NavDropdown, Nav, Container} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import { getUserId } from '../pages/utils'
 
 export default function NavBar() {
     return (
@@ -15,7 +15,7 @@ export default function NavBar() {
                             <Nav.Link href="/contact-us">Contact Us</Nav.Link>
                             <Nav.Link href="/login">Login</Nav.Link>
                             <Nav.Link href="/sign-up">Sign Up</Nav.Link>
-                            <Nav.Link href="/cart">Cart</Nav.Link>
+                            <Nav.Link href={"/cart/" + getUserId()}>Cart</Nav.Link>
                             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

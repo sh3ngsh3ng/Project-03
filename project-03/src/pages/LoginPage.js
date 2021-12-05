@@ -1,6 +1,7 @@
 import axios from "axios"
 import { React, useState} from "react"
 import {useHistory} from "react-router-dom"
+import { getUserId } from "./utils"
 
 
 export default function LoginPage() {
@@ -35,10 +36,9 @@ export default function LoginPage() {
                 ...obj
             })
             
-            
             if (result.data.message == "success") {
                 localStorage.setItem("accessToken", result.data.accessToken)
-                history.push("/cart") // push user id to cart
+                history.push("/cart/" + getUserId()) // push user id to cart
             }
 
         } else {
