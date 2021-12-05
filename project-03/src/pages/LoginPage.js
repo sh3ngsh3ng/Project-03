@@ -40,13 +40,6 @@ export default function LoginPage() {
                 localStorage.setItem("accessToken", result.data.accessToken)
                 history.push("/cart") // push user id to cart
             }
-            // example of protecting route
-            // let result2 = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/user/test", {
-            //     "headers": {
-            //         Authorization: `Bearer ${localStorage.getItem("accessToken")}`
-            //     }
-            // })
-            // console.log(result2)
 
         } else {
             history.push("/sign-up")

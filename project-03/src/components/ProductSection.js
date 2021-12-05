@@ -24,6 +24,10 @@ export default function ProductSection() {
         'getListings': () => {
             console.log(listings)
             return listings
+        },
+        'addToCart': async (userId, productSlotId) => {
+            // let response = await axios.get(BASE_URL + userId + "/" + productSlotId)
+            // console.log(response)
         }
     }
 

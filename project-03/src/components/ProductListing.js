@@ -1,7 +1,7 @@
-import {React, useContext, useEffect, useState} from 'react'
+import {React, useContext} from 'react'
 import {Card, Button} from 'react-bootstrap'
 import ProductContext from "../context/ProductContext"
-import {Link, useHistory} from "react-router-dom"
+import {useHistory} from "react-router-dom"
 
 
 

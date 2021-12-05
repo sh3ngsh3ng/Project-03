@@ -3,7 +3,7 @@ import {useParams, useHistory} from "react-router-dom"
 import axios from "axios"
 import CartItemsContext from "../context/CartItemsContext"
 import CartItemsList from '../components/CartItemsList'
-
+import { sendJwt } from "./utils"
 
 export default function CartPage(){
 
@@ -31,7 +31,7 @@ export default function CartPage(){
     // use effect to refetch the updated quantity on adding, deleting, etc
     useEffect( async()=> {
         const fetchCart = async(user_id) => {
-            let response = await axios.get(BASE_URL + user_id)
+            let response = await axios.get(BASE_URL + user_id, sendJwt())
             setCartItems(response.data)
         }
         if(parseInt(userId)) {
@@ -46,24 +46,24 @@ export default function CartPage(){
             return cartItems
         },
         'addOne': async (product_slots_id) => {
-            let response = await axios.get(BASE_URL +  userId + "/" + product_slots_id + "/add-one")
+            let response = await axios.get(BASE_URL +  userId + "/" + product_slots_id + "/add-one", sendJwt())
             setQuantityUpdate(true)
         },
         'deleteOne': async (product_slots_id) => {
-            let response = await axios.get(BASE_URL + userId + "/" + product_slots_id + "/delete-one")
+            let response = await axios.get(BASE_URL + userId + "/" + product_slots_id + "/delete-one", sendJwt())
             setQuantityUpdate(true)
         },
         'deleteItem': async (product_slots_id) => {
-            let response = await axios.get(BASE_URL + userId + "/" + product_slots_id + "/delete-item")
+            let response = await axios.get(BASE_URL + userId + "/" + product_slots_id + "/delete-item", sendJwt())
             setQuantityUpdate(true)
         },
         'deleteCart': async () => {
-            let response = await axios.get(BASE_URL + userId + "/clear")
+            let response = await axios.get(BASE_URL + userId + "/clear", sendJwt())
             setQuantityUpdate(true)
         },
         'checkOut': async () => {
             // let response = await axios.get(BASE_URL + "checkout/" + userId)
-            window.location.assign(BASE_URL + "checkout/" + userId)
+            window.location.assign(BASE_URL + "checkout/" + userId, sendJwt())
         }
     }
 
