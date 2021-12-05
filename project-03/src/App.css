@@ -1,0 +1,23 @@
+/* CART */
+.cart-card {
+    border: solid black 1px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.cart-quantity-div {
+    display: flex;
+}
+
+.delete-cart-item {
+    font-size: 20px;
+    right: 10px;
+    justify-content: end;
+}
+
+
+
+
+
+
+

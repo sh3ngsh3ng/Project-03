@@ -31,7 +31,7 @@ export default function CartPage(){
     // use effect to refetch the updated quantity on adding, deleting, etc
     useEffect( async()=> {
         const fetchCart = async(user_id) => {
-            let response = await axios.get(BASE_URL + user_id)
+            let response = await axios.get(BASE_URL + user_id, sendJwt())
             setCartItems(response.data)
         }
         if(parseInt(userId)) {
