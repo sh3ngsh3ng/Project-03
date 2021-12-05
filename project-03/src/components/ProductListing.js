@@ -1,21 +1,25 @@
 import {React, useContext, useEffect, useState} from 'react'
 import {Card, Button} from 'react-bootstrap'
 import ProductContext from "../context/ProductContext"
-
+import {Link, useHistory} from "react-router-dom"
 
 
 
 export default function ProductListing() {
 
-    const [activeListings, setActiveListings] = useState([])
     const context = useContext(ProductContext)
+    const history = useHistory()
     
-    
-    context.getActiveListings().then(res => setActiveListings(res))
+    const moreInfo = (listing) => {
+        history.push("/products/" + listing.id, {
+            "productInfo": listing
+        })
+    }
+    // context.getActiveListings().then(res => setActiveListings(res))
 
     return (
         <div>
-            {activeListings.map((listing) => (
+            {context.getListings().map((listing) => (
                 // card
                 <Card style={{ width: '18rem', display: "inline-block" }}>
                     <Card.Img variant="top" src={listing.thumbnail_url} />
@@ -24,7 +28,11 @@ export default function ProductListing() {
                         <Card.Text>
                             {listing.product_description}
                         </Card.Text>
-                        <Button variant="primary">Book Now!</Button>
+                        {/* <Link to={"/products/" + listing.id}> */}
+                            <Button variant="primary" onClick={()=>{
+                                moreInfo(listing)
+                            }}>Book Now!</Button>
+                        {/* </Link> */}
                     </Card.Body>
                 </Card>
             ))}

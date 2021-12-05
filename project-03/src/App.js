@@ -1,13 +1,13 @@
 import './App.css';
-import FeaturedCarousel from './components/Carousel'
 import NavBar from "./components/NavBar"
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
-import ProductSection from "./components/ProductSection"
 import SignUpPage from './pages/SignUpPage';
 import LoginPage from "./pages/LoginPage"
 import CartPage from './pages/CartPage'
+import MainPage from "./pages/MainPage"
+import ProductInfoPage from "./pages/ProductInfoPage"
 // import CheckoutPage from "./pages/CheckoutPage"
 
 function App() {
@@ -20,8 +20,7 @@ function App() {
       <Switch>
         {/* Start of Main Page */}
         <Route exact path="/">
-          <FeaturedCarousel />
-          <ProductSection />
+          <MainPage />
         </Route>
         {/* End of Main Page */}
 
@@ -47,16 +46,10 @@ function App() {
           <CartPage />
         </Route>
 
-        {/* <Route exact path="/checkout">
-          <CheckoutPage/>
-        </Route> */}
 
-
-
-        {/* Start of Product Display Page + Product Context*/}
+        {/* Start of Product Display Page*/}
         <Route exact path="/products/:product_id">
-          <h1>product display here should be compoenent</h1>
-          {/* <ProductDisplay/> component */}
+          <ProductInfoPage />
         </Route>
         {/* End of product Display Page */}
 
