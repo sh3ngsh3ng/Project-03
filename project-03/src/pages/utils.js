@@ -21,8 +21,6 @@ export const getUserId = () => {
 
 export const checkIfLogin = () => {
     let accessToken = localStorage.getItem("accessToken")
-    console.log("called")
-    console.log(accessToken)
     if (accessToken) {
         return true
     } else {

@@ -62,8 +62,8 @@ export default function CartPage(){
             setQuantityUpdate(true)
         },
         'checkOut': async () => {
-            let response = await axios.get(BASE_URL + "checkout/" + userId, sendJwt())
-            window.location.replace(BASE_URL + "checkout/" + userId)
+            let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/checkout/" + userId, sendJwt())
+            window.location.assign(response.data.url)
         }
     }
 
