@@ -18,7 +18,7 @@ export default function ProductListing() {
     // context.getActiveListings().then(res => setActiveListings(res))
 
     return (
-        <div id="active-listing-card-div">
+        <div id="active-listing-card-div" role="button">
             {context.getListings().map((listing, i) => (
                 // card
                 <motion.Card className="active-listing-card"
@@ -37,15 +37,20 @@ export default function ProductListing() {
                     <Card.Img variant="top" src={listing.thumbnail_url} />
                     <Card.Body>
                         <Card.Title>{listing.product_name}</Card.Title>
-                        <Card.Text>
-                            {listing.product_description}
-                        </Card.Text>
-                        {/* <Link to={"/products/" + listing.id}> */}
-                            <Button variant="primary" onClick={()=>{
-                                moreInfo(listing)
-                            }}>Book Now!</Button>
-                        {/* </Link> */}
+                        <div className="active-listing-card-body">
+                            <Card.Text className="active-listing-card-description">
+
+                                    {listing.product_description}
+
+                            </Card.Text>
+                        </div>
+                        
                     </Card.Body>
+                    <div className="active-listing-card-button-div">
+                        <Button className="active-listing-card-btn" variant="primary" onClick={()=>{
+                            moreInfo(listing)
+                        }}>Book Now!</Button>
+                    </div>
                 </motion.Card>
             ))}
         </div>

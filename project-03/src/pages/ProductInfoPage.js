@@ -3,23 +3,22 @@ import {useLocation} from "react-router-dom"
 import axios from "axios"
 import { getUserId, sendJwt } from "./utils"
 import { motion } from "framer-motion"
-
+import moment from "../../node_modules/moment/moment.js"
 
 export default function ProductInfoPage() {
     const [productSlotId, setProductSlotId] = useState()
 
     let location = useLocation()
     let product = location.state.productInfo
+    console.log(product)
 
-
-    const addItemToCart = async () => {
+    const addItemToCart = async (productSlotId) => {
         let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/cart/" 
         + getUserId() + "/" + productSlotId + "/" + "add-item", sendJwt())
     }
 
     const animateLetters = () => {
         let arrayOfLetters = Array.from(product.product_name)
-        console.log(arrayOfLetters)
         return (
             arrayOfLetters.map(function(letter,i) {
                 
@@ -43,6 +42,27 @@ export default function ProductInfoPage() {
             })
         )
     }
+
+
+    const renderSlotsRow = () => {
+        if (product.productslots.length > 0) {
+            return (
+                product.productslots.map((slots)=>{
+                    console.log(slots)
+                    return <tr>
+                        <td className="table-data">{moment(slots.slot_datetime).format('L')}</td>
+                        <td className="table-data">{moment(slots.slot_datetime).format('LT')}</td>
+                        <td className="table-data">{slots.slot_quantity}</td>
+                        <td className="table-data"><button className="btn btn-sm btn-success" onClick={() => addItemToCart(slots.id)}>Add To Cart</button></td>
+                    </tr>
+                })
+            )
+        } else {
+            return <tr>No Slots Available</tr>
+        }
+
+    }
+
 
     return (
         <div>
@@ -70,21 +90,26 @@ export default function ProductInfoPage() {
                 </div>
             </motion.div>
             
-
-            <select onChange={(evt) => {
-                setProductSlotId(evt.target.value)
-            }}>
-                <option selected disabled>Please Choose a Slot</option>
-                {product.productslots.map((slots) => {
-                    return (
-                        <option value={slots.id}>{slots.slot_datetime}</option>
-                    )
-                })}
-            </select>
-
-            <button className="btn btn-success" onClick={() => addItemToCart()}>Add To Cart</button>
-
-            <p>{product.productslots.length > 0? product.productslots[0].slot_quantity + "/" + product.productslots[0].slot_quantity : "no slots avail"}</p>
+            {/* table start here */}
+            <motion.div id="product-info-slots-table"
+                animate ={{opacity:1}}
+                initial = {{opacity:0}}
+                transition ={{type:"spring", delay:4}}
+            >
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Slots Left</th>
+                            <th scope="col">Book Now</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {renderSlotsRow()}
+                    </tbody>
+                </table>
+            </motion.div>
         </div>
         
 
