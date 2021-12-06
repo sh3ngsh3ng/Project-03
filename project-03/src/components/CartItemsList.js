@@ -26,17 +26,26 @@ export default function CartItemsList() {
                     >
 
                         <div className="cart-card card-body">
-                            <i class="delete-cart-item bi bi-x-lg" onClick={() => context.deleteItem(cartItem.product_slots_id)}></i>
-                            <h1>{cartItem.productslot.product.product_name}</h1>
-                            <img src={cartItem.productslot.product.thumbnail_url} />
-                            <p>Date: {cartItem.productslot.slot_datetime}</p>
-                            <p>$ {cartItem.productslot.product.product_price / 100} / pax</p>
-                            <p>Total Price: $ {cartItem.productslot.product.product_price / 100 * cartItem.cart_items_quantity}</p>
+                            <div class="cart-item-header-div">
+                                <h1 class="cart-item-title">{cartItem.productslot.product.product_name}</h1>
+                                <i class="delete-cart-item-icon bi bi-x-lg" onClick={() => context.deleteItem(cartItem.product_slots_id)}></i>
+                            </div>
+                            <div class="cart-item-image-div">
+                                <img class="cart-image" src={cartItem.productslot.product.thumbnail_url} />
+                            </div>
+                            <p>Date: {cartItem.productslot.slot_datetime.slice(0,10)}</p>
+                            <p>Time: {cartItem.productslot.slot_datetime.slice(12, 16)}</p>
+
                             <div className="cart-quantity-div">
                                 <span>Quantity: </span>
-                                <i class="bi bi-caret-left" onClick={() => context.deleteOne(cartItem.product_slots_id)}></i>
-                                    <p>{cartItem.cart_items_quantity}</p>
-                                <i class="bi bi-caret-right" onClick={() => context.addOne(cartItem.product_slots_id)}></i>
+                                <button class="adjust-quantity-button" onClick={() => context.deleteOne(cartItem.product_slots_id)}><i class="bi bi-dash" ></i></button>
+                                    <button class="quantity-display">{cartItem.cart_items_quantity}</button>
+                                <button class="adjust-quantity-button" onClick={() => context.addOne(cartItem.product_slots_id)}><i class="bi bi-plus" ></i></button>
+                            </div>
+                            <div class="cart-item-price-div">
+                                <p class="cart-item-total-price-text">Total Price</p>
+                                <p class="cart-item-pax-price-text">({"$" + cartItem.productslot.product.product_price/100 + "/pax"}): </p>
+                                <p>$ {cartItem.productslot.product.product_price / 100 * cartItem.cart_items_quantity}</p>
                             </div>
                             
                         </div>
