@@ -48,7 +48,13 @@ export default function ProductInfoPage() {
         <div>
             <div id="product-title-div">{animateLetters()}</div>
             
-            <div><img src={product.image_url}/></div>
+            <motion.div id="product-info-image-div"
+                animate ={{opacity:1}}
+                initial = {{opacity:0}}
+                transition ={{type:"spring", delay:2}}
+            >
+                <img src={product.image_url}/>
+            </motion.div>
             
             <p>Description: {product.product_description}</p>
 

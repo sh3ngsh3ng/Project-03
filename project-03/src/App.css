@@ -63,12 +63,21 @@
 #product-title-div {
     display: flex;
     justify-content: center;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 10px 0px;
 }
 
 .product-title-letters {
     white-space:pre;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
 }
+
+#product-info-image-div {
+    display: flex;
+    justify-content: center;
+}
+
 
 
 /* end of ProductInfoPage */
