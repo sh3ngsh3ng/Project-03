@@ -33,19 +33,20 @@ export default function CartItemsList() {
                             <div class="cart-item-image-div">
                                 <img class="cart-image" src={cartItem.productslot.product.thumbnail_url} />
                             </div>
-                            <p>Date: {cartItem.productslot.slot_datetime.slice(0,10)}</p>
-                            <p>Time: {cartItem.productslot.slot_datetime.slice(12, 16)}</p>
-
+                            <div class="cart-item-datetime-div">
+                                <span class="cart-item-date">Date: {cartItem.productslot.slot_datetime.slice(0,10)}</span>
+                                <span class="cart-item-time">Time: {cartItem.productslot.slot_datetime.slice(12, 16)}</span>
+                            </div>
                             <div className="cart-quantity-div">
-                                <span>Quantity: </span>
+                                <span class="cart-item-quantity">Quantity: </span>
                                 <button class="adjust-quantity-button" onClick={() => context.deleteOne(cartItem.product_slots_id)}><i class="bi bi-dash" ></i></button>
                                     <button class="quantity-display">{cartItem.cart_items_quantity}</button>
                                 <button class="adjust-quantity-button" onClick={() => context.addOne(cartItem.product_slots_id)}><i class="bi bi-plus" ></i></button>
                             </div>
                             <div class="cart-item-price-div">
                                 <p class="cart-item-total-price-text">Total Price</p>
-                                <p class="cart-item-pax-price-text">({"$" + cartItem.productslot.product.product_price/100 + "/pax"}): </p>
-                                <p>$ {cartItem.productslot.product.product_price / 100 * cartItem.cart_items_quantity}</p>
+                                <p class="cart-item-pax-price-text">{"($" + cartItem.productslot.product.product_price/100 + "/pax):"}</p>
+                                <p>${cartItem.productslot.product.product_price / 100 * cartItem.cart_items_quantity}</p>
                             </div>
                             
                         </div>
