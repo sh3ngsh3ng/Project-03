@@ -34,7 +34,7 @@ export default function NavBar() {
                     <button className="btn btn-danger" onClick={handleClose}>No</button>
                 </Offcanvas.Body>
             </Offcanvas>
-            <Navbar bg="secondary" expand="lg">
+            <Navbar expand="lg">
                 <Container>
                     <Navbar.Brand href="/">
                         <img id="nav-bar-logo"src={brandLogo2}/>

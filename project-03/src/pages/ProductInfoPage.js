@@ -2,6 +2,8 @@ import {React, useState} from "react"
 import {useLocation} from "react-router-dom"
 import axios from "axios"
 import { getUserId, sendJwt } from "./utils"
+import { motion } from "framer-motion"
+
 
 export default function ProductInfoPage() {
     const [productSlotId, setProductSlotId] = useState()
@@ -15,11 +17,39 @@ export default function ProductInfoPage() {
         + getUserId() + "/" + productSlotId + "/" + "add-item", sendJwt())
     }
 
+    const animateLetters = () => {
+        let arrayOfLetters = Array.from(product.product_name)
+        console.log(arrayOfLetters)
+        return (
+            arrayOfLetters.map(function(letter,i) {
+                
+                return (
+                        <motion.span
+                            className="product-title-letters"
+                            animate = {{
+                                opacity: 1
+                            }}
+                            initial = {{
+                                opacity: 0
+                            }}
+                            transition = {{
+                                type:"spring",
+                                delay: i * 0.08
+                            }}
+                        >
+                            {letter}
+                        </motion.span>
+                )
+            })
+        )
+    }
 
     return (
         <div>
-            <h1>{product.product_name}</h1>
-            <img src={product.image_url}/>
+            <div id="product-title-div">{animateLetters()}</div>
+            
+            <div><img src={product.image_url}/></div>
+            
             <p>Description: {product.product_description}</p>
 
             <select onChange={(evt) => {

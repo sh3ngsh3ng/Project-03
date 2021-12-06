@@ -2,7 +2,7 @@ import {React, useContext} from 'react'
 import {Card, Button} from 'react-bootstrap'
 import ProductContext from "../context/ProductContext"
 import {useHistory} from "react-router-dom"
-
+import {motion} from "framer-motion"
 
 
 export default function ProductListing() {
@@ -19,9 +19,21 @@ export default function ProductListing() {
 
     return (
         <div id="active-listing-card-div">
-            {context.getListings().map((listing) => (
+            {context.getListings().map((listing, i) => (
                 // card
-                <Card style={{ width: '18rem', display: "inline-block" }}>
+                <motion.Card className="active-listing-card"
+                    animate={{
+                        x: 0
+                    }}
+                    initial={{
+                        x: "-100%"
+                    }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 50,
+                        delay: i * 0.1
+                    }}
+                >
                     <Card.Img variant="top" src={listing.thumbnail_url} />
                     <Card.Body>
                         <Card.Title>{listing.product_name}</Card.Title>
@@ -34,7 +46,7 @@ export default function ProductListing() {
                             }}>Book Now!</Button>
                         {/* </Link> */}
                     </Card.Body>
-                </Card>
+                </motion.Card>
             ))}
         </div>
     )
