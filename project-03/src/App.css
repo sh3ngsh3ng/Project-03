@@ -76,6 +76,19 @@
 #product-info-image-div {
     display: flex;
     justify-content: center;
+    margin-bottom: 15px;
+}
+
+#product-info-description-div {
+    display: flex;
+    justify-content: center;
+}
+
+#description-title-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: underline;
 }
 
 

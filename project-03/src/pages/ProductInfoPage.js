@@ -56,7 +56,20 @@ export default function ProductInfoPage() {
                 <img src={product.image_url}/>
             </motion.div>
             
-            <p>Description: {product.product_description}</p>
+            <motion.div
+                animate ={{opacity:1}}
+                initial = {{opacity:0}}
+                transition ={{type:"spring", delay:3}}
+            >
+                <div id="product-info-description-div">
+                    <span id="description-title-text">Description</span>
+                </div>
+
+                <div id="product-info-description-div">
+                    <span>{product.product_description}</span>
+                </div>
+            </motion.div>
+            
 
             <select onChange={(evt) => {
                 setProductSlotId(evt.target.value)
