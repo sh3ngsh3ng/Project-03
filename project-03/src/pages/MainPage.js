@@ -8,8 +8,11 @@ export default function MainPage () {
 
     return (
         <React.Fragment>
-            <FeaturedCarousel />
-            <ProductSection />
+
+                <FeaturedCarousel />
+
+                <ProductSection />
+                
         </React.Fragment>
     )
 

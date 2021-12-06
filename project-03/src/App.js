@@ -10,7 +10,6 @@ import MainPage from "./pages/MainPage"
 import ProductInfoPage from "./pages/ProductInfoPage"
 
 
-
 function App() {
 
 

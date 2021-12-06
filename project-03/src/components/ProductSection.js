@@ -34,8 +34,12 @@ export default function ProductSection() {
     return (
         <div>
             <ProductContext.Provider value ={context}>
-                <ProductListingTab />
-                <ProductListing />
+                <div>
+                    <ProductListingTab />
+                </div>
+                <div>
+                    <ProductListing />
+                </div>
             </ProductContext.Provider>
         </div>
     )
