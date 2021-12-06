@@ -2,7 +2,7 @@ import axios from "axios"
 import { React, useState} from "react"
 import {useHistory} from "react-router-dom"
 import { getUserId } from "./utils"
-
+import { userLogo } from "../images"
 
 export default function LoginPage() {
 
@@ -52,7 +52,7 @@ export default function LoginPage() {
         <div id="login-form-div">
             <div id="login-form">
             <div id="login-form-brand-logo-div">
-                <img class="form-brand-logo" src="../src/sherlock-holmes.png"/>
+                <img class="form-brand-logo" src={userLogo}/>
             </div>
             <div id="login-username-div">
                 <input id="userIdInput" placeholder="Enter Username" name="username" className="form-control" value={form.username} onChange={onUpdateFormField} />

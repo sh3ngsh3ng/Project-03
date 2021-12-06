@@ -1,7 +1,7 @@
 import axios from "axios"
 import {React, useState} from "react"
 import {useHistory} from "react-router-dom"
-
+import { userLogo } from "../images"
 
 
 export default function SignUpPage() {
@@ -55,7 +55,7 @@ export default function SignUpPage() {
             <div id="sign-up-form-div">
                 <div id="sign-up-form">
                     <div id="sign-up-form-brand-logo-div">
-                        <img class="form-brand-logo" src="../src/sherlock-holmes.png"/>
+                        <img class="form-brand-logo" src={userLogo}/>
                     </div>
                     <div class="sign-up-input-div">
                         <input id="userIdInput" name="username" placeholder="Enter Username"className="form-control" value={form.username} onChange={onUpdateFormField}/>

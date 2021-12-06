@@ -1,3 +1,16 @@
+/* start of navbar */
+#nav-bar-logo {
+    height: 30px;
+}
+
+
+/* end of navbar */
+
+
+
+
+
+
 /* CART */
 /* start of CartItemsList */
 .cart-card {
@@ -116,6 +129,9 @@
     margin: 20px 0px 20px 0px;
 }
 
+.form-brand-logo {
+    height: 60px;
+}
 
 #login-username-div {
     margin-bottom: 10px;
@@ -199,3 +215,14 @@
     margin-left: 5px;
 }
 /* end of SignUpForm */
+
+
+
+
+/* start of Carousel */
+
+
+/* end of Carousel */
+
+
+

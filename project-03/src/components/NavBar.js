@@ -3,6 +3,7 @@ import { Navbar, NavDropdown, Nav, Container, Offcanvas} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { checkIfLogin, getUserId } from '../pages/utils'
 import { useHistory } from 'react-router'
+import { brandLogo, brandLogo2 } from '../images'
 
 export default function NavBar() {
 
@@ -35,7 +36,9 @@ export default function NavBar() {
             </Offcanvas>
             <Navbar bg="secondary" expand="lg">
                 <Container>
-                    <Navbar.Brand href="/">BrandName</Navbar.Brand>
+                    <Navbar.Brand href="/">
+                        <img id="nav-bar-logo"src={brandLogo2}/>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
