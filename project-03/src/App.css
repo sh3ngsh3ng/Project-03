@@ -1,9 +1,11 @@
 /* CART */
+/* start of CartItemsList */
 .cart-card {
     border: solid black 1px;
     border-radius: 10px;
     position: relative;
     box-shadow: inset 0 0 5px #c2b9b9;
+    margin-bottom: 10px;
 }
 
 .cart-item-header-div {
@@ -93,3 +95,64 @@
     margin-right: 8px;
 }
 
+/* end of CartItemsList */
+
+
+/* start of LoginForm */
+#login-form-div {
+    padding: 20px;
+}
+
+#login-form {
+    padding: 10px;
+    border: 1px solid #e1e3e7;
+    border-radius: 10px;
+    box-shadow:0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+#login-form-brand-logo-div {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+
+
+#login-username-div {
+    margin-bottom: 10px;
+}
+
+#login-password-div {
+    margin-bottom: 15px;
+}
+
+#login-btn-div {
+    margin-bottom: 20px;
+}
+
+#login-btn {
+    width: 100%;
+    background: #1877f2;
+}
+
+#sign-up-btn-div {
+    display: flex;
+    justify-content: center;
+}
+
+#sign-up-btn {
+    width: 60%;
+    background: #42b72a;
+}
+
+#sign-up-prompt-div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+}
+
+#sign-up-prompt {
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* end of LoginForm */

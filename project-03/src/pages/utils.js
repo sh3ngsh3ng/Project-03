@@ -13,6 +13,7 @@ export const getUserId = () => {
     let accessToken = localStorage.getItem("accessToken")
     if (accessToken) {
         let userDetails = jwt_decode(accessToken)
+        console.log(userDetails)
         return userDetails.id
     } else {
         return ""
@@ -26,5 +27,4 @@ export const checkIfLogin = () => {
     } else {
         return false
     }
-
 }

@@ -1,5 +1,5 @@
 import {React, useEffect, useState} from 'react'
-import {useParams, useHistory} from "react-router-dom"
+import {useParams} from "react-router-dom"
 import axios from "axios"
 import CartItemsContext from "../context/CartItemsContext"
 import CartItemsList from '../components/CartItemsList'
@@ -11,7 +11,6 @@ export default function CartPage(){
     const [user, setUser] = useState(userId)
     const [cartItems, setCartItems] = useState([])
     const [quantityUpdate, setQuantityUpdate] = useState(false)
-    const history = useHistory()
 
     
 

@@ -49,22 +49,29 @@ export default function LoginPage() {
 
 
     return (
-        <div>
-            <div>
-                <div id="login-form">
-                    <h1>LoginForm</h1>
-                    <div>
-                        <label for="userIdInput"> Enter Username: </label>
-                        <input id="userIdInput" name="username" className="form-control" value={form.username} onChange={onUpdateFormField} />
-                    </div>
-                    <div>
-                        <label for="passwordInput"> Enter Password: </label>
-                        <input id="passwordInput" type="password" name="password" className="form-control" value={form.password} onChange={onUpdateFormField} />
-                    </div>
-                </div>
+        <div id="login-form-div">
+            <div id="login-form">
+            <div id="login-form-brand-logo-div">
+                <img id="login-form-brand-logo" src="../src/sherlock-holmes.png"/>
             </div>
-            <div>
-                <btn className="btn btn-success" onClick={() => submitForm(form)}>Submit</btn>
+            <div id="login-username-div">
+                <input id="userIdInput" placeholder="Enter Username" name="username" className="form-control" value={form.username} onChange={onUpdateFormField} />
+            </div>
+            <div id="login-password-div">
+                <input id="passwordInput" type="password" placeholder="Password" name="password" className="form-control" value={form.password} onChange={onUpdateFormField} />
+            </div>
+
+            <div id="login-btn-div">
+                <btn id="login-btn" className="btn btn-success" onClick={() => submitForm(form)}>Login</btn>
+                
+            </div>
+            <div id="sign-up-prompt-div">
+                <span id="sign-up-prompt">Don't have an account?</span>
+            </div>
+            
+            <div id="sign-up-btn-div">
+                <btn id="sign-up-btn"className="btn btn-secondary" onClick={() => history.push("/sign-up")}>Sign Up</btn>
+            </div>
             </div>
         </div>
     )
