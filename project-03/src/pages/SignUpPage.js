@@ -52,31 +52,31 @@ export default function SignUpPage() {
 
 
     return(
-        <div>
-            <div>
+            <div id="sign-up-form-div">
                 <div id="sign-up-form">
-                    <h1>Sign Up Form</h1>
-                    <div>
-                        <label for="email"> Enter Email: </label>
-                        <input id="emailInput" name="email" className="form-control" value={form.email} onChange={onUpdateFormField}/>
+                    <div id="sign-up-form-brand-logo-div">
+                        <img class="form-brand-logo" src="../src/sherlock-holmes.png"/>
                     </div>
-                    <div>
-                        <label for="userIdInput"> Enter Username: </label>
-                        <input id="userIdInput" name="username" className="form-control" value={form.username} onChange={onUpdateFormField}/>
+                    <div class="sign-up-input-div">
+                        <input id="userIdInput" name="username" placeholder="Enter Username"className="form-control" value={form.username} onChange={onUpdateFormField}/>
                     </div>
-                    <div>
-                        <label for="passwordInput"> Enter Password: </label>
-                        <input id="passwordInput" type="password" name="password" className="form-control" value={form.password} onChange={onUpdateFormField}/>
+                    <div class="sign-up-input-div">
+                        <input id="passwordInput" type="password" placeholder="Password" name="password" className="form-control" value={form.password} onChange={onUpdateFormField}/>
                     </div>
-                    <div>
-                        <label for="confirmPassword"> Confirm Password: </label>
-                        <input id="confirmPassword" type="password" name="confirmPassword" className="form-control" value={form.confirmPassword} onChange={onUpdateFormField}/>
+                    <div class="sign-up-input-div">
+                        <input id="confirmPassword" type="password" placeholder="Confirm Password" name="confirmPassword" className="form-control" value={form.confirmPassword} onChange={onUpdateFormField}/>
+                    </div>
+                    <div class="sign-up-input-div">
+                        <input id="emailInput" name="email" placeholder="Enter Email"className="form-control" value={form.email} onChange={onUpdateFormField}/>
+                    </div>
+                    <div class="sign-up-input-div">
+                        <btn id="sign-up-submit-btn" className="btn btn-success" onClick={() => submitForm(form)}>Submit</btn>
+                    </div>
+                    <div id="login-prompt-div">
+                        <i class="bi bi-arrow-left-circle" onClick={() => history.push("/login")}></i>
+                        <span id="login-prompt">Back to Login</span>
                     </div>
                 </div>
             </div>
-            <div>
-                <btn className="btn btn-success" onClick={() => submitForm(form)}>Submit</btn>
-            </div>
-        </div>
     )
 }

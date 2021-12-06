@@ -156,3 +156,46 @@
 }
 
 /* end of LoginForm */
+
+
+
+/* start of SignUpForm */
+#sign-up-form-div {
+    padding: 20px;
+}
+
+#sign-up-form {
+    padding: 10px;
+    border: 1px solid #e1e3e7;
+    border-radius: 10px;
+    box-shadow:0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+#sign-up-form-brand-logo-div {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+
+.sign-up-input-div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#sign-up-submit-btn {
+    width: 100%;
+    background: #42b72a;
+}
+
+#login-prompt-div {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#login-prompt {
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 5px;
+}
+/* end of SignUpForm */
