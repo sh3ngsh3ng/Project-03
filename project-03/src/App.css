@@ -128,8 +128,21 @@
 
 .table-data {
     text-align: center;
-    text-align: ;
 }
+
+.alert-notif-div {
+    width: 40vw;
+    height: 40px;
+    left: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-notif-text {
+    font-size: 12px;
+}
+
 
 /* end of ProductInfoPage */
 
