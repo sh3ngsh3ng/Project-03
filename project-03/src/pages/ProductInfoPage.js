@@ -1,20 +1,41 @@
-import {React, useState} from "react"
+import {React, useEffect, useState} from "react"
 import {useLocation} from "react-router-dom"
 import axios from "axios"
 import { getUserId, sendJwt } from "./utils"
 import { motion } from "framer-motion"
 import moment from "../../node_modules/moment/moment.js"
+import FlashMessage from "react-flash-message"
+
 
 export default function ProductInfoPage() {
-    const [productSlotId, setProductSlotId] = useState()
+    const [addedToCart , setAddedToCart] = useState(false)
 
     let location = useLocation()
     let product = location.state.productInfo
-    console.log(product)
+    
+
+    const flashMessageAddToCart = () => {
+        if (addedToCart) {
+            return (
+                <FlashMessage duration={5000}>
+                    <strong>I will disapper in 5 seconds!</strong>
+                </FlashMessage>
+            )
+        } else {
+            return null
+        }
+    }
+
+    useEffect(() => {
+        setTimeout(function() {
+            setAddedToCart(false)
+        }, 5000)
+    }, [addedToCart])
 
     const addItemToCart = async (productSlotId) => {
         let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/cart/" 
         + getUserId() + "/" + productSlotId + "/" + "add-item", sendJwt())
+        setAddedToCart(true)
     }
 
     const animateLetters = () => {
@@ -43,6 +64,7 @@ export default function ProductInfoPage() {
         )
     }
 
+    
 
     const renderSlotsRow = () => {
         if (product.productslots.length > 0) {
@@ -53,12 +75,12 @@ export default function ProductInfoPage() {
                         <td className="table-data">{moment(slots.slot_datetime).format('L')}</td>
                         <td className="table-data">{moment(slots.slot_datetime).format('LT')}</td>
                         <td className="table-data">{slots.slot_quantity}</td>
-                        <td className="table-data"><button className="btn btn-sm btn-success" onClick={() => addItemToCart(slots.id)}>Add To Cart</button></td>
+                        <td className="table-data" ><button className="btn btn-sm btn-success" onClick={() => addItemToCart(slots.id)}>Add To Cart</button></td>
                     </tr>
                 })
             )
         } else {
-            return <tr>No Slots Available</tr>
+            return <tr><td colSpan="4" className="table-data">No Slots Available</td></tr>
         }
 
     }
@@ -66,6 +88,7 @@ export default function ProductInfoPage() {
 
     return (
         <div>
+            {flashMessageAddToCart()}
             <div id="product-title-div">{animateLetters()}</div>
             
             <motion.div id="product-info-image-div"
@@ -73,7 +96,7 @@ export default function ProductInfoPage() {
                 initial = {{opacity:0}}
                 transition ={{type:"spring", delay:2}}
             >
-                <img src={product.image_url}/>
+                <img className="product-info-image" src={product.image_url}/>
             </motion.div>
             
             <motion.div
@@ -90,7 +113,7 @@ export default function ProductInfoPage() {
                 </div>
             </motion.div>
             
-            {/* table start here */}
+            {/* slots table */}
             <motion.div id="product-info-slots-table"
                 animate ={{opacity:1}}
                 initial = {{opacity:0}}

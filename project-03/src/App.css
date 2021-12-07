@@ -78,6 +78,9 @@
     background: #1877f2;
 }
 
+.card-img-top {
+    height: 150px;
+}
 
 /* end of ProductListing */
 
@@ -100,6 +103,11 @@
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+}
+
+.product-info-image {
+    height: 200px;
+    width: 100%;
 }
 
 #product-info-description-div {
@@ -233,6 +241,7 @@
 }
 
 #login-form {
+    background-color: white;
     padding: 10px;
     border: 1px solid #e1e3e7;
     border-radius: 10px;
@@ -297,6 +306,7 @@
 }
 
 #sign-up-form {
+    background-color: white;
     padding: 10px;
     border: 1px solid #e1e3e7;
     border-radius: 10px;
