@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation, useHistory } from "react-router-dom"
 import axios from "axios"
-import { getUserId, sendJwt } from "./utils"
+import { checkIfLogin, getUserId, sendJwt } from "./utils"
 import { motion } from "framer-motion"
 import moment from "../../node_modules/moment/moment.js"
 import FlashMessage from "react-flash-message"
@@ -12,7 +12,7 @@ export default function ProductInfoPage() {
 
     let location = useLocation()
     let product = location.state.productInfo
-
+    const history = useHistory()
 
     const flashMessageAddToCart = () => {
         if (addedToCart) {
@@ -49,9 +49,13 @@ export default function ProductInfoPage() {
     }, [addedToCart])
 
     const addItemToCart = async (productSlotId) => {
-        let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/cart/"
+        if (checkIfLogin()) {
+            let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/cart/"
             + getUserId() + "/" + productSlotId + "/" + "add-item", sendJwt())
-        setAddedToCart(true)
+            setAddedToCart(true)
+        } else {
+            history.push("/login")
+        }
     }
 
     const animateLetters = () => {

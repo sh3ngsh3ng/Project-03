@@ -1,5 +1,5 @@
-import {React, useState} from 'react'
-import { Navbar, NavDropdown, Nav, Container, Offcanvas} from 'react-bootstrap'
+import { React, useEffect, useState } from 'react'
+import { Navbar, NavDropdown, Nav, Container, Offcanvas } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { checkIfLogin, getUserId } from '../pages/utils'
 import { useHistory } from 'react-router'
@@ -11,13 +11,12 @@ export default function NavBar() {
 
     const logoutUser = () => {
         localStorage.removeItem("accessToken")
-        history.push("/")
+        history.push("/login")
     }
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
 
     return (
         <div>
@@ -37,7 +36,7 @@ export default function NavBar() {
             <Navbar expand="lg">
                 <Container>
                     <Navbar.Brand href="/">
-                        <img id="nav-bar-logo"src={brandLogo2}/>
+                        <img id="nav-bar-logo" src={brandLogo2} />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -46,22 +45,23 @@ export default function NavBar() {
                             <Nav.Link href={checkIfLogin() ? "/logout" : "/login"}></Nav.Link>
 
 
-
                             {checkIfLogin() ?
-                                <Nav.Link href={"/cart/" + getUserId()}>Cart</Nav.Link>
+                                <Nav.Link href={"/cart/" + getUserId()}><i id="cart-icon" class="bi bi-cart4">{` `}</i></Nav.Link>
                                 : null
                             }
 
 
                             {checkIfLogin() ?
                                 null
-                                : <Nav.Link href="/login">Sign In</Nav.Link>
+                                : <Nav.Link href="/login" onClick={handleClose}>Sign In</Nav.Link>
                             }
 
 
 
                             {checkIfLogin() ?
-                                <NavDropdown title="UserIconHere" id="basic-nav-dropdown">
+                                <NavDropdown title={
+                                    <span><i id="user-icon"class="bi bi-person-circle"></i></span>
+                                } id="basic-nav-dropdown">
                                     <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
                                     <NavDropdown.Divider />

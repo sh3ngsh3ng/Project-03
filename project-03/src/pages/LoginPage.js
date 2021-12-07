@@ -1,8 +1,10 @@
 import axios from "axios"
-import { React, useState} from "react"
+import { React, useEffect, useState} from "react"
 import {useHistory} from "react-router-dom"
 import { getUserId } from "./utils"
 import { userLogo } from "../images"
+import FlashMessage from "react-flash-message"
+import { motion } from "framer-motion/dist/es"
 
 export default function LoginPage() {
 
@@ -13,6 +15,15 @@ export default function LoginPage() {
         'password': ""
     })
 
+    const [loginErrorMessage, setLoginErrorMessage] = useState(false)
+
+
+    useEffect(() => {
+        setTimeout(function() {
+            setLoginErrorMessage(false)
+        }, 5000)
+    }, [loginErrorMessage])
+
     const onUpdateFormField = (e) => {
         setForm({
             ...form,
@@ -20,17 +31,48 @@ export default function LoginPage() {
         })
     }
 
+    //simple client check for empty field
     const simpleClientValidation = (obj) => {
+        console.log(obj)
         for (let i in obj) {
-            if (i == "") {
-                return "Please field in empty field"
-            }
-        }
+            if (obj[i] == "") {
+                return false
+            } 
+        } 
         return true
+    }
+
+    const flashMessageLoginError = () => {
+        if (loginErrorMessage) {
+            return (
+                <FlashMessage duration={4000}>
+                    <motion.div
+                        className="alert-notif-div alert alert-danger"
+                        style={{position:"absolute"}}
+                        role="alert"
+                        animate={{ y: 0 }}
+                        initial={{ y: "-100%" }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 50,
+                            delay: 0.02
+                        }}
+                    >
+                        <div class="alert-notif-content">
+                            <i class="bi bi-exclamation-circle"></i>
+                            <span class="alert-notif-text">{` `} Login Error</span>
+                        </div>
+                    </motion.div>
+                </FlashMessage>
+            )
+        } else {
+            return null
+        }
     }
 
     const submitForm = async(obj) => {
         let check = simpleClientValidation(obj)
+        console.log(check)
         if (check) {
             let result = await axios.post("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/user/login", {
                 ...obj
@@ -38,18 +80,23 @@ export default function LoginPage() {
             
             if (result.data.message == "success") {
                 localStorage.setItem("accessToken", result.data.accessToken)
-                history.push("/cart/" + getUserId()) // push user id to cart
+                history.push("/") // push user id to cart
+            }
+
+            if (result.data.message == "failed") {
+                setLoginErrorMessage(true)
             }
 
         } else {
-            history.push("/sign-up")
-            return null // give failed notification
+            setLoginErrorMessage(true)
+            history.push("/login")
         }
     }
 
 
     return (
         <div id="login-form-div">
+            {flashMessageLoginError()}
             <div id="login-form">
             <div id="login-form-brand-logo-div">
                 <img class="form-brand-logo" src={userLogo}/>

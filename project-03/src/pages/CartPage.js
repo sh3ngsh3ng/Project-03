@@ -20,6 +20,7 @@ export default function CartPage(){
     useEffect( async()=> {
         const fetchCart = async(user_id) => {
             let response = await axios.get(BASE_URL + user_id, sendJwt())
+            console.log(response.data)
             setCartItems(response.data)
         }
         if(parseInt(userId)) {
@@ -39,6 +40,18 @@ export default function CartPage(){
         }
     }, [quantityUpdate])
     
+    const renderCheckOutBtn = () => {
+        if (cartItems.length !== 0) {
+            return (
+                <div id="cart-page-submit-btn-div">
+                    <btn id="cart-page-submit-btn" className="btn btn-success" onClick={() => context.checkOut()}>Check Out</btn>
+                </div>
+            )
+        }
+    }
+
+
+
     // context
     const context = {
         'cartItems': () => {
@@ -68,9 +81,13 @@ export default function CartPage(){
 
     return(
         <CartItemsContext.Provider value={context}>
-            <h1>User's Cart Page</h1>
-            <p className="btn btn-danger" onClick={() => context.deleteCart()}>Clear Cart</p>
-            <p className="btn btn-success" onClick={() => context.checkOut()}>CheckOut</p>
+            <div style={{display:"flex", justifyContent: "center", marginTop: "20px"}}>
+                <h1 style={{textDecoration: "underline"}}>Cart Items</h1>
+            </div>
+            <div>
+                <span id="cart-page-clear-cart-btn" role="button" onClick={() => context.deleteCart()}>Clear Cart</span>
+            </div>
+            {renderCheckOutBtn()}
             <CartItemsList />
         </CartItemsContext.Provider>
 

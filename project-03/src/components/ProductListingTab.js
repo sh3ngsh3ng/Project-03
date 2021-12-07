@@ -15,28 +15,28 @@ export default function ProductListingTab() {
         <div>
             <ul className="nav nav-tabs">
                 <li className="nav-item">
-                    <button className={`nav-link ${context.activeTab == "all"? "active": null}`}
+                    <button className={`nav-link ${context.activeTab == "all"? "active": null} listing-tab`}
                     onClick={(evt) => {
                         context.setActiveTab(evt)
                     }}
                     value="all"
-                    >All</button>
+                    >Escape Rooms</button>
                 </li>
                 <li className="nav-item">
-                    <button className={`nav-link ${context.activeTab == "featured"? "active": null}`}
+                    <button className={`nav-link ${context.activeTab == "featured"? "active": null} listing-tab`}
                     onClick={(evt) => {
                         context.setActiveTab(evt)
                     }}
                     value="featured"
-                    >Featured</button>
+                    >Amazing Race</button>
                 </li>
                 <li className="nav-item">
-                    <button className={`nav-link ${context.activeTab == "promotions"? "active": null}`}
+                    <button className={`nav-link ${context.activeTab == "promotions"? "active": null} listing-tab`}
                     onClick={(evt) => {
                         context.setActiveTab(evt)
                     }}
                     value="promotions"
-                    >Promotions</button>
+                    >Mystery Murder</button>
                 </li>
             </ul>
         </div>
