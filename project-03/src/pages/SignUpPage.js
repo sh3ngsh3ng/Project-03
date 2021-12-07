@@ -1,7 +1,9 @@
 import axios from "axios"
-import {React, useState} from "react"
+import {React, useState, useEffect} from "react"
 import {useHistory} from "react-router-dom"
 import { userLogo } from "../images"
+import { motion } from "framer-motion/dist/es"
+import FlashMessage from "react-flash-message"
 
 
 export default function SignUpPage() {
@@ -16,6 +18,45 @@ export default function SignUpPage() {
         'confirmPassword': ""
     })
 
+    // sign up failed
+    const [signUpErrorMessage, setSignUpErrorMessage] = useState(false)
+
+    // sign up failed flash message
+    const flashMessageSignUpError = () => {
+        if (signUpErrorMessage) {
+            return (
+                <FlashMessage duration={4000}>
+                    <motion.div
+                        className="alert-notif-div alert alert-danger"
+                        style={{position:"absolute"}}
+                        role="alert"
+                        animate={{ y: 0 }}
+                        initial={{ y: "-100%" }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 50,
+                            delay: 0.02
+                        }}
+                    >
+                        <div class="alert-notif-content">
+                            <i class="bi bi-exclamation-circle"></i>
+                            <span class="alert-notif-text">{` `} Sign Up Failed</span>
+                        </div>
+                    </motion.div>
+                </FlashMessage>
+            )
+        } else {
+            return null
+        }
+    }
+
+    // reset signUpErrorMessage state
+    useEffect(() => {
+        setTimeout(function() {
+            setSignUpErrorMessage(false)
+        }, 5000)
+    }, [signUpErrorMessage])
+
     // form two way binding
     const onUpdateFormField = (e) => {
         setForm({
@@ -27,12 +68,12 @@ export default function SignUpPage() {
     // check for no empty field
     const simpleClientValidation = (obj) => {
         for (let i in obj) {
-            if (i == "") {
-                return "Please fill in empty field"
+            if (obj[i] == "") {
+                return false
             }
         }
         if (form.password !== form.confirmPassword) {
-            return "Password don't match"
+            return false
         }
         return true
     }
@@ -41,18 +82,22 @@ export default function SignUpPage() {
     const submitForm = async (obj) =>{
         let check = simpleClientValidation(obj)
         if (check) {
-            let newUser = await axios.post("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/user/sign-up" , {
+            let result = await axios.post("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/user/sign-up" , {
                 ...obj
             })
-            history.push("/login")
+
+            if (result.data.message == "success") {
+                history.push("/login")
+            }
         } else {
-            return null // give failed notification
+            setSignUpErrorMessage(true) // give failed notification
         }
     }
 
 
     return(
             <div id="sign-up-form-div">
+                {flashMessageSignUpError()}
                 <div id="sign-up-form">
                     <div id="sign-up-form-brand-logo-div">
                         <img class="form-brand-logo" src={userLogo}/>
