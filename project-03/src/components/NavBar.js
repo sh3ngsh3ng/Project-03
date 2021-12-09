@@ -3,7 +3,8 @@ import { Navbar, NavDropdown, Nav, Container, Offcanvas } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { checkIfLogin, getUserId } from '../pages/utils'
 import { useHistory } from 'react-router'
-import { brandLogo, brandLogo2 } from '../images'
+import { brandLogo2 } from '../images'
+import { motion } from 'framer-motion'
 
 export default function NavBar() {
 
@@ -19,7 +20,14 @@ export default function NavBar() {
     const handleShow = () => setShow(true);
 
     return (
-        <div>
+        <motion.div animate={{y:0}}
+                    initial={{y:"-100%"}}
+                    transition={{
+                        type:"spring",
+                        stiffness: 50,
+                        delay: 0.02
+                    }}
+        >
             <Offcanvas show={show} onHide={handleClose} placement="top">
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>Offcanvas</Offcanvas.Title>
@@ -77,6 +85,6 @@ export default function NavBar() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </div>
+        </motion.div>
     )
 }

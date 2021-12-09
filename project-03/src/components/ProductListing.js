@@ -17,6 +17,20 @@ export default function ProductListing() {
     }
     // context.getActiveListings().then(res => setActiveListings(res))
 
+    const getBadgeColor = (tag) => {
+        let legend = {
+            'horror': 'bg-danger',
+            'suspense': 'bg-dark',
+            'humour': "bg-warning",
+            'relaxing': 'bg-success',
+            'mystery': "bg-dark",
+            'suspense': "bg-primary",
+            'thriller': "bg-secondary"
+        }
+        return legend[tag]
+    }
+
+
     return (
         <div id="active-listing-card-div" role="button">
             {context.getListings().map((listing, i) => (
@@ -26,17 +40,26 @@ export default function ProductListing() {
                         x: 0
                     }}
                     initial={{
-                        x: "-100%"
+                        x: "-1000%"
                     }}
                     transition={{
                         type: "spring",
                         stiffness: 50,
-                        delay: i * 0.1
+                        delay: i * 0.3
                     }}
                 >
-                    <Card.Img variant="top" src={listing.thumbnail_url} />
+                    <Card.Img variant="top" src={listing.image_url} />
                     <Card.Body>
                         <Card.Title>{listing.product_name}</Card.Title>
+
+                        <div className="card-badge-div">
+
+                            {listing.tags.map((tag)=> {
+                                return <span className={"active-card-badge badge rounded-pill " +  getBadgeColor(tag.name)}>{tag.name}</span>
+                            })}
+
+                        </div>
+
                         <div className="active-listing-card-body">
                             <Card.Text className="active-listing-card-description">
 
@@ -44,7 +67,6 @@ export default function ProductListing() {
 
                             </Card.Text>
                         </div>
-                        
                     </Card.Body>
                     <div className="active-listing-card-button-div">
                         <Button className="active-listing-card-btn" variant="primary" onClick={()=>{

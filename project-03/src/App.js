@@ -14,9 +14,11 @@ function App() {
 
 
   return (
-    <Router>
     <React.Fragment>
-      <NavBar />
+    <NavBar />
+    <Router>
+    
+      
       <Switch>
         {/* Start of Main Page */}
         <Route exact path="/">
@@ -54,8 +56,9 @@ function App() {
         {/* End of product Display Page */}
 
       </Switch>
+      </Router>
     </React.Fragment>
-    </Router>
+    
     
   );
 }

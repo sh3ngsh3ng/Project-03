@@ -8,12 +8,23 @@
 
 /* start of navbar */
 .navbar {
-    background-color: rgba(119, 68, 68, 0.521);
+    background-color: rgba(128, 119, 119, 0.959);
+    border-radius: 0px 0px 20px 20px;
 }
 
 #nav-bar-logo {
     height: 30px;
 }
+
+div.navbar-nav {
+    margin: 0!important;
+}
+
+#basic-navbar-nav {
+    justify-content: flex-end;
+}
+
+
 
 a.nav-link {
     display: flex;
@@ -26,17 +37,12 @@ a.nav-link {
 }
 
 #user-icon {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 /* end of navbar */
 
 
-/* start of carousel */
-/* #carousel-div {
-    height: 100px;
-    overflow: hidden;
-} */
 
 #banner-div {
     height: 150px;
@@ -99,8 +105,23 @@ a.nav-link {
     background: #1877f2;
 }
 
+div.card-title {
+    margin: 2px;
+}
+
 .card-img-top {
     height: 150px;
+}
+
+.card-badge-div {
+    width:100%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.active-card-badge {
+    margin-right: 2px;
 }
 
 /* end of ProductListing */
