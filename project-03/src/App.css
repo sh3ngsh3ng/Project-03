@@ -70,6 +70,7 @@ a.nav-link {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
 }
 
 .active-listing-card {
@@ -78,6 +79,7 @@ a.nav-link {
     width: 16rem;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.5);
     background-color: white;
+    border-radius: 15px;
 }
 
 
@@ -97,12 +99,23 @@ a.nav-link {
     background-color: white;
     display:flex;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .active-listing-card-btn {
     width: 45%;
     background: #1877f2;
+}
+
+.active-listing-price-div {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
+
+.active-listing-price {
+    font-size: 12px;
+    font-style: italic;
 }
 
 div.card-title {
@@ -111,6 +124,7 @@ div.card-title {
 
 .card-img-top {
     height: 150px;
+    border-radius: 15px 15px 0 0!important;
 }
 
 .card-badge-div {
@@ -118,6 +132,10 @@ div.card-title {
     display: inline-block;
     white-space: nowrap;
     overflow-x: auto;
+}
+
+.card-badge-div::-webkit-scrollbar {
+    display: none;
 }
 
 .active-card-badge {

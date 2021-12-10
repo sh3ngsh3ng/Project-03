@@ -74,7 +74,7 @@ export default function LoginPage() {
         let check = simpleClientValidation(obj)
         console.log(check)
         if (check) {
-            let result = await axios.post("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/user/login", {
+            let result = await axios.post("https://3000-amber-guppy-qbo1ebq4.ws-us23.gitpod.io/api/user/login", {
                 ...obj
             })
             

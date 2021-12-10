@@ -10,7 +10,7 @@ export default function ProductSection() {
     const [listings, setListings] = useState([])
 
     useEffect(async() => {
-        let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/products/active-listings")
+        let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us23.gitpod.io/api/products/active-listings")
         setListings(response.data)
         console.log(listings)
     }, [])

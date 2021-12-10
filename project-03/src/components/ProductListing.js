@@ -34,6 +34,7 @@ export default function ProductListing() {
     return (
         <div id="active-listing-card-div" role="button">
             {context.getListings().map((listing, i) => (
+                
                 // card
                 <motion.Card className="active-listing-card"
                     animate={{
@@ -48,12 +49,11 @@ export default function ProductListing() {
                         delay: i * 0.3
                     }}
                 >
-                    <Card.Img variant="top" src={listing.image_url} />
+                    <Card.Img  variant="top" src={listing.image_url} />
                     <Card.Body>
                         <Card.Title>{listing.product_name}</Card.Title>
 
                         <div className="card-badge-div">
-
                             {listing.tags.map((tag)=> {
                                 return <span className={"active-card-badge badge rounded-pill " +  getBadgeColor(tag.name)}>{tag.name}</span>
                             })}
@@ -64,7 +64,7 @@ export default function ProductListing() {
                             <Card.Text className="active-listing-card-description">
 
                                     {listing.product_description}
-
+                                    
                             </Card.Text>
                         </div>
                     </Card.Body>
@@ -72,6 +72,9 @@ export default function ProductListing() {
                         <Button className="active-listing-card-btn" variant="primary" onClick={()=>{
                             moreInfo(listing)
                         }}>Book Now!</Button>
+                    </div>
+                    <div className="active-listing-price-div">
+                        <span className="active-listing-price">{"$" + listing.product_price / 100}/pax</span>
                     </div>
                 </motion.Card>
             ))}
