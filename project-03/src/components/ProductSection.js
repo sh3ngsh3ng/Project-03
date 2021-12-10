@@ -1,6 +1,7 @@
 import {React, useEffect, useState} from 'react'
 import ProductListing from "./ProductListing"
 import ProductListingTab from "./ProductListingTab"
+import SearchForm from './SearchForm'
 import ProductContext from '../context/ProductContext'
 import axios from "axios"
 
@@ -32,6 +33,7 @@ export default function ProductSection() {
                 <div>
                     <ProductListingTab />
                 </div>
+                <SearchForm/>
                 <div>
                     <ProductListing />
                 </div>
