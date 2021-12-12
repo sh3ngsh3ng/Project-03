@@ -584,11 +584,25 @@ th {
 }
 
 @media only screen and (min-width: 1024px) {
+
+    /* start of Navbar */
+    div.dropdown-menu.show {
+        left: -105px!important;
+        z-index: 10;
+    }
+    /* end of Navbar */
+
     /* start of ProductListingTab */
     .listing-tab {
         font-size: 15px;
     }
     /* end of ProductListingtab */
+
+    /* start of ProductListing */
+
+
+
+    /* end of ProductListing */
 
     /* start of ProductInfoPage */
     #product-info-image-div {
