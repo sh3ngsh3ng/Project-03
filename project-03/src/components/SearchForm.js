@@ -85,10 +85,11 @@ export default function SearchForm() {
 
     return (
         <div>
-            <Button variant="primary" onClick={handleShow}>
-                <i class="bi bi-search"></i>
-            </Button>
-
+            <div id="search-form-btn-div">
+                <Button id="search-form-btn" onClick={handleShow}>
+                    <i id="search-btn-icon" class="bi bi-search"></i>
+                </Button>
+            </div>
             <Offcanvas show={show} onHide={handleClose} placement={'end'}>
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>Search</Offcanvas.Title>
