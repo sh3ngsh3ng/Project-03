@@ -1,18 +1,18 @@
-import { React, useEffect, useState } from 'react'
+import { React, useState } from 'react'
+import { useHistory } from "react-router-dom"
 import { Navbar, NavDropdown, Nav, Container, Offcanvas } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { checkIfLogin, getUserId } from '../pages/utils'
-import { useHistory } from 'react-router'
 import { brandLogo2 } from '../images'
 import { motion } from 'framer-motion'
 
 export default function NavBar() {
 
-    let history = useHistory()
+    const history = useHistory()
 
     const logoutUser = () => {
         localStorage.removeItem("accessToken")
-        history.push("/login")
+        history.push("/cart")
     }
 
     const [show, setShow] = useState(false);

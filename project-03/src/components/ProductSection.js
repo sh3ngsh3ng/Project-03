@@ -24,6 +24,9 @@ export default function ProductSection() {
         'getListings': () => {
             console.log(listings)
             return listings
+        },
+        'setSearchResults': (newResults) => {
+            setListings(newResults)
         }
     }
 
@@ -33,7 +36,7 @@ export default function ProductSection() {
                 <div>
                     <ProductListingTab />
                 </div>
-                <SearchForm/>
+                    <SearchForm/>
                 <div>
                     <ProductListing />
                 </div>

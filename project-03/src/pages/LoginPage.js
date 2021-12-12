@@ -1,7 +1,6 @@
 import axios from "axios"
 import { React, useEffect, useState} from "react"
 import {useHistory} from "react-router-dom"
-import { getUserId } from "./utils"
 import { userLogo } from "../images"
 import FlashMessage from "react-flash-message"
 import { motion } from "framer-motion/dist/es"
@@ -80,7 +79,7 @@ export default function LoginPage() {
             
             if (result.data.message == "success") {
                 localStorage.setItem("accessToken", result.data.accessToken)
-                history.push("/") // push user id to cart
+                history.push("/")
             }
 
             if (result.data.message == "failed") {
