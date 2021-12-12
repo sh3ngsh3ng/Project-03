@@ -12,8 +12,7 @@ export default function SearchForm() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [startDate, setStartDate] = useState(new Date())
-    const [endDate, setEndDate] = useState(new Date())
+    // const [startDate, setStartDate] = useState(new Date())
     
 
     const [allTags, setAllTags] = useState([])
@@ -101,10 +100,9 @@ export default function SearchForm() {
                             value = {nameSearch}
                         />
                     </div>
-                    <div>
-                        <span>From: </span><DatePicker selected={startDate} onChange={(date) => setStartDate(date)}/>
-                        <span>To: </span><DatePicker selected={endDate} onChange={(date) => setEndDate(date)}/>
-                    </div>
+                    {/* <div>
+                        <span>Available Dates: </span><DatePicker selected={startDate} onChange={(date) => setStartDate(date)}/>
+                    </div> */}
                     <div>
                         <label>Price (below): ${priceFilter} </label>
                         <input type="range" 
