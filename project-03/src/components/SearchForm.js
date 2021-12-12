@@ -19,6 +19,7 @@ export default function SearchForm() {
     const [allTags, setAllTags] = useState([])
     const [selectedTags, setSelectedTags] = useState([])
     const [nameSearch, setNameSearch] = useState("")
+    const [priceFilter, setPriceFilter] = useState(100)
 
     const context = useContext(ProductContext)
 
@@ -29,7 +30,7 @@ export default function SearchForm() {
         setAllTags(response.data)
     }, [])
 
-    // click event for tags
+    // click event for tags (set state for tags)
     const selectTagsCheckbox = (evt) => {
         // check if in the array
         if (selectedTags.includes(evt.target.value)) {
@@ -44,12 +45,14 @@ export default function SearchForm() {
         }
     }
 
+
     // event to submit form
     const submitSearchForm = async () => {
         let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us23.gitpod.io/api/products/search", {
             params: {
                 tags: selectedTags,
-                name: nameSearch
+                name: nameSearch,
+                max_cost: priceFilter
             }
         })
         // set listings to show in ProductListing
@@ -58,15 +61,20 @@ export default function SearchForm() {
         setShow(false)
         // reset Tags selection
         setSelectedTags([])
-        // reset text
-        setNameSearch("")
     }
 
     const renderTagsCheckbox = (allTags) => {
         return allTags.map((tag) => {
+            let checked = selectedTags
+            console.log(checked)
             return (
                 <span>
-                    <input className="form-check-input" type="checkbox" value={tag[0]} id={tag[0]} onChange={selectTagsCheckbox}/>
+                    <input className="form-check-input" 
+                        type="checkbox" 
+                        value={tag[0]} 
+                        id={tag[0]} 
+                        onChange={selectTagsCheckbox}
+                    />
                     <label className="form-check-label" for="flexCheckDefault">
                         {tag[1]}
                     </label>
@@ -88,15 +96,25 @@ export default function SearchForm() {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <div>
-                        <input type="text" placeholder="type something here" onChange={(evt) => setNameSearch(evt.target.value)}/>
+                        <input type="text" placeholder="type something here" 
+                            onChange={(evt) => setNameSearch(evt.target.value)}
+                            value = {nameSearch}
+                        />
                     </div>
                     <div>
                         <span>From: </span><DatePicker selected={startDate} onChange={(date) => setStartDate(date)}/>
                         <span>To: </span><DatePicker selected={endDate} onChange={(date) => setEndDate(date)}/>
                     </div>
                     <div>
-                        <label>Price: </label>
-                        <input type="range" class="form-range" min="0" max="5" step="1"/>
+                        <label>Price (below): ${priceFilter} </label>
+                        <input type="range" 
+                                class="form-range" 
+                                min="10" 
+                                max="100" 
+                                step="10"
+                                onChange={(evt) => setPriceFilter(evt.target.value)}
+                                value={priceFilter}
+                        />
                     </div>
                     <div>
                         {renderTagsCheckbox(allTags)}
