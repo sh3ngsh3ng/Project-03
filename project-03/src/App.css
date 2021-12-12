@@ -147,8 +147,8 @@ div.card-title {
 /* start of SearchForm */
 #search-form-btn-div {
     position: fixed;
-    right: 10px;
-    top: 100px;
+    right: 8px;
+    bottom: 40px;
     z-index: 1;
     opacity: 0.5;
 }
@@ -167,6 +167,72 @@ div.card-title {
 
 #search-btn-icon {
     font-size: 18px;
+}
+
+div.offcanvas {
+    background-color: rgba(112, 106, 106, 0.911);
+    width: 80%;
+}
+
+.offcanvas-title {
+    color: rgba(255, 255, 255, 0.911)!important;
+}
+
+#search-form {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.849);
+    border-radius: 20px;
+}
+
+.search-field-div {
+    margin-bottom: 5px;
+}
+
+.search-form-field-title {
+    font-size: 15px;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+#search-form-keywords-input {
+    width: 65%;
+    height: 25px;
+}
+
+#search-form-keywords-input::placeholder {
+    font-size: 15px;
+}
+
+.tag-checkbox {
+    margin-right: 3px;
+}
+
+.tag-checkbox-label {
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+#test {
+    display: inline-block;
+}
+
+#search-field-div-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+#search-form-submit-btn {
+    background-color: rgb(64, 218, 64);
+    color: black;
+    font-weight: 500;
+}
+
+#search-form-submit-btn:hover {
+    transition: 0.3s;
+    box-shadow: 0px 0px 1px 8px #aaaaaa;
+    background-color: lightgreen !important;
+    cursor: pointer;
 }
 
 /* end of SearchForm */

@@ -67,14 +67,14 @@ export default function SearchForm() {
             let checked = selectedTags
             console.log(checked)
             return (
-                <span>
-                    <input className="form-check-input" 
+                <span id="test">
+                    <input className="tag-checkbox form-check-input" 
                         type="checkbox" 
                         value={tag[0]} 
                         id={tag[0]} 
                         onChange={selectTagsCheckbox}
                     />
-                    <label className="form-check-label" for="flexCheckDefault">
+                    <label className="tag-checkbox-label form-check-label" for="flexCheckDefault">
                         {tag[1]}
                     </label>
                 </span>
@@ -95,31 +95,36 @@ export default function SearchForm() {
                     <Offcanvas.Title>Search</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <div>
-                        <input type="text" placeholder="type something here" 
-                            onChange={(evt) => setNameSearch(evt.target.value)}
-                            value = {nameSearch}
-                        />
-                    </div>
-                    {/* <div>
-                        <span>Available Dates: </span><DatePicker selected={startDate} onChange={(date) => setStartDate(date)}/>
-                    </div> */}
-                    <div>
-                        <label>Price (below): ${priceFilter} </label>
-                        <input type="range" 
-                                class="form-range" 
-                                min="10" 
-                                max="100" 
-                                step="10"
-                                onChange={(evt) => setPriceFilter(evt.target.value)}
-                                value={priceFilter}
-                        />
-                    </div>
-                    <div>
-                        {renderTagsCheckbox(allTags)}
-                    </div>
-                    <div>
-                        <btn className="btn btn-primary" onClick={submitSearchForm}>Search</btn>
+                    <div id="search-form">
+                        <div className="search-field-div">
+                            <label className="search-form-field-title">Keywords: </label>
+                            <input type="text" placeholder="enter keywords..."
+                                id="search-form-keywords-input" 
+                                onChange={(evt) => setNameSearch(evt.target.value)}
+                                value = {nameSearch}
+                            />
+                        </div>
+                        {/* <div>
+                            <span>Available Dates: </span><DatePicker selected={startDate} onChange={(date) => setStartDate(date)}/>
+                        </div> */}
+                        <div className="search-field-div">
+                            <label className="search-form-field-title">Price (below ${priceFilter}):  </label>
+                            <input type="range" 
+                                    class="form-range" 
+                                    min="10" 
+                                    max="100" 
+                                    step="10"
+                                    onChange={(evt) => setPriceFilter(evt.target.value)}
+                                    value={priceFilter}
+                            />
+                        </div>
+                        <div className="search-field-div">
+                            <label className="search-form-field-title">Tags: </label>
+                            {renderTagsCheckbox(allTags)}
+                        </div>
+                        <div id="search-field-div-btn">
+                            <btn id="search-form-submit-btn" className="btn btn-primary" onClick={submitSearchForm}>Search</btn>
+                        </div>
                     </div>
                 </Offcanvas.Body>
             </Offcanvas>
