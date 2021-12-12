@@ -18,6 +18,7 @@ export default function SearchForm() {
 
     const [allTags, setAllTags] = useState([])
     const [selectedTags, setSelectedTags] = useState([])
+    const [nameSearch, setNameSearch] = useState("")
 
     const context = useContext(ProductContext)
 
@@ -43,15 +44,22 @@ export default function SearchForm() {
         }
     }
 
+    // event to submit form
     const submitSearchForm = async () => {
         let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us23.gitpod.io/api/products/search", {
             params: {
-                tags: selectedTags
+                tags: selectedTags,
+                name: nameSearch
             }
         })
+        // set listings to show in ProductListing
         context.setSearchResults(response.data)
+        // close OffCanvas
         setShow(false)
+        // reset Tags selection
         setSelectedTags([])
+        // reset text
+        setNameSearch("")
     }
 
     const renderTagsCheckbox = (allTags) => {
@@ -80,7 +88,7 @@ export default function SearchForm() {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <div>
-                        <input type="text" placeholder="type something here"/>
+                        <input type="text" placeholder="type something here" onChange={(evt) => setNameSearch(evt.target.value)}/>
                     </div>
                     <div>
                         <span>From: </span><DatePicker selected={startDate} onChange={(date) => setStartDate(date)}/>
