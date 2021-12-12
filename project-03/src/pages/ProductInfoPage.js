@@ -90,7 +90,6 @@ export default function ProductInfoPage() {
         if (product.productslots.length > 0) {
             return (
                 product.productslots.map((slots) => {
-                    console.log(slots)
                     return <tr>
                         <td className="table-data">{moment(slots.slot_datetime).format('L')}</td>
                         <td className="table-data">{moment(slots.slot_datetime).format('LT')}</td>
@@ -124,11 +123,11 @@ export default function ProductInfoPage() {
                 initial={{ opacity: 0 }}
                 transition={{ type: "spring", delay: 3 }}
             >
-                <div id="product-info-description-div">
+                <div className="product-info-description-div">
                     <span id="description-title-text">Description</span>
                 </div>
 
-                <div id="product-info-description-div">
+                <div className="product-info-description-div">
                     <span>{product.product_description}</span>
                 </div>
             </motion.div>

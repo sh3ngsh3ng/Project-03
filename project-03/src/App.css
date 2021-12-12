@@ -44,18 +44,6 @@ a.nav-link {
 
 
 
-#banner-div {
-    height: 150px;
-    overflow: hidden;
-}
-
-
-#banner-img {
-    width: 100%;
-    opacity: 0.7;
-}
-
-/* end of carousel */
 
 /* start of ProductListingTab */
 
@@ -64,6 +52,7 @@ a.nav-link {
 }
 
 /* end of ProductListingTab */
+
 
 /* start of ProductListing */
 #active-listing-card-div {
@@ -263,7 +252,7 @@ div.offcanvas {
     width: 100%;
 }
 
-#product-info-description-div {
+.product-info-description-div {
     display: flex;
     justify-content: center;
 }
@@ -277,6 +266,10 @@ div.offcanvas {
 
 #product-info-slots-table {
     margin-top: 20px;
+}
+
+th {
+    text-align: center!important;
 }
 
 .table-data {
@@ -309,7 +302,7 @@ div.offcanvas {
 }
 
 #cart-page-submit-btn-div {
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 10%
 }
@@ -533,12 +526,87 @@ div.offcanvas {
 /* end of SignUpForm */
 
 
+@media only screen and (min-width: 425px) {
+    /* start of searchForm */
+    #search-form-btn-div {
+        right: 15px;
+    }
+    
+    #search-form-btn {
+        height: 50px;
+        width: 50px;
+    }
+     
+    #search-btn-icon {
+        font-size: 25px;
+    }
+    /* end of searchForm */
 
+}
 
-/* start of Carousel */
+@media only screen and (min-width: 768px) {
+    /* start of searchForm */
+    #search-form-btn-div {
+        right: 25px;
+    }
 
+    div.offcanvas {
+        width: 50%;
+    }
+    /* end of searchForm */
 
-/* end of Carousel */
+    /* start of ProductInfoPage */
+    #product-info-image-div {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 
+    .product-info-image {
+        height: 250px;
+        border-radius: 20px;
+    }
 
+    .product-info-description-div {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    /* end of ProductInfoPage */
+
+    /* start of Cart Page */
+    .cart-card {
+        padding: 15px 60px 15px 60px!important;
+        margin-right: 80px;
+        margin-left: 80px;
+    }
+
+    /* end of Cart Page */
+}
+
+@media only screen and (min-width: 1024px) {
+    /* start of ProductListingTab */
+    .listing-tab {
+        font-size: 15px;
+    }
+    /* end of ProductListingtab */
+
+    /* start of ProductInfoPage */
+    #product-info-image-div {
+        padding-left: 180px;
+        padding-right: 180px;
+    }
+
+    .product-info-image {
+        height: 300px;
+    }
+
+    .product-info-description-div {
+        padding-right: 50px;
+        padding-left: 50px; 
+    }
+
+   
+    /* end of ProductInfoPage */
+
+}
 
