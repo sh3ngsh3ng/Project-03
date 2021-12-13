@@ -15,8 +15,9 @@ function App() {
 
   return (
     <React.Fragment>
-      <NavBar />
+      
       <Router>
+        <NavBar />
         <Switch>
           {/* Start of Main Page */}
           <Route exact path="/">

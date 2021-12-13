@@ -8,11 +8,11 @@ import { motion } from 'framer-motion'
 
 export default function NavBar() {
 
-    const history = useHistory()
+    let history = useHistory()
 
     const logoutUser = () => {
         localStorage.removeItem("accessToken")
-        history.push("/cart")
+        history.push("/login")
     }
 
     const [show, setShow] = useState(false);
