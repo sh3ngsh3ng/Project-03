@@ -49,9 +49,9 @@ export default function SearchForm() {
     const submitSearchForm = async () => {
         let response = await axios.get("https://escape-rooms-project03.herokuapp.com/api/products/search", {
             params: {
-                tags: selectedTags,
-                name: nameSearch,
-                max_cost: priceFilter
+                // tags: selectedTags,
+                name: nameSearch
+                // max_cost: priceFilter
             }
         })
         // set listings to show in ProductListing
@@ -65,7 +65,6 @@ export default function SearchForm() {
     const renderTagsCheckbox = (allTags) => {
         return allTags.map((tag) => {
             let checked = selectedTags
-            console.log(checked)
             return (
                 <span id="test">
                     <input className="tag-checkbox form-check-input" 
@@ -123,7 +122,7 @@ export default function SearchForm() {
                             {renderTagsCheckbox(allTags)}
                         </div>
                         <div id="search-field-div-btn">
-                            <btn id="search-form-submit-btn" className="btn btn-primary" onClick={submitSearchForm}>Search</btn>
+                            <btn id="search-form-submit-btn" className="btn btn-primary" onClick={() => submitSearchForm()}>Search</btn>
                         </div>
                     </div>
                 </Offcanvas.Body>
