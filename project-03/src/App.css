@@ -24,8 +24,6 @@ div.navbar-nav {
     justify-content: flex-end;
 }
 
-
-
 a.nav-link {
     display: flex;
     justify-content: flex-end;
@@ -39,6 +37,28 @@ a.nav-link {
 #user-icon {
     font-size: 25px;
 }
+
+#logout-confirmation-box {
+    width: 100%!important;
+}
+
+#logout-confirmation-text {
+    text-align: center;
+    background-color: rgba(216, 201, 201, 0.562);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+#logout-btns-div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.logout-btns {
+    width: 50px;
+}
+
 
 /* end of navbar */
 
@@ -545,6 +565,29 @@ th {
 }
 
 @media only screen and (min-width: 768px) {
+
+    /* start of navbar */
+    #logout-confirmation-box {
+        width: 80%!important;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    
+    #logout-confirmation-text {
+        border-radius: 10px;
+    }
+    
+    #logout-btns-div {
+        margin-top: 50px;
+    }
+
+    .logout-btns {
+        width: 70px;
+        font-size: 20px!important;
+    }
+    /* end of navbar */
+
+
     /* start of searchForm */
     #search-form-btn-div {
         right: 25px;

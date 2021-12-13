@@ -20,7 +20,8 @@ export default function NavBar() {
     const handleShow = () => setShow(true);
 
     return (
-        <motion.div animate={{y:0}}
+        <motion.div 
+                    animate={{y:0}}
                     initial={{y:"-100%"}}
                     transition={{
                         type:"spring",
@@ -28,17 +29,18 @@ export default function NavBar() {
                         delay: 0.02
                     }}
         >
-            <Offcanvas show={show} onHide={handleClose} placement="top">
+            <Offcanvas id="logout-confirmation-box" show={show} onHide={handleClose} placement="top">
                 <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Offcanvas</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <h1>Do you want to logout?</h1>
-                    <button className="btn btn-success" onClick={() => {
-                        logoutUser()
-                        handleClose()
-                    }}>Yes</button>
-                    <button className="btn btn-danger" onClick={handleClose}>No</button>
+                    <h1 id="logout-confirmation-text">Do you want to logout?</h1>
+                    <div id="logout-btns-div">
+                        <button className="btn btn-danger logout-btns" onClick={handleClose}>No</button>
+                        <button className="btn btn-success logout-btns" onClick={() => {
+                            logoutUser()
+                            handleClose()
+                        }}>Yes</button>
+                    </div>
                 </Offcanvas.Body>
             </Offcanvas>
             <Navbar expand="lg">
