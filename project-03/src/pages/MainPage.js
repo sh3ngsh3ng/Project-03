@@ -7,9 +7,7 @@ export default function MainPage () {
 
     return (
         <React.Fragment>
-
                 <ProductSection />
-                
         </React.Fragment>
     )
 

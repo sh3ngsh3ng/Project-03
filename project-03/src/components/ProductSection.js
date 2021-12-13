@@ -31,15 +31,11 @@ export default function ProductSection() {
     }
 
     return (
-        <div>
+        <div id="product-section-div">
             <ProductContext.Provider value ={context}>
-                <div>
                     <ProductListingTab />
-                </div>
                     <SearchForm/>
-                <div>
                     <ProductListing />
-                </div>
             </ProductContext.Provider>
         </div>
     )
