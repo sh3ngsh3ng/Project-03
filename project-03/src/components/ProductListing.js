@@ -20,7 +20,6 @@ export default function ProductListing() {
     const getBadgeColor = (tag) => {
         let legend = {
             'horror': 'bg-danger',
-            'suspense': 'bg-dark',
             'humour': "bg-warning",
             'relaxing': 'bg-success',
             'mystery': "bg-dark",
