@@ -50,7 +50,7 @@ export default function ProductInfoPage() {
 
     const addItemToCart = async (productSlotId) => {
         if (checkIfLogin()) {
-            let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us23.gitpod.io/api/cart/"
+            let response = await axios.get("https://escape-rooms-project03.herokuapp.com/api/cart/"
             + getUserId() + "/" + productSlotId + "/" + "add-item", sendJwt())
             setAddedToCart(true)
         } else {

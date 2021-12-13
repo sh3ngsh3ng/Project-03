@@ -82,7 +82,7 @@ export default function SignUpPage() {
     const submitForm = async (obj) =>{
         let check = simpleClientValidation(obj)
         if (check) {
-            let result = await axios.post("https://3000-amber-guppy-qbo1ebq4.ws-us21.gitpod.io/api/user/sign-up" , {
+            let result = await axios.post("https://escape-rooms-project03.herokuapp.com/api/user/sign-up" , {
                 ...obj
             })
 
