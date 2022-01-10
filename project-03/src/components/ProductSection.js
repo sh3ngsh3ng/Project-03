@@ -13,7 +13,6 @@ export default function ProductSection() {
     useEffect(async() => {
         let response = await axios.get("https://escape-rooms-project03.herokuapp.com/api/products/active-listings")
         setListings(response.data)
-        console.log(listings)
     }, [])
 
     const context = {

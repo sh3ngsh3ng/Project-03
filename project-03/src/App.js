@@ -12,7 +12,6 @@ import ProductInfoPage from "./pages/ProductInfoPage"
 
 function App() {
 
-
   return (
     <React.Fragment>
       
@@ -26,9 +25,9 @@ function App() {
           {/* End of Main Page */}
 
           {/* Start of Contact Us Page */}
-          <Route exact path="/contact-us">
+          {/* <Route exact path="/contact-us">
             <h1>You can contact us here!</h1>
-          </Route>
+          </Route> */}
           {/* End of Contact us page */}
 
           {/* Start of Login Page */}

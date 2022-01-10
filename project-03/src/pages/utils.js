@@ -1,6 +1,5 @@
 import jwt_decode from "../../node_modules/jwt-decode"
 
-
 export const sendJwt = () => {
         return {
         "headers": {
