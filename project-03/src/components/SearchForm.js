@@ -25,7 +25,7 @@ export default function SearchForm() {
 
     // fetch all tags to render in search form
     useEffect(async ()=> {
-        let response = await axios.get("https://escape-rooms-project03.herokuapp.com/api/products/tags")
+        let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us25.gitpod.io/api/products/tags")
         setAllTags(response.data)
     }, [])
 
@@ -47,11 +47,11 @@ export default function SearchForm() {
 
     // event to submit form
     const submitSearchForm = async () => {
-        let response = await axios.get("https://escape-rooms-project03.herokuapp.com/api/products/search", {
+        let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us25.gitpod.io/api/products/search", {
             params: {
-                // tags: selectedTags,
-                name: nameSearch
-                // max_cost: priceFilter
+                tags: selectedTags,
+                name: nameSearch,
+                max_cost: priceFilter
             }
         })
         // set listings to show in ProductListing

@@ -14,7 +14,8 @@ export default function CartPage(){
 
     
 
-    const BASE_URL = "https://escape-rooms-project03.herokuapp.com/api/cart/"
+    // const BASE_URL = "https://escape-rooms-project03.herokuapp.com/api/cart/"
+    const BASE_URL = "https://3000-amber-guppy-qbo1ebq4.ws-us25.gitpod.io/api/cart"
 
     // use effect to fetch cart items on load
     useEffect( async()=> {
