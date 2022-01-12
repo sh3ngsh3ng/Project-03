@@ -4,7 +4,8 @@ import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
 import ProductContext from "../context/ProductContext"
-
+import Select from "react-select"
+import makeAnimated from "react-select/animated"
 
 export default function SearchForm() {
 
@@ -17,6 +18,8 @@ export default function SearchForm() {
 
     const [allTags, setAllTags] = useState([])
     const [selectedTags, setSelectedTags] = useState([])
+    const [roomType, setRoomType] = useState("")
+    const [playTime, setPlayTime] = useState([])
     const [nameSearch, setNameSearch] = useState("")
     const [priceFilter, setPriceFilter] = useState(100)
 
@@ -47,11 +50,14 @@ export default function SearchForm() {
 
     // event to submit form
     const submitSearchForm = async () => {
+        let editedPlayTime = playTime.map(obj => obj.value) // onkly the value
         let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us25.gitpod.io/api/products/search", {
             params: {
                 tags: selectedTags,
                 name: nameSearch,
-                max_cost: priceFilter
+                max_cost: priceFilter,
+                room_type: roomType,
+                play_time: editedPlayTime
             }
         })
         // set listings to show in ProductListing
@@ -60,6 +66,8 @@ export default function SearchForm() {
         setShow(false)
         // reset Tags selection
         setSelectedTags([])
+        setPlayTime([])
+        setRoomType("")
     }
 
     const renderTagsCheckbox = (allTags) => {
@@ -81,6 +89,21 @@ export default function SearchForm() {
         })
     }
 
+    // play time select options
+    let playTimeOptions = [ 
+                            {value: 0, label: 'All'},
+                            {value: 30, label: '30 mins'}, 
+                            {value: 45, label: '45 mins'}, 
+                            {value: 60, label: '1 hour'},
+                            {value: 90, label: '1 hour 30 mins'},
+                            {value: 120, label: '2 hours'},
+                            ]
+    let roomTypeOptions = [
+                            {value: 'all', label: 'All Room Type'},
+                            {value: 'escape_room', label: 'Escape Room'},
+                            {value: 'mystery_murder', label: 'Mystery Murder'},
+                            {value: 'amazing_race', label: "Amazing Race"}
+                            ]
 
     return (
         <div>
@@ -102,6 +125,14 @@ export default function SearchForm() {
                                 onChange={(evt) => setNameSearch(evt.target.value)}
                                 value = {nameSearch}
                             />
+                        </div>
+                        <div className="search-field-div">
+                            <label className="search-form-field-title">Room Type: </label>
+                            <Select options={roomTypeOptions} value={roomTypeOptions.filter((opt) => opt.value === roomType)} onChange={(evt) => setRoomType(evt.value)}/>
+                        </div>
+                        <div className="search-field-div">
+                            <label className="search-form-field-title">Play Time: </label>
+                            <Select isMulti components={makeAnimated()} value={playTime} options={playTimeOptions} onChange={(evt) => setPlayTime(evt)}/>
                         </div>
                         {/* <div>
                             <span>Available Dates: </span><DatePicker selected={startDate} onChange={(date) => setStartDate(date)}/>
