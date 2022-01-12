@@ -15,9 +15,10 @@ export default function ProductListingTab() {
     return (
         <div>
             <ul className="nav nav-tabs">
-                <Tabs tabName="Escape Rooms" value="all"/>
-                <Tabs tabName="Amazing Race" value="featured"/>
-                <Tabs tabName="Mystery Murder" value="promotions"/>
+                <Tabs tabName="All" value="all"/>
+                <Tabs tabName="Escape Rooms" value="escape_room"/>
+                <Tabs tabName="Amazing Race" value="amazing_race"/>
+                <Tabs tabName="Mystery Murder" value="mystery_murder"/>
             </ul>
         </div>
     )
