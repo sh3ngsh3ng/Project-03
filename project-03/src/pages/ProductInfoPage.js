@@ -52,7 +52,7 @@ export default function ProductInfoPage() {
         if (checkIfLogin()) {
             // console.log(getUserId())
             // return
-            let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us25.gitpod.io/api/cart/"
+            let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us27.gitpod.io/api/cart/"
             + getUserId() + "/" + productSlotId + "/" + "add-item", sendJwt())
             setAddedToCart(true)
             
@@ -93,6 +93,7 @@ export default function ProductInfoPage() {
         if (product.productslots.length > 0) {
             return (
                 product.productslots.map((slots) => {
+                    console.log(slots.id)
                     return <tr>
                         <td className="table-data">{moment(slots.slot_datetime).format('L')}</td>
                         <td className="table-data">{moment(slots.slot_datetime).format('LT')}</td>
