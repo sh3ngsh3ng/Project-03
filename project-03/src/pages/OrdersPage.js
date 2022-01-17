@@ -1,7 +1,9 @@
 import React from "react"
 import NavBar from "../components/NavBar"
 import {useState} from "react"
-
+import PendingOrders from "../components/PendingOrders"
+import OrderHistory from "../components/OrderHistory"
+import Notifications from "../components/Notifications"
 
 
 export default function OrdersPage () {
@@ -11,6 +13,23 @@ export default function OrdersPage () {
     const changeContent = (evt) => {
         setActiveContent(evt.target.value)
     }
+
+    const renderContent = () => {
+        if (activeContent == "pending") {
+            // call pending orders, display pending Orders
+            return <PendingOrders />
+        }
+        if (activeContent == "notification") {
+            return <Notifications />
+        }
+        if (activeContent == "history") {
+            return <OrderHistory />
+        }
+    }
+
+
+
+
 
 
     return (
@@ -35,9 +54,13 @@ export default function OrdersPage () {
                     </div>
                 </div>
                 {/* end of navigation pane */}
+
+
                 {/* start of display content */}
-                <div id="orders-content-display" className="container-fluid">
+                <div id="orders-content-display" className="container-fluid" style={{"background": "white"}}>
                     <h1>show content</h1>
+                    {/* render content */}
+                    {renderContent()}
                 </div>
                 {/* end of display content */}
             </div>
