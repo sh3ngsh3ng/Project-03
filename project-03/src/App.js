@@ -16,12 +16,12 @@ function App() {
     <React.Fragment>
       
       <Router>
-        <NavBar />
+        
         <Switch>
           {/* Start of Main Page */}
-          <Route exact path="/">
-            <MainPage />
-          </Route>
+            <Route exact path="/">
+              <MainPage />
+            </Route>
           {/* End of Main Page */}
 
           {/* Start of Contact Us Page */}
@@ -31,9 +31,11 @@ function App() {
           {/* End of Contact us page */}
 
           {/* Start of Login Page */}
+          
           <Route exact path="/login">
-            <LoginPage />
+              <LoginPage />
           </Route>
+          
           {/* End of login page */}
 
           {/* start of Sign up page */}
@@ -54,6 +56,7 @@ function App() {
           {/* End of product Display Page */}
 
         </Switch>
+
       </Router>
     </React.Fragment>
     

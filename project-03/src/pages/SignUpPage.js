@@ -1,9 +1,11 @@
 import axios from "axios"
-import {React, useState, useEffect} from "react"
+import React from "react"
+import {useState, useEffect} from "react"
 import {useHistory} from "react-router-dom"
 import { userLogo } from "../images"
 import { motion } from "framer-motion/dist/es"
 import FlashMessage from "react-flash-message"
+import NavBar from "../components/NavBar"
 
 
 export default function SignUpPage() {
@@ -96,7 +98,9 @@ export default function SignUpPage() {
 
 
     return(
-            <div id="sign-up-form-div">
+        <React.Fragment>
+            <NavBar />
+            <div id="sign-up-form-div" className="container">
                 {flashMessageSignUpError()}
                 <div id="sign-up-form">
                     <div id="sign-up-form-brand-logo-div">
@@ -123,5 +127,6 @@ export default function SignUpPage() {
                     </div>
                 </div>
             </div>
+        </React.Fragment>
     )
 }
