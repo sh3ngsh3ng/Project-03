@@ -9,22 +9,24 @@ export default function CartItemsList() {
 
     return (
         <React.Fragment>
+            <div className="container">
             {context.cartItems().map(function(cartItem, i) {
                 return (
-                    <motion.div className="cart-item-div"
+                    <motion.div 
                         animate={{
                             x: 0
                         }}
                         initial={{
-                            x: "-100%"
+                            x: "-1000%"
                         }}
                         transition={{
                             type: "spring",
                             stiffness: 50,
                             delay: i * 0.05
                         }}
+                        style={{"z-index": "-10"}}
                     >
-
+                        <div className="cart-item-div">
                         <div className="cart-card card-body">
                             <div class="cart-item-header-div">
                                 <h1 class="cart-item-title">{cartItem.productslot.product.product_name}</h1>
@@ -50,10 +52,12 @@ export default function CartItemsList() {
                             </div>
                             
                         </div>
+                        </div>
 
                     </motion.div>
                 )
             })}
+            </div>
         </React.Fragment>
     )
 }

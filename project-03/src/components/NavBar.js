@@ -75,9 +75,9 @@ export default function NavBar() {
                                 } id="basic-nav-dropdown"
                                 
                                 >
-                                    <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">My Orders</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
+                                    <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+                                    <NavDropdown.Item href="/orders">My Orders</NavDropdown.Item>
+                                    <NavDropdown.Item href="/settings">Settings</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item href="#" onClick={() => {
                                         handleShow()

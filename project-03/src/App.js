@@ -8,6 +8,7 @@ import LoginPage from "./pages/LoginPage"
 import CartPage from './pages/CartPage'
 import MainPage from "./pages/MainPage"
 import ProductInfoPage from "./pages/ProductInfoPage"
+import OrdersPage from './pages/OrdersPage';
 
 
 function App() {
@@ -54,6 +55,11 @@ function App() {
             <ProductInfoPage />
           </Route>
           {/* End of product Display Page */}
+
+
+          <Route exact path="/orders">
+            <OrdersPage />
+          </Route>
 
         </Switch>
 
