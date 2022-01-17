@@ -1,9 +1,11 @@
-import {React, useEffect, useState} from 'react'
+import React from "react"
+import {useEffect, useState} from 'react'
 import {useParams} from "react-router-dom"
 import axios from "axios"
 import CartItemsContext from "../context/CartItemsContext"
 import CartItemsList from '../components/CartItemsList'
 import { sendJwt } from "./utils"
+import NavBar from '../components/NavBar'
 
 export default function CartPage(){
 
@@ -82,16 +84,19 @@ export default function CartPage(){
     }
 
     return(
-        <CartItemsContext.Provider value={context}>
-            <div style={{display:"flex", justifyContent: "center", marginTop: "20px"}}>
-                <h1 style={{textDecoration: "underline"}}>Cart Items</h1>
-            </div>
-            <div>
-                <span id="cart-page-clear-cart-btn" role="button" onClick={() => context.deleteCart()}>Clear Cart</span>
-            </div>
-            {renderCheckOutBtn()}
-            <CartItemsList />
-        </CartItemsContext.Provider>
+        <React.Fragment>
+            <NavBar/>
+            <CartItemsContext.Provider value={context}>
+                <div style={{display:"flex", justifyContent: "center", marginTop: "20px"}}>
+                    <h1 style={{textDecoration: "underline"}}>Cart Items</h1>
+                </div>
+                <div>
+                    <span id="cart-page-clear-cart-btn" role="button" onClick={() => context.deleteCart()}>Clear Cart</span>
+                </div>
+                {renderCheckOutBtn()}
+                <CartItemsList />
+            </CartItemsContext.Provider>
+        </React.Fragment>
 
     )
 

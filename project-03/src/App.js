@@ -14,7 +14,7 @@ function App() {
 
   return (
     <React.Fragment>
-      
+      <div className="container">
       <Router>
         
         <Switch>
@@ -58,6 +58,7 @@ function App() {
         </Switch>
 
       </Router>
+      </div>
     </React.Fragment>
     
     

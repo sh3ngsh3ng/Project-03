@@ -28,6 +28,7 @@ export default function NavBar() {
                         stiffness: 50,
                         delay: 0.02
                     }}
+                   
         >
             <Offcanvas id="logout-confirmation-box" show={show} onHide={handleClose} placement="top">
                 <Offcanvas.Header closeButton>
@@ -71,8 +72,11 @@ export default function NavBar() {
                             {checkIfLogin() ?
                                 <NavDropdown title={
                                     <span><i id="user-icon"class="bi bi-person-circle"></i></span>
-                                } id="basic-nav-dropdown">
+                                } id="basic-nav-dropdown"
+                                
+                                >
                                     <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">My Orders</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item href="#" onClick={() => {

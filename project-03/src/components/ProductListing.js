@@ -33,21 +33,22 @@ export default function ProductListing() {
     return (
         <div id="active-listing-card-div" role="button">
             {context.getListings().map((listing, i) => (
-                
-                // card
-                <motion.Card className="active-listing-card"
-                    animate={{
-                        x: 0
-                    }}
-                    initial={{
-                        x: "-1000%"
-                    }}
-                    transition={{
-                        type: "spring",
-                        stiffness: 50,
-                        delay: i * 0.3
-                    }}
+                <motion.div 
+                animate={{
+                    x: 0
+                }}
+                initial={{
+                    x: "-1000%"
+                }}
+                transition={{
+                    type: "spring",
+                    stiffness: 50,
+                    delay: i * 0.3
+                }}
+                style={{"z-index": "-10"}}
                 >
+                
+                <Card className="active-listing-card">
                     <Card.Img  variant="top" src={listing.image_url} />
                     <Card.Body>
                         <Card.Title>{listing.product_name}</Card.Title>
@@ -75,7 +76,10 @@ export default function ProductListing() {
                     <div className="active-listing-price-div">
                         <span className="active-listing-price">{"$" + listing.product_price / 100}/pax</span>
                     </div>
-                </motion.Card>
+                </Card>
+
+                </motion.div>
+
             ))}
         </div>
     )
