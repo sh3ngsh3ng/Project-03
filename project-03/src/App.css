@@ -1,15 +1,17 @@
 /* start of body */
 #body {
-    background-image: url("./images/background-image6.png");
-    background-repeat: repeat;
+    background-size: cover;
+    background-image: linear-gradient(to top, #272b30, #3b424c, #4f5b6a, #657589, #7c90aa);
 }
 /* end of body */
 
 
+
+
+
 /* start of navbar */
 .navbar {
-    background-color: rgba(128, 119, 119, 0.959);
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 #nav-bar-logo {
@@ -63,6 +65,31 @@ a.nav-link {
 /* end of navbar */
 
 
+/* Start of CArousel */
+#carousel-div {
+}
+
+div.slick-slider.slick-initialized {
+    display: none!important;
+}
+
+button.slick-arrow.slick-prev {
+    display: none!important;
+}
+
+button.slick-arrow.slick-next {
+    display:none!important;
+}
+
+.carousel-img {
+    margin: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* end of Carousel */
 
 
 /* start of ProductListingTab */
@@ -666,6 +693,25 @@ th {
     }
     /* end of searchForm */
 
+    /* Start of CArousel */
+    #carousel-div {
+    }
+
+    div.slick-slider.slick-initialized {
+        display: block!important;
+    }
+
+
+    .carousel-img {
+        margin: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    /* end of Carousel */
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -787,6 +833,17 @@ th {
 
     /* end of OrderHistory compoenent */
     
+    /* Start of CArousel */
+
+    button.slick-arrow.slick-prev {
+        display: block!important;
+    }
+
+    button.slick-arrow.slick-next {
+        display:block!important;
+    }
+
+    /* end of Carousel */
 
 }
 
@@ -905,6 +962,16 @@ th {
 
 
     /* end of OrderHistory compoenent */
+
+    .carousel-img {
+        margin: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    
+    /* end of Carousel */
 
 }
 

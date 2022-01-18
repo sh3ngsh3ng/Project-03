@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { checkIfLogin, getUserId } from '../pages/utils'
 import { brandLogo2 } from '../images'
 import { motion } from 'framer-motion'
+import TypeAnimation from "react-type-animation"
 
 export default function NavBar() {
 
@@ -18,6 +19,8 @@ export default function NavBar() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const sequence = ['Escape Room', 2000, 'Murder Mystery', 2000, 'Amazing Race', 2000]
 
     return (
         <motion.div 
@@ -47,7 +50,8 @@ export default function NavBar() {
             <Navbar expand="lg">
                 <Container>
                     <Navbar.Brand href="/">
-                        <img id="nav-bar-logo" src={brandLogo2} />
+                        <img id="nav-bar-logo" src="https://res.cloudinary.com/dt7n0rbhy/image/upload/v1642524100/lrlymzh1d32dodjmmsgb.png" />
+                        <TypeAnimation cursor={true} sequence={sequence} wrapper = "span" repeat ={Infinity}/>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
