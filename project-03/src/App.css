@@ -623,6 +623,16 @@ th {
 /* end of PendingOrders component */
 
 
+/* start of OrderHistory component */
+.list-group-item.history {
+    height: 100%;
+}
+
+
+/* end of OrderHistory compoenent */
+
+
+
 
 
 @media only screen and (min-width: 425px) {

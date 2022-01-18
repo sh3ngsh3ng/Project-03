@@ -36,11 +36,14 @@ export default function PendingOrders() {
                                 <p className="pending-order-text">Room: {item.productslot.product.product_name}</p>
                                 <p className="pending-order-text">Price: ${item.productslot.product.product_price / 100}</p>
                                 <p className="pending-order-text">Quantity: {item.order_item_quantity}</p>
+                                <p className="pending-order-text">Slot Time: {item.productslot.slot_datetime.slice(0, 10) + 
+                                 " ,"} {item.productslot.slot_datetime.slice(11, 16)}</p>
+                                {/* {item.productslot.slot_datetime.slice(0, 10) + " "} */}
                             </div>
                         </div>
 
                         <div className="pending-order-bottom-div">
-                            <span className="pending-order-text">Order Date: {item.productslot.slot_datetime.slice(0, 10) + " "} </span>
+                            <span className="pending-order-text">Order Date: {item.order.order_date.slice(0, 10)} </span>
                             <span className="pending-order-text">Order Status: {item.order_item_status.charAt(0).toUpperCase() + item.order_item_status.slice(1)}</span>
                         </div>
                     </div>
