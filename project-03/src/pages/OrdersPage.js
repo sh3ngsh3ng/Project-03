@@ -50,30 +50,28 @@ export default function OrdersPage () {
         <React.Fragment>
             <OrdersContext.Provider value={context}>
             <NavBar />
-            <div className="container" style={{"display": "flex", "height": "100vh"}}>
+            <div id="orders-page-container" className="container">
 
                 {/* Start of navigation pane */}
                 <div id="orders-navigation-pane">
-                    <div>
-                        User's Profile
-                    </div>
-                    <div className="list-group">
+                    <div id="orders-page-navigation-pane" className="list-group">
+                        <button class={"list-group-item list-group-item-action " + (activeContent == "profile"? "active": null)} value="profile" onClick={(evt) => changeContent(evt)}
+                        ><span className="navigation-pane-text">Profile</span></button>
                         <button class={"list-group-item list-group-item-action " + (activeContent == "notification"? "active": null)} value="notification" onClick={(evt) => changeContent(evt)}
-                        >Notifications
-                        <span class="badge bg-primary rounded-pill">14</span>
+                        ><span className="navigation-pane-text">Notifications</span>
+                        {/* <span class="badge bg-primary rounded-pill navigation-pane-text">14</span> */}
                         </button>
                         <button class={"list-group-item list-group-item-action " + (activeContent == "pending"? "active": null)} value="pending" onClick={(evt) => changeContent(evt)}
-                        >Pending Orders</button>
+                        ><span className="navigation-pane-text">Pending</span></button>
                         <button class={"list-group-item list-group-item-action " + (activeContent == "history"? "active": null)} value="history" onClick={(evt) => changeContent(evt)}
-                        >Order History</button>
+                        ><span className="navigation-pane-text">Order History</span></button>
                     </div>
                 </div>
                 {/* end of navigation pane */}
 
 
                 {/* start of display content */}
-                <div id="orders-content-display" className="container-fluid" style={{"background": "white"}}>
-                    <h1>show content</h1>
+                <div id="orders-page-content-display" className="container-fluid">
                     {/* render content */}
                     {renderContent()}
                 </div>

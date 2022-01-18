@@ -31,7 +31,7 @@ export default function ProductListing() {
 
 
     return (
-        <div id="active-listing-card-div" role="button">
+        <div id="active-listing-card-div" >
             {context.getListings().map((listing, i) => (
                 <motion.div 
                 animate={{
@@ -45,7 +45,6 @@ export default function ProductListing() {
                     stiffness: 50,
                     delay: i * 0.3
                 }}
-                style={{"z-index": "-10"}}
                 >
                 
                 <Card className="active-listing-card">

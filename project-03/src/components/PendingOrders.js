@@ -19,22 +19,33 @@ export default function PendingOrders() {
     // context.getPendingOrders().then((results) => setData(results.data))
     return (
         <React.Fragment>
+
             {data.map((item) => {
                 return (
-                    <div className="container" style={{"border": "1px black solid"}}>
-                        <p>Product Name: {item.productslot.product.product_name}</p>
-                        <p>Big image: {item.productslot.product.image_url}</p>
-                        <p>Thumbnail: {item.productslot.product.thumbnail_url}</p>
-                        <p>Roomtype: {item.productslot.product.room_type}</p>
-                        <p>Price: ${item.productslot.product.product_price / 100}</p>
-                        <p>Datetime: {item.productslot.slot_datetime}</p>
-                        <p>Order Status: {item.order.order_status}</p>
-                        <p>Payment Status: {item.order_item_status}</p>
-                        <p>Quantity: {item.order_item_quantity}</p>
+                    <div className= "container pending-order-item">
+                        <div style={{"display": "flex", "justify-content": "space-between", "margin-bottom": "10px"}}>
+                            <span className="pending-order-text">{item.productslot.product.room_type}</span>
+                            <span className="pending-order-text">Payment Status: {item.order.order_status}</span>
+                        </div>
+                        {/* <p>Big image: {item.productslot.product.image_url}</p> */}
+                        {/* <img src={item.productslot.product.image_url}/> */}
+                        {/* <p>Thumbnail: {item.productslot.product.thumbnail_url}</p> */}
+                        <div className="d-flex" style={{"margin-bottom": "10px"}}>
+                            <img style={{"height": "100%"}} src={item.productslot.product.thumbnail_url} style={{"margin-right": "20px"}}/>
+                            <div>
+                                <p className="pending-order-text" style={{"margin": "0"}}>Room: {item.productslot.product.product_name}</p>
+                                <p className="pending-order-text" style={{"margin": "0"}}>Price: ${item.productslot.product.product_price / 100}</p>
+                                <p className="pending-order-text" style={{"margin": "0"}}>Quantity: {item.order_item_quantity}</p>
+                            </div>
+                        </div>
+
+                        <div style={{"display": "flex","justify-content": "space-between"}}>
+                            <span className="pending-order-text">Order Date: {item.productslot.slot_datetime.slice(0, 10) + " "} </span>
+                            <span className="pending-order-text">Order Status: {item.order_item_status}</span>
+                        </div>
                     </div>
                 )
             })}
-            "PendingOrder Component"
         </React.Fragment>
     )
 }
