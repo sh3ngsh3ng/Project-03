@@ -590,11 +590,34 @@ th {
 /* start of PendingOrders Component*/
 .pending-order-text {
     font-size: 12px;
+    margin: 0;
 }
 
 .pending-order-item {
     padding: 10px;
     box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.123);
+}
+
+.pending-order-header-div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.pending-order-body-div {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.pending-order-img {
+    height: 100%;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.pending-order-bottom-div {
+    display: flex;
+    justify-content: space-between
 }
 
 /* end of PendingOrders component */
