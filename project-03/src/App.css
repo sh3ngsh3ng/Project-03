@@ -66,8 +66,6 @@ a.nav-link {
 
 
 /* Start of CArousel */
-#carousel-div {
-}
 
 
 
@@ -692,8 +690,7 @@ th {
     /* end of searchForm */
 
     /* Start of CArousel */
-    #carousel-div {
-    }
+ 
 
     div.slick-slider.slick-initialized {
         display: block!important;

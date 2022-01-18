@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Carousel from '../components/Carousel'
 import RoomSlider from '../components/RoomSlider'
 import NavBar from '../components/NavBar'
+import axios from 'axios'
+import ProductSection from '../components/ProductSection'
 
 
 export default function MainPage () {
 
-    var settings = {
-        infinite: true,
-        speed: 500,
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        fade: true,
-    };
+    const [featuredProducts, setFeaturedProducts] = useState([])
+    const BASE_URL = "https://3000-amber-guppy-qbo1ebq4.ws-us27.gitpod.io/api/products/active-listings"
+
+    useEffect(() => {
+        async function getData() {
+            let response = await axios.get(BASE_URL)
+            console.log(response.data)
+        }
+        getData()
+    }, [])
+
+    
 
     return (
         <React.Fragment>
@@ -21,7 +28,6 @@ export default function MainPage () {
             {/* Featured */}
             <h1>Featured Rooms</h1>
             <RoomSlider />
-            {/* Escape Rooms */}
             <h1>Escape Rooms</h1>
             <RoomSlider />
             {/* Mystery Murder */}
@@ -30,6 +36,7 @@ export default function MainPage () {
             {/* Amazing Race */}
             <h1>Amazing Race</h1>
             <RoomSlider />
+            
             
         </React.Fragment>
     )
