@@ -9,7 +9,7 @@ export default function Notifications() {
 
     return (
         <React.Fragment>
-            "Notification Component"
+            "Work-in-progress"
         </React.Fragment>
     )
 }

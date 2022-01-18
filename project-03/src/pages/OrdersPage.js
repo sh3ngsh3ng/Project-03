@@ -58,8 +58,9 @@ export default function OrdersPage () {
         <React.Fragment>
             <OrdersContext.Provider value={context}>
             <NavBar />
+            <div id="orders-page-div">
             <div id="orders-page-container" className="container">
-
+                
                 {/* Start of navigation pane */}
                 <div id="orders-navigation-pane">
                     <div id="orders-page-navigation-pane" className="list-group">
@@ -84,6 +85,7 @@ export default function OrdersPage () {
                     {renderContent()}
                 </div>
                 {/* end of display content */}
+            </div>
             </div>
             </OrdersContext.Provider>
         </React.Fragment>

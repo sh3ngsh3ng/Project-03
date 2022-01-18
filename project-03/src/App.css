@@ -550,6 +550,10 @@ th {
 
 /* start of OrdersPage */
 #orders-page-container {
+    height:100%;
+}
+
+#orders-page-div {
     height: 100vh;
 }
 
@@ -561,8 +565,9 @@ th {
 
 #orders-page-content-display {
     background: white;
-    height: 100vh;
+    height: 100%;
     padding: 10px;
+    overflow: auto;
 }
 
 .list-group-item {
