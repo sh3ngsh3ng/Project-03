@@ -24,7 +24,7 @@ export default function PendingOrders() {
                 return (
                     <div className= "container pending-order-item">
                         <div className="pending-order-header-div">
-                            <span className="pending-order-text">{item.productslot.product.room_type.replace("_", " ").replace(/(?: |\b)(\w)/g, function(key) { return key.toUpperCase()})}</span>
+                            <span className="pending-order-text">Type: {item.productslot.product.room_type.replace("_", " ").replace(/(?: |\b)(\w)/g, function(key) { return key.toUpperCase()})}</span>
                             <span className="pending-order-text">Payment Status: {item.order.order_status.charAt(0).toUpperCase() + item.order.order_status.slice(1)}</span>
                         </div>
                         {/* <p>Big image: {item.productslot.product.image_url}</p> */}
@@ -38,7 +38,8 @@ export default function PendingOrders() {
                                 <p className="pending-order-text">Quantity: {item.order_item_quantity}</p>
                                 <p className="pending-order-text">Slot Time: {item.productslot.slot_datetime.slice(0, 10) + 
                                  " ,"} {item.productslot.slot_datetime.slice(11, 16)}</p>
-                                {/* {item.productslot.slot_datetime.slice(0, 10) + " "} */}
+
+                                <p className="pending-order-text">Play Time: {item.productslot.product.play_time} min</p>
                             </div>
                         </div>
 

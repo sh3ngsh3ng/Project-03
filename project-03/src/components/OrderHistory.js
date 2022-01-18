@@ -21,7 +21,7 @@ export default function OrderHistory() {
         <React.Fragment>
             {data.map((order) => {
                 return (
-                    <div className="container" style={{"background": "grey", "margin-bottom": "10px"}}>
+                    <div className="container" style={{"background": "grey", "margin-bottom": "10px", "padding": "10px"}}>
                         <p>Order Date: {order.order_date}</p>
                         <p>Total Cost: {order.order_total_cost}</p>
                         <ol className="list-group list-group-numbered">
@@ -34,7 +34,7 @@ export default function OrderHistory() {
                                             <div>Slot Time: {item.productslot.slot_datetime.slice(0, 10) + " ,"} {item.productslot.slot_datetime.slice(11, 16)}</div>
                                             <div>Order Status: {item.order_item_status.charAt(0).toUpperCase() + item.order_item_status.slice(1)}</div>
                                         </div>
-                                        <span>x {item.order_item_quantity}</span>
+                                        <span>Qty x {item.order_item_quantity}</span>
                                     </li>
                                 )
                             })}

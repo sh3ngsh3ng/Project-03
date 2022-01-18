@@ -561,7 +561,8 @@ th {
 
 #orders-page-content-display {
     background: white;
-    height: 100vh
+    height: 100vh;
+    padding: 10px;
 }
 
 .list-group-item {
