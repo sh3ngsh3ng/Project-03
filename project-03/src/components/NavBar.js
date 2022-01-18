@@ -51,7 +51,8 @@ export default function NavBar() {
                 <Container>
                     <Navbar.Brand href="/">
                         <img id="nav-bar-logo" src="https://res.cloudinary.com/dt7n0rbhy/image/upload/v1642524100/lrlymzh1d32dodjmmsgb.png" />
-                        <TypeAnimation cursor={true} sequence={sequence} wrapper = "span" repeat ={Infinity}/>
+                        {/* <img id="nav-bar-logo" src="https://res.cloudinary.com/dt7n0rbhy/image/upload/v1642524939/wuo6pkolitrvjtjplk82.png" /> */}
+                        {/* <TypeAnimation cursor={true} sequence={sequence} wrapper = "span" repeat ={Infinity}/> */}
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
