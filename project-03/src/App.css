@@ -69,17 +69,15 @@ a.nav-link {
 #carousel-div {
 }
 
-div.slick-slider.slick-initialized {
-    display: none!important;
-}
 
-button.slick-arrow.slick-prev {
+
+/* button.slick-arrow.slick-prev {
     display: none!important;
 }
 
 button.slick-arrow.slick-next {
     display:none!important;
-}
+} */
 
 .carousel-img {
     margin: 0;

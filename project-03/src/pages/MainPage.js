@@ -1,6 +1,6 @@
 import React from 'react'
 import Carousel from '../components/Carousel'
-import FeaturedRooms from '../components/FeaturedRooms'
+import RoomSlider from '../components/RoomSlider'
 import NavBar from '../components/NavBar'
 
 
@@ -18,7 +18,18 @@ export default function MainPage () {
         <React.Fragment>
             <NavBar/>
             <Carousel />
-            <FeaturedRooms />
+            {/* Featured */}
+            <h1>Featured Rooms</h1>
+            <RoomSlider />
+            {/* Escape Rooms */}
+            <h1>Escape Rooms</h1>
+            <RoomSlider />
+            {/* Mystery Murder */}
+            <h1>MysteryMurder</h1>
+            <RoomSlider />
+            {/* Amazing Race */}
+            <h1>Amazing Race</h1>
+            <RoomSlider />
             
         </React.Fragment>
     )
