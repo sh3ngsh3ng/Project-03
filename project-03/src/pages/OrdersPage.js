@@ -40,6 +40,14 @@ export default function OrdersPage () {
                 }
             })
             return results
+        },
+        'getOrderHistory': async() => {
+            let results = axios.get(BASE_URL + "order-history", {
+                params: {
+                    'userId': getUserId()
+                }
+            })
+            return results
         }
     }
 
