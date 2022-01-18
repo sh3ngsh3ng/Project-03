@@ -24,8 +24,8 @@ export default function PendingOrders() {
                 return (
                     <div className= "container pending-order-item">
                         <div className="pending-order-header-div">
-                            <span className="pending-order-text">{item.productslot.product.room_type}</span>
-                            <span className="pending-order-text">Payment Status: {item.order.order_status}</span>
+                            <span className="pending-order-text">{item.productslot.product.room_type.replace("_", " ").replace(/(?: |\b)(\w)/g, function(key) { return key.toUpperCase()})}</span>
+                            <span className="pending-order-text">Payment Status: {item.order.order_status.charAt(0).toUpperCase() + item.order.order_status.slice(1)}</span>
                         </div>
                         {/* <p>Big image: {item.productslot.product.image_url}</p> */}
                         {/* <img src={item.productslot.product.image_url}/> */}
@@ -41,7 +41,7 @@ export default function PendingOrders() {
 
                         <div className="pending-order-bottom-div">
                             <span className="pending-order-text">Order Date: {item.productslot.slot_datetime.slice(0, 10) + " "} </span>
-                            <span className="pending-order-text">Order Status: {item.order_item_status}</span>
+                            <span className="pending-order-text">Order Status: {item.order_item_status.charAt(0).toUpperCase() + item.order_item_status.slice(1)}</span>
                         </div>
                     </div>
                 )
