@@ -584,7 +584,6 @@ th {
     pointer-events: none;
 }
 
-
 /* end of OrdersPage */
 
 
@@ -625,8 +624,18 @@ th {
 
 
 /* start of OrderHistory component */
-.list-group-item.history {
+
+
+.order-history-item-div {
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.order-history-item {
     height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 
@@ -730,6 +739,50 @@ th {
     }
     /* end of Signup Page */
 
+
+    /* start of OrdersPage */
+    #orders-page-container {
+        display: flex;
+        padding: 10px;
+    }
+
+    #orders-page-navigation-pane {
+        display: flex;
+        flex-direction: column!important;
+        margin: 0;
+        width: 150px;
+    }
+
+
+    .list-group-item {
+        height: 40px;
+    }
+
+    .navigation-pane-text {
+        font-size: 15px;
+    }
+
+    /* end of OrdersPage */
+
+    /* start of OrderHistory component */
+
+
+    .order-history-item-div {
+        margin-bottom: 10px;
+        padding: 10px;
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    }
+
+    .order-history-item {
+        height: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+    /* end of OrderHistory compoenent */
+    
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -787,6 +840,66 @@ th {
 
    
     /* end of ProductInfoPage */
+
+
+    /* start of OrdersPage */
+    #orders-page-container {
+        padding: 20px;
+    }
+
+    #orders-page-navigation-pane {
+        width: 200px;
+    }
+
+    .list-group-item {
+        height: 50px;
+    }
+
+    .navigation-pane-text {
+        font-size: 18px;
+    }
+    /* end of OrdersPage */
+
+
+    /* start of PendingOrders Component*/
+    .pending-order-text {
+        font-size: 18px;
+    }
+
+
+    .pending-order-header-div {
+        margin-bottom: 15px;
+    }
+
+    .pending-order-body-div {
+        margin-bottom: 15px;
+    }
+
+    .pending-order-img {
+        height: 60px;
+        margin-right: 25px;
+        border-radius: 5px;
+    }
+
+    /* end of PendingOrders component */
+
+    /* start of OrderHistory component */
+
+
+    .order-history-item-div {
+        margin-bottom: 10px;
+        padding: 10px;
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    }
+
+    .order-history-item {
+        height: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+    /* end of OrderHistory compoenent */
 
 }
 
