@@ -21,13 +21,13 @@ export default class RoomSlider extends Component {
         let settings = {
             infinite: true,
             speed: 500,
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 6,
+            slidesToScroll: 6,
             initialSlide: 0,
-            // focusOnSelect: true,
-            // centerMode: true,
-            // adaptiveHeight: true,
-            // variableWidth: true,
+            focusOnSelect: true,
+            centerMode: true,
+            adaptiveHeight: true,
+            variableWidth: true,
             responsive: [
                 {
                     breakpoint: 1025,
@@ -79,9 +79,6 @@ export default class RoomSlider extends Component {
                     <Slider {...settings}>
                         {this.props.data.map((each) => {
                             return (
-                                // <div className="img-slide-div">
-                                //     <img className="img-slide" src={each.image_url}/>
-                                // </div>
                                 <SliderCard data={each}/>
                             )
                         })}

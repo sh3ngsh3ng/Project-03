@@ -1,7 +1,12 @@
 /* start of body */
 #body {
     background-size: cover;
-    background-image: linear-gradient(to top, #272b30, #3b424c, #4f5b6a, #657589, #7c90aa);
+    /* background-image: linear-gradient(to top, #272b30, #3b424c, #4f5b6a, #657589, #7c90aa); */
+    /* background-image: linear-gradient(to left top, #c19a6b, #bd9667, #b99263, #b68f60, #b28b5c); */
+    /* background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    /* background-image: linear-gradient(to bottom, #924972, #96598b, #976ba3, #957dba, #908fcf, #839cdc, #74a9e5, #66b5eb, #52bee8, #48c5e1, #4dccd6, #5fd1c9); */
+    /* background-image: linear-gradient(to bottom, #924972, #985e8e, #9c73a8, #9d89c1, #9e9fd6, #98acdf, #95b8e4, #96c4e8, #96c8e1, #9bcbd9, #a4ced2, #afcfcd); */
+    background-image: linear-gradient(to bottom, #48405c, #595576, #6b6b90, #7c82ac, #8c9ac8, #8ea8d4, #91b6de, #96c4e8, #96c8e1, #9bcbd9, #a4ced2, #afcfcd);
 }
 /* end of body */
 
@@ -17,6 +22,24 @@
 #nav-bar-logo {
     height: 50px;
 }
+
+#nav-bar-logo:hover {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
 
 div.navbar-nav {
     margin: 0!important;
@@ -699,7 +722,13 @@ th {
     border-radius: 6px;
 }
 
+#carousel-div > div > button.slick-arrow.slick-next {
+    display: none!important;
+}
 
+#carousel-div > div > button.slick-arrow.slick-prev {
+    display: none!important;
+}
 
 /* end of RoomSlider */
 
