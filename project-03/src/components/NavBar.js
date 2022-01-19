@@ -57,6 +57,7 @@ export default function NavBar() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
+                            <Nav.Link href="/search"><i class="bi bi-search"></i></Nav.Link>
                             {/* <Nav.Link href="/contact-us">Contact Us</Nav.Link> */}
                             <Nav.Link href={checkIfLogin() ? "/logout" : "/login"}></Nav.Link>
 

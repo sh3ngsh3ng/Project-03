@@ -1,19 +1,10 @@
-import {React, useEffect, useState, useContext} from 'react'
-import {Button, Offcanvas} from 'react-bootstrap'
-import "react-datepicker/dist/react-datepicker.css";
-import axios from 'axios';
+import React, {useEffect, useState, useContext} from "react"
+import axios from "axios"
 import ProductContext from "../context/ProductContext"
 import Select from "react-select"
 import makeAnimated from "react-select/animated"
 
-export default function SearchForm() {
-
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-    // const [startDate, setStartDate] = useState(new Date())
-    
+export default function SearchFormV2() {
 
     const [allTags, setAllTags] = useState([])
     const [selectedTags, setSelectedTags] = useState([])
@@ -46,7 +37,6 @@ export default function SearchForm() {
         }
     }
 
-
     // event to submit form
     const submitSearchForm = async () => {
         let editedPlayTime = playTime.map(obj => obj.value) // onkly the value
@@ -59,10 +49,9 @@ export default function SearchForm() {
                 play_time: editedPlayTime
             }
         })
+        console.log(response.data)
         // set listings to show in ProductListing
         context.setSearchResults(response.data)
-        // close OffCanvas
-        setShow(false)
         // reset Tags selection
         setSelectedTags([])
         setPlayTime([])
@@ -88,35 +77,26 @@ export default function SearchForm() {
         })
     }
 
+
     // play time select options
     let playTimeOptions = [ 
-                            {value: 0, label: 'All'},
-                            {value: 30, label: '30 mins'}, 
-                            {value: 45, label: '45 mins'}, 
-                            {value: 60, label: '1 hour'},
-                            {value: 90, label: '1 hour 30 mins'},
-                            {value: 120, label: '2 hours'},
-                            ]
+        {value: 0, label: 'All'},
+        {value: 30, label: '30 mins'}, 
+        {value: 45, label: '45 mins'}, 
+        {value: 60, label: '1 hour'},
+        {value: 90, label: '1 hour 30 mins'},
+        {value: 120, label: '2 hours'},
+        ]
     let roomTypeOptions = [
-                            {value: 'all', label: 'All Room Type'},
-                            {value: 'escape_room', label: 'Escape Room'},
-                            {value: 'mystery_murder', label: 'Mystery Murder'},
-                            {value: 'amazing_race', label: "Amazing Race"}
-                            ]
+            {value: 'all', label: 'All Room Type'},
+            {value: 'escape_room', label: 'Escape Room'},
+            {value: 'mystery_murder', label: 'Mystery Murder'},
+            {value: 'amazing_race', label: "Amazing Race"}
+            ]
 
     return (
-        <div>
-            <div id="search-form-btn-div">
-                <Button id="search-form-btn" onClick={handleShow}>
-                    <i id="search-btn-icon" class="bi bi-search"></i>
-                </Button>
-            </div>
-            <Offcanvas show={show} onHide={handleClose} placement={'end'}>
-                <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Search</Offcanvas.Title>
-                </Offcanvas.Header>
-                <Offcanvas.Body>
-                    <div id="search-form">
+        <React.Fragment>
+            <div id="search-form">
                         <div className="search-field-div">
                             <label className="search-form-field-title">Keywords: </label>
                             <input type="text" placeholder="enter keywords..."
@@ -155,10 +135,6 @@ export default function SearchForm() {
                             <btn id="search-form-submit-btn" className="btn btn-primary" onClick={() => submitSearchForm()}>Search</btn>
                         </div>
                     </div>
-                </Offcanvas.Body>
-            </Offcanvas>
-        </div>
+        </React.Fragment>
     )
-
-
 }

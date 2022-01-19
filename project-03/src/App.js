@@ -1,5 +1,4 @@
 import './App.css';
-import NavBar from "./components/NavBar"
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -9,6 +8,7 @@ import CartPage from './pages/CartPage'
 import MainPage from "./pages/MainPage"
 import ProductInfoPage from "./pages/ProductInfoPage"
 import OrdersPage from './pages/OrdersPage';
+import SearchPage from './pages/SearchPage';
 
 
 function App() {
@@ -55,6 +55,12 @@ function App() {
             <ProductInfoPage />
           </Route>
           {/* End of product Display Page */}
+
+          {/* start of SearchPage */}
+          <Route exact path="/search">
+            <SearchPage />
+          </Route>
+          {/* End of SearchPage */}
 
 
           <Route exact path="/orders">

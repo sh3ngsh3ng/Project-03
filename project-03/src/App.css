@@ -16,6 +16,9 @@
 /* start of navbar */
 .navbar {
     border-radius: 0px 0px 10px 10px;
+    /* background-color: #adabab; */
+    background-color: #abacad;
+    margin-bottom: 10px;
 }
 
 #nav-bar-logo {
@@ -815,14 +818,41 @@ th {
 
 
     /* start of searchForm */
-    #search-form-btn-div {
+    /* #search-form-btn-div {
         right: 25px;
     }
 
     div.offcanvas {
         width: 50%;
+    } */
+
+/* start of SearchFormV2 */
+    .search-field-div {
+        margin-bottom: 18px;
     }
-    /* end of searchForm */
+    #search-form-container {
+        width: 40%;
+    }
+
+    #product-section-div {
+        width: 60%
+    }
+
+    .search-form-field-title {
+        font-size: 15px;
+    }
+
+    #search-form-keywords-input {
+        height: 28px;
+        width: 65%;
+    }
+
+    #search-form-keywords-input::placeholder {
+        font-size: 12px;
+    }
+
+/* end of SearchFormV2 */
+
 
     /* start of ProductInfoPage */
     #product-info-image-div {
@@ -973,6 +1003,39 @@ th {
         padding: 40px;
     }
     /* end of Signup Page */
+
+    /* start of SearchFormV2 */
+    .search-field-div {
+        margin-bottom: 20px;
+    }
+    #search-form-container {
+        width: 35%;
+    }
+
+    #product-section-div {
+        width: 65%
+    }
+
+    .search-form-field-title {
+        font-size: 20px;
+    }
+
+    #search-form-keywords-input {
+        height: 30px;
+        width: 63%;
+        margin-left: 5px;
+    }
+
+    #search-form-keywords-input::placeholder {
+        font-size: 15px;
+    }
+
+    .tag-checkbox-label {
+        margin-right: 8px;
+        font-size: 18px;
+    }
+
+/* end of SearchFormV2 */
 
 
     /* start of ProductListingTab */
