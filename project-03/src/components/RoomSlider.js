@@ -3,17 +3,31 @@ import Slider from "react-slick"
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SliderCard from "./SliderCard";
+
+
+
+
 
 export default class RoomSlider extends Component {
 
+    
 
     render() {
+
+        
+
+
         let settings = {
             infinite: true,
             speed: 500,
             slidesToShow: 3,
             slidesToScroll: 3,
             initialSlide: 0,
+            // focusOnSelect: true,
+            // centerMode: true,
+            // adaptiveHeight: true,
+            // variableWidth: true,
             responsive: [
                 {
                     breakpoint: 1025,
@@ -45,56 +59,34 @@ export default class RoomSlider extends Component {
                 {
                     breakpoint: 375,
                     settings: {
+                        infinite: true,
+                        dots: false,
                         slidesToShow: 3,
                         slidesToScroll: 3,
-                        infinite: true,
-                        dots: false
+                        focusOnSelect: true,
+                        centerMode: true,
+                        adaptiveHeight: true,
+                        variableWidth: true,
                     }
                 },
             ]
         };
 
 
-
-
         return (
-            <React.Fragment>
-                <div className="container">
+
+                <div className="container slider-container">
                     <Slider {...settings}>
-                    {/* Conditional rendering of url */}
-                    <div>
-                        <h3>1</h3>
-                    </div>
-                    <div>
-                        <h3>2</h3>
-                    </div>
-                    <div>
-                        <h3>3</h3>
-                    </div>
-                    <div>
-                        <h3>4</h3>
-                    </div>
-                    <div>
-                        <h3>5</h3>
-                    </div>
-                    <div>
-                        <h3>6</h3>
-                    </div>
-                    <div>
-                        <h3>5</h3>
-                    </div>
-                    <div>
-                        <h3>6</h3>
-                    </div>
-                    <div>
-                        <h3>5</h3>
-                    </div>
-                    <div>
-                        <h3>6</h3>
-                    </div>
+                        {this.props.data.map((each) => {
+                            return (
+                                // <div className="img-slide-div">
+                                //     <img className="img-slide" src={each.image_url}/>
+                                // </div>
+                                <SliderCard data={each}/>
+                            )
+                        })}
                     </Slider>
                 </div>
-            </React.Fragment>
 
         )
     }

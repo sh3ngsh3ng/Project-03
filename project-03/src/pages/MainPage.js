@@ -15,6 +15,7 @@ export default function MainPage () {
         async function getData() {
             let response = await axios.get(BASE_URL)
             console.log(response.data)
+            setFeaturedProducts(response.data)
         }
         getData()
     }, [])
@@ -27,15 +28,15 @@ export default function MainPage () {
             <Carousel />
             {/* Featured */}
             <h1>Featured Rooms</h1>
-            <RoomSlider />
+            <RoomSlider data={featuredProducts}/>
             <h1>Escape Rooms</h1>
-            <RoomSlider />
+            {/* <RoomSlider /> */}
             {/* Mystery Murder */}
             <h1>MysteryMurder</h1>
-            <RoomSlider />
+            {/* <RoomSlider /> */}
             {/* Amazing Race */}
             <h1>Amazing Race</h1>
-            <RoomSlider />
+            {/* <RoomSlider /> */}
             
             
         </React.Fragment>

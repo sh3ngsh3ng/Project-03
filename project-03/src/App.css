@@ -670,6 +670,39 @@ th {
 /* end of OrderHistory compoenent */
 
 
+/* start of RoomSlider */
+/* .slider-container {
+    align-items: center;
+    
+} */
+
+.slider-container > .slick-slider > .slick-list > .slick-track {
+    height: 120px;
+}
+
+.slick-slide {
+    display: flex!important;
+    align-items: center;
+}
+
+.img-slide-div {
+    height: 65px!important;
+    width: 105px!important;
+    border-radius: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.img-slide {
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+}
+
+
+
+/* end of RoomSlider */
+
 
 
 
