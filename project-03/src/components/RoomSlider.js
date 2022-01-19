@@ -24,6 +24,7 @@ export default class RoomSlider extends Component {
             slidesToShow: 6,
             slidesToScroll: 1,
             dots: false,
+            swipeToSlide: true,
             // initialSlide: 0,
             // focusOnSelect: true,
             // centerMode: true,
@@ -36,6 +37,7 @@ export default class RoomSlider extends Component {
                         slidesToShow: 5,
                         slidesToScroll: 1,
                         dots: false,
+                        swipeToSlide: true
                     }
                 },
                 {
@@ -44,6 +46,7 @@ export default class RoomSlider extends Component {
                         slidesToShow: 4,
                         slidesToScroll: 1,
                         dots: false,
+                        swipeToSlide: true
                     }
                 },
                 {
@@ -71,18 +74,13 @@ export default class RoomSlider extends Component {
                 <SliderCard data={each} />
             )
         })
-        const {element} = this.props
-        // https://stackoverflow.com/questions/56438595/react-slick-slider-items-are-miss-ordered-first-item-is-rendered-as-last-items
 
         return (
-                // element != null && element.length > 0 &&
                 <div className="container slider-container">
+                    <h2 style={{"position": "absolute"}}>{this.props.title}</h2>
+                    <div style={{"min-height": "10px"}}></div>
+
                     <Slider {...settings}>
-                        {/* {this.props.data.map((each) => {
-                            return (
-                                <SliderCard data={each}/>
-                            )
-                        })} */}
                         {slides}
                     </Slider>
                 </div>

@@ -30,15 +30,16 @@ export default function MainPage () {
     return (
         <React.Fragment>
             <NavBar/>
+            
             <Carousel />
-            <h1>Featured Rooms</h1>
-            <RoomSlider data={featuredProducts}/>
-            {/* <h1>Escape Rooms</h1>
-            <RoomSlider data={escapeRooms}/>
-            <h1>MysteryMurder</h1>
-            <RoomSlider data={mysteryMurders}/>
-            <h1>Amazing Race</h1>
-            <RoomSlider data={amazingRaces}/> */}
+
+            <RoomSlider data={featuredProducts} title={"Featured Rooms"}/>
+
+            <RoomSlider data={escapeRooms} title={"Escape Rooms"}/>
+
+            <RoomSlider data={mysteryMurders} title={"Mystery Murders"}/>
+
+            <RoomSlider data={amazingRaces} title={"Amazing Races"}/>
             
             
         </React.Fragment>
