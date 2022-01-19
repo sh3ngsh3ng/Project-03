@@ -2,7 +2,8 @@
 #body {
     background-size: cover;
     /* background-color: #414448; */
-    background-color: #2b4468;
+    /* background-color: #2b4468; */
+    background-color: #f5f5f7;
     /* background-image: linear-gradient(to bottom, #53575c, #576164, #5f6b69, #6b746c, #7c7c70); */
     /* background-image: linear-gradient(to bottom, #35393f, #3d4548, #48504f, #565b57, #666661); */
 }
