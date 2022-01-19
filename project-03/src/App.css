@@ -1,12 +1,8 @@
 /* start of body */
 #body {
     background-size: cover;
-    /* background-image: linear-gradient(to top, #272b30, #3b424c, #4f5b6a, #657589, #7c90aa); */
-    /* background-image: linear-gradient(to left top, #c19a6b, #bd9667, #b99263, #b68f60, #b28b5c); */
-    /* background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
-    /* background-image: linear-gradient(to bottom, #924972, #96598b, #976ba3, #957dba, #908fcf, #839cdc, #74a9e5, #66b5eb, #52bee8, #48c5e1, #4dccd6, #5fd1c9); */
-    /* background-image: linear-gradient(to bottom, #924972, #985e8e, #9c73a8, #9d89c1, #9e9fd6, #98acdf, #95b8e4, #96c4e8, #96c8e1, #9bcbd9, #a4ced2, #afcfcd); */
-    background-image: linear-gradient(to bottom, #48405c, #595576, #6b6b90, #7c82ac, #8c9ac8, #8ea8d4, #91b6de, #96c4e8, #96c8e1, #9bcbd9, #a4ced2, #afcfcd);
+    background-image: linear-gradient(to bottom, #53575c, #576164, #5f6b69, #6b746c, #7c7c70);
+    /* background-image: linear-gradient(to bottom, #35393f, #3d4548, #48504f, #565b57, #666661); */
 }
 /* end of body */
 
@@ -902,6 +898,31 @@ th {
 
     /* end of Carousel */
 
+
+    /* start of RoomSlider */
+
+    .slider-container > .slick-slider > .slick-list > .slick-track {
+        height: 200px;
+    }
+
+    .slick-slide {
+        display: flex!important;
+        align-items: center;
+    }
+
+    .img-slide-div {
+        height: 120px!important;
+        width: 180px!important;
+        border-radius: 10px;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+
+
+
+    /* end of RoomSlider */
+
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1032,3 +1053,25 @@ th {
 
 }
 
+
+@media only screen and (min-width: 1024px) { 
+    /* start of RoomSlider */
+
+    .slider-container > .slick-slider > .slick-list > .slick-track {
+        height: 300px;
+    }
+
+    .img-slide-div {
+        height: 180px!important;
+        width: 260px!important;
+        border-radius: 10px;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+
+
+
+    /* end of RoomSlider */
+
+
+}

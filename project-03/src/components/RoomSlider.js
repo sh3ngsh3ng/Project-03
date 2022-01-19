@@ -19,7 +19,6 @@ export default class RoomSlider extends Component {
 
 
         let settings = {
-            infinite: true,
             speed: 500,
             slidesToShow: 6,
             slidesToScroll: 6,
@@ -30,11 +29,19 @@ export default class RoomSlider extends Component {
             variableWidth: true,
             responsive: [
                 {
+                    breakpoint: 1440,
+                    settings: {
+                        slidesToShow: 8,
+                        slidesToScroll: 3,
+                        dots: false
+                    }
+                },
+
+                {
                     breakpoint: 1025,
                     settings: {
                         slidesToShow: 6,
-                        slidesToScroll: 6,
-                        infinite: true,
+                        slidesToScroll: 3,
                         dots: false
                     }
                 },
@@ -42,8 +49,7 @@ export default class RoomSlider extends Component {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 5,
-                        slidesToScroll: 5,
-                        infinite: true,
+                        slidesToScroll: 1,
                         dots: false
                     }
                 },
@@ -51,18 +57,16 @@ export default class RoomSlider extends Component {
                     breakpoint: 425,
                     settings: {
                         slidesToShow: 4,
-                        slidesToScroll: 4,
-                        infinite: true,
+                        slidesToScroll: 2,
                         dots: false
                     }
                 },
                 {
                     breakpoint: 375,
                     settings: {
-                        infinite: true,
                         dots: false,
                         slidesToShow: 3,
-                        slidesToScroll: 3,
+                        slidesToScroll: 1,
                         focusOnSelect: true,
                         centerMode: true,
                         adaptiveHeight: true,
