@@ -19,7 +19,7 @@ export default function SliderCard(props) {
 
     return(
         <React.Fragment>
-            <animated.div className="img-slide-div"
+            {/* <animated.div className="img-slide-div"
             onMouseLeave={() => {
                 setSpring({
                     scale: 1,
@@ -42,10 +42,34 @@ export default function SliderCard(props) {
                 boxShadow: spring.boxShadow,
                 zIndex: spring.zIndex
             }}>
-                <img
-                
+                <img className="img-slide" src={props.data.image_url} />
+            </animated.div> */}
+            <div className="img-slide-div">
+                <animated.img 
+                onMouseLeave={() => {
+                    setSpring({
+                        scale: 1,
+                        boxShadow: "3px 3px 5px rgba(0, 0, 0, 0.62)",
+                        zIndex:0
+                    })
+                }}
+                onMouseEnter={() => {
+                    setSpring({
+                        scale: 1.5,
+                        boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.42)",
+                        zIndex: 10,
+                        opacity: 1,
+                    })
+                }}
+                style={{
+                    transform: spring.scale.to(
+                        s => `scale(${s}) rotateZ(.1deg)`
+                    ),
+                    boxShadow: spring.boxShadow,
+                    zIndex: spring.zIndex
+                }}
                 className="img-slide" src={props.data.image_url} />
-            </animated.div>
+            </div>
         </React.Fragment>
 
     )

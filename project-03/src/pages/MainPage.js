@@ -16,8 +16,7 @@ export default function MainPage () {
     useEffect(() => {
         async function getData() {
             let response = await axios.get(BASE_URL)
-            console.log(response.data)
-            console.log(response.data)
+            console.log("data caleed =>", response.data)
             setFeaturedProducts(response.data)
             setEscapeRooms(response.data)
             setMysteryMurders(response.data)
@@ -34,12 +33,12 @@ export default function MainPage () {
             <Carousel />
             <h1>Featured Rooms</h1>
             <RoomSlider data={featuredProducts}/>
-            <h1>Escape Rooms</h1>
+            {/* <h1>Escape Rooms</h1>
             <RoomSlider data={escapeRooms}/>
             <h1>MysteryMurder</h1>
             <RoomSlider data={mysteryMurders}/>
             <h1>Amazing Race</h1>
-            <RoomSlider data={amazingRaces}/>
+            <RoomSlider data={amazingRaces}/> */}
             
             
         </React.Fragment>

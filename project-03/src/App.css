@@ -697,22 +697,30 @@ th {
     
 } */
 
+
+
+
 .slider-container > .slick-slider > .slick-list > .slick-track {
     height: 120px;
 }
+
 
 .slick-slide {
     display: flex!important;
     align-items: center;
 }
 
+/* .slick-list {
+    padding: 0!important;
+} */
+
 .img-slide-div {
     height: 65px!important;
     width: 105px!important;
     border-radius: 6px;
-    margin-right: 5px;
-    margin-left: 5px;
+    padding: 0 2px;
 }
+
 
 .img-slide {
     height: 100%;
@@ -766,6 +774,17 @@ th {
     }
 
     /* end of Carousel */
+
+    /* start of Room slider */
+    .img-slide-div {
+        height: 75px!important;
+        width: 120px!important;
+    }
+
+    /* end of Room Slider */
+
+
+
 
 }
 
@@ -907,14 +926,9 @@ th {
         height: 200px;
     }
 
-    .slick-slide {
-        display: flex!important;
-        align-items: center;
-    }
-
     .img-slide-div {
-        height: 120px!important;
-        width: 180px!important;
+        height: 90px!important;
+        width: 150px!important;
         border-radius: 10px;
         margin-right: 8px;
         margin-left: 8px;
@@ -922,8 +936,6 @@ th {
     .img-slide {
         border-radius: 10px;
     }
-
-
 
     /* end of RoomSlider */
 
@@ -1056,19 +1068,15 @@ th {
     
     /* end of Carousel */
 
-}
-
-
-@media only screen and (min-width: 1024px) { 
     /* start of RoomSlider */
 
     .slider-container > .slick-slider > .slick-list > .slick-track {
-        height: 300px;
+        height: 250px;
     }
 
     .img-slide-div {
-        height: 180px!important;
-        width: 280px!important;
+        height: 120px!important;
+        width: 170px!important;
         border-radius: 15px;
         margin-right: 8px;
         margin-left: 8px;
@@ -1079,6 +1087,31 @@ th {
     }
 
 
+    /* end of RoomSlider */
+
+    
+
+}
+
+
+@media only screen and (min-width: 1440px) { 
+    /* start of RoomSlider */
+
+    .slider-container > .slick-slider > .slick-list > .slick-track {
+        height: 300px;
+    }
+
+    .img-slide-div {
+        height: 140px!important;
+        width: 200px!important;
+        border-radius: 15px;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+
+    .img-slide {
+        border-radius: 15px;
+    }
 
     /* end of RoomSlider */
 
