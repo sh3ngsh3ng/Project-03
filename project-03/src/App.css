@@ -716,6 +716,7 @@ th {
 } */
 
 .img-slide-div {
+    position: relative;
     height: 65px!important;
     width: 105px!important;
     border-radius: 6px;
