@@ -110,11 +110,10 @@ button.slick-arrow.slick-next {
 
 
 /* start of ProductListing */
-#active-listing-card-div {
+/* #active-listing-card-div {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
 }
 
 .active-listing-card {
@@ -128,8 +127,21 @@ button.slick-arrow.slick-next {
 }
 
 
+.card-img-top {
+    height: 150px;
+    border-radius: 15px 15px 0 0!important;
+}
+
+
+
 .active-listing-card-body {
-    height: 80px;
+    height: 60px;
+}
+
+div.card-title {
+    margin: 2px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .active-listing-card-description {
@@ -163,14 +175,6 @@ button.slick-arrow.slick-next {
     font-style: italic;
 }
 
-div.card-title {
-    margin: 2px;
-}
-
-.card-img-top {
-    height: 150px;
-    border-radius: 15px 15px 0 0!important;
-}
 
 .card-badge-div {
     width:100%;
@@ -185,9 +189,105 @@ div.card-title {
 
 .active-card-badge {
     margin-right: 2px;
-}
+} */
 
 /* end of ProductListing */
+
+/* start of ProductSection */
+#product-section-div {
+    padding: 0;
+}
+/* end of ProductSection */
+
+
+/* start of productlistingv2 */
+#product-listing-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 160px;
+    height: 280px;
+    margin: 3px;
+}
+
+.card-img-top {
+    height: 100px;
+    object-fit: cover;
+    width: 100%
+}
+
+.card-body {
+    height: 180px;
+    padding: 8px!important;
+}
+
+.card-title-div {
+    height: 20px;
+}
+
+.card-title-text {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.cards-tags-div {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 15px;
+}
+
+.cards-tags-div::-webkit-scrollbar {
+    display: none
+}
+
+span.card-badge {
+    font-size: 10px;
+    margin-right: 2px
+}
+
+.card-text-div {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 90px;
+}
+
+.card-btn-div {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.card-btn {
+    width: 45%;
+    background-color: #1877f2;
+}
+
+/* .active-listing-card-button-div {
+    background-color: white;
+    display:flex;
+    justify-content: center;
+}
+
+.active-listing-card-btn {
+    width: 45%;
+    background: #1877f2;
+} */
+
+
+
+
+/* end of productlistingv2 */
+
+
 
 /* start of SearchForm */
 #search-form-btn-div {
@@ -958,6 +1058,97 @@ th {
 }
 
 /* end of ProductDescription */
+
+
+/* start of ProductListing */
+#active-listing-card-div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%
+}
+
+.active-listing-card {
+    display: inline-block;
+    margin: 10px 8px 10px 8px;
+    width: 16rem;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.5);
+    background-color: white;
+    border-radius: 15px;
+    z-index: -1000;
+}
+
+/* .for-scale {
+    transform: scale(0.5)!important;
+} */
+
+.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.active-listing-card-body {
+    height: 80px;
+}
+
+.active-listing-card-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.active-listing-card-button-div {
+    background-color: white;
+    display:flex;
+    justify-content: center;
+}
+
+.active-listing-card-btn {
+    width: 45%;
+    background: #1877f2;
+}
+
+.active-listing-price-div {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
+
+.active-listing-price {
+    font-size: 12px;
+    font-style: italic;
+}
+
+div.card-title {
+    margin: 2px;
+}
+
+.card-img-top {
+    height: 150px;
+    border-radius: 15px 15px 0 0!important;
+}
+
+.card-badge-div {
+    width:100%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.card-badge-div::-webkit-scrollbar {
+    display: none;
+}
+
+.active-card-badge {
+    margin-right: 2px;
+}
+
+/* end of ProductListing */
+
+
 
 }
 

@@ -1,5 +1,5 @@
-import {React, useContext} from 'react'
-import {Card, Button} from 'react-bootstrap'
+import React, { useContext} from 'react'
+// import {Card, Button} from 'react-bootstrap'
 import ProductContext from "../context/ProductContext"
 import {useHistory} from "react-router-dom"
 import {motion} from "framer-motion"
@@ -31,26 +31,65 @@ export default function ProductListing() {
 
 
     return (
-        <div id="active-listing-card-div" >
+        <React.Fragment>
+            <div id="product-listing-div" >
+                {context.getListings().map((listing, i) => {
+                    return (
+                        <div class="card">
+                        {/* card img*/}
+                        <div>
+                            <img src={listing.image_url} class="card-img-top" alt="..."/>
+                        </div>
+                        
+                        {/* card body */}
+                        <div class="card-body">
+
+                            {/* title div */}
+                            <div className="card-title-div">
+                                <h5 class="card-title-text">{listing.product_name}</h5>
+                            </div>
+                            
+                            {/* tags div */}
+                            <div className="card-tags-div">
+                                {listing.tags.map((tag) => {
+                                    return <span className={"card-badge badge rounded-pill " +  getBadgeColor(tag.name)}>{tag.name}</span>
+                                })}
+                            </div>
+
+                            {/* text div */}
+                            <div className="card-text-div" >
+                                <p class="card-text">{listing.product_description}</p>
+                            </div>
+
+                            {/* button div */}
+                            <div className="card-btn-div">
+                                <a class="card-btn" href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                            
+                            
+                            {/* price div */}
+                            <div>
+                            <span className="active-listing-price">{"$" + listing.product_price / 100}/pax</span>
+                            </div>
+
+                        </div>
+                        </div>
+                    )
+                })}
+            </div>
+        </React.Fragment>
+    )
+}
+
+{/* <div id="active-listing-card-div" >
             {context.getListings().map((listing, i) => (
-                <motion.div 
-                animate={{
-                    x: 0
-                }}
-                initial={{
-                    x: "-1000%"
-                }}
-                transition={{
-                    type: "spring",
-                    stiffness: 50,
-                    delay: i * 0.3
-                }}
-                >
+                <motion.div animate={{x: 0}} initial={{x: "-1000%"}} transition={{type: "spring",stiffness: 50,delay: i * 0.3}}>
                 
                 <Card className="active-listing-card">
                     <Card.Img  variant="top" src={listing.image_url} />
+
                     <Card.Body>
-                        <Card.Title>{listing.product_name}</Card.Title>
+                        <Card.Title >{listing.product_name}</Card.Title>
 
                         <div className="card-badge-div">
                             {listing.tags.map((tag)=> {
@@ -67,6 +106,8 @@ export default function ProductListing() {
                             </Card.Text>
                         </div>
                     </Card.Body>
+
+
                     <div className="active-listing-card-button-div">
                         <Button className="active-listing-card-btn" variant="primary" onClick={()=>{
                             moreInfo(listing)
@@ -80,8 +121,4 @@ export default function ProductListing() {
                 </motion.div>
 
             ))}
-        </div>
-    )
-}
-
-
+        </div> */}

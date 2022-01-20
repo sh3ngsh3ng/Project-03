@@ -64,32 +64,6 @@ export default function BookingPage() {
         }
     }
 
-    // const animateLetters = () => {
-    //     let arrayOfLetters = Array.from(product.product_name)
-    //     return (
-    //         arrayOfLetters.map(function (letter, i) {
-
-    //             return (
-    //                 <motion.span
-    //                     className="product-title-letters"
-    //                     animate={{
-    //                         opacity: 1
-    //                     }}
-    //                     initial={{
-    //                         opacity: 0
-    //                     }}
-    //                     transition={{
-    //                         type: "spring",
-    //                         delay: i * 0.08
-    //                     }}
-    //                 >
-    //                     {letter}
-    //                 </motion.span>
-    //             )
-    //         })
-    //     )
-    // }
-
 
 
     const renderSlotsRow = () => {

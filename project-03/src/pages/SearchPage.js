@@ -40,22 +40,28 @@ export default function SearchPage() {
     return (
         <React.Fragment>
             <ProductContext.Provider value ={context}>
-
+            
             <NavBar />
+
+            {/* mobile version search form */}
             <MediaQuery maxWidth={767.9}>
                 <SearchForm />
             </MediaQuery>
             
             <div style={{"display": "flex"}}>
+
+                {/* non-mobile search form */}
                 <div id="search-form-container">
                     <MediaQuery minWidth={768}>
                         <SearchFormV2 />
                     </MediaQuery>
                 </div>
-            
 
+
+                {/* product display */}
                 <div id="product-section-div" className="container">
-                    <ProductListingTab />
+                    {/* only show productlistingtab for mobile */}
+                    {/* <ProductListingTab />  */}
                     <ProductListing />
                 </div>
             </div>
