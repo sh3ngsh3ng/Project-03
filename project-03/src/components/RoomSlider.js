@@ -86,8 +86,7 @@ export default class RoomSlider extends Component {
 
         return (
                 <div className="container slider-container">
-                    <h2 style={{"position": "absolute"}}>{this.props.title}</h2>
-                    <div style={{"min-height": "10px"}}></div>
+                    <h2 className="slider-title" >{this.props.title}</h2>
 
                     <Slider {...settings}>
                         {slides}

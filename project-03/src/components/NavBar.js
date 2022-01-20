@@ -47,7 +47,7 @@ export default function NavBar() {
                     </div>
                 </Offcanvas.Body>
             </Offcanvas>
-            <Navbar expand="lg">
+            <Navbar expand={true}>
                 <Container>
                     <Navbar.Brand href="/">
                         <img id="nav-bar-logo" src="https://res.cloudinary.com/dt7n0rbhy/image/upload/v1642524100/lrlymzh1d32dodjmmsgb.png" />
@@ -57,25 +57,33 @@ export default function NavBar() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="/search"><i class="bi bi-search"></i></Nav.Link>
+                            <Nav.Link href="/search"><i class="bi bi-search cart-icon"></i></Nav.Link>
                             {/* <Nav.Link href="/contact-us">Contact Us</Nav.Link> */}
-                            <Nav.Link href={checkIfLogin() ? "/logout" : "/login"}></Nav.Link>
-
-
+            
                             {checkIfLogin() ?
-                                <Nav.Link href={"/cart/" + getUserId()}><i id="cart-icon" class="bi bi-cart4">{` `}</i></Nav.Link>
+                                <Nav.Link href={"/cart/" + getUserId()}><i class="bi bi-cart4 cart-icon">{` `}</i></Nav.Link>
                                 : null
                             }
 
 
                             {checkIfLogin() ?
                                 null
-                                : <Nav.Link href="/login" onClick={handleClose}>Sign In</Nav.Link>
+                                : <Nav.Link href="/login" onClick={handleClose}><i class="bi bi-box-arrow-in-right cart-icon"></i></Nav.Link>
                             }
 
-
+                            {checkIfLogin() ?
+                                <Nav.Link href="/orders"><i class="bi bi-envelope cart-icon"></i></Nav.Link>
+                                :
+                                null
+                            }
 
                             {checkIfLogin() ?
+                                <Nav.Link onClick={() => handleShow()}><i class="bi bi-box-arrow-right cart-icon"></i></Nav.Link>
+                                :
+                                null
+                            }
+
+                            {/* {checkIfLogin() ?
                                 <NavDropdown title={
                                     <span><i id="user-icon"class="bi bi-person-circle"></i></span>
                                 } id="basic-nav-dropdown"
@@ -91,7 +99,7 @@ export default function NavBar() {
                                 </NavDropdown>
                                 :
                                 null
-                            }
+                            } */}
 
                         </Nav>
                     </Navbar.Collapse>
