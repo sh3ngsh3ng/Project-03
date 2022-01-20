@@ -740,6 +740,41 @@ th {
 /* end of RoomSlider */
 
 
+/* start of SliderCard */
+.slider-card-title-div {
+    z-index: 100;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 3px;
+}
+
+.slider-card-title-text {
+    font-size: 8px;
+}
+
+.slider-card-btn {
+    position: absolute;
+    z-index: 1;
+    bottom: 5px;
+    right: 8px;
+    height: 15px;
+    width: 30px;
+    background-color: rgb(117, 218, 117)!important;
+    font-size: 10px!important;
+    padding: 0!important;
+    border: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* end of SliderCard */
+
+
+
 /* start of ProductDescription */
 
 

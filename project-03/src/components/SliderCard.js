@@ -59,10 +59,12 @@ export default function SliderCard(props) {
                 zIndex: spring.zIndex,
             }}
             >
-                <span className={displayButton ? "d-flex": "d-none"} style={{"position": "absolute", "zIndex": "100", "color": "white"}}>{props.data.product_name}</span>
-                <button className={"btn btn-sm btn-primary " + (displayButton ? "d-flex": "d-none")}
-                style={{"position": "absolute", "zIndex": "1", "bottom": "5px", "right": "5px"}}
-                >test</button>
+                <div className={"slider-card-title-div " + (displayButton ? "d-flex": "d-none")}>
+                    <span className="slider-card-title-text">{props.data.product_name}</span>
+                </div>
+                <button className={"btn btn-sm slider-card-btn " + (displayButton ? "d-flex": "d-none")}>
+                    Go
+                </button>
                 <img className="img-slide" src={props.data.image_url} />
                 
             </animated.div>
