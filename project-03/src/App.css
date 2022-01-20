@@ -1366,15 +1366,8 @@ div.card-title {
 
     /* end of OrderHistory compoenent */
 
-    .carousel-img {
-        margin: 0;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-    }
+
     
-    /* end of Carousel */
 
     /* start of RoomSlider */
 
@@ -1450,6 +1443,22 @@ div.card-title {
     
 
 /* start of Carousel */
+.carousel-img {
+    margin: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+#carousel-div {
+    margin-top: -68px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
 #carousel-btn-div {
     position: absolute;
     z-index: 10;
