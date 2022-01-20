@@ -193,6 +193,9 @@ div.card-title {
 
 /* end of ProductListing */
 
+
+
+
 /* start of ProductSection */
 #product-section-div {
     padding: 0;
@@ -269,7 +272,11 @@ span.card-badge {
 }
 
 .card-btn {
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
     width: 45%;
+    font-size: 12px!important;
 }
 
 .card-price-div {

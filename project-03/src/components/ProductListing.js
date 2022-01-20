@@ -63,7 +63,9 @@ export default function ProductListing() {
 
                             {/* button div */}
                             <div className="card-btn-div">
-                                <a href="#" class="btn btn-primary card-btn">Book</a>
+                                <a class="btn btn-primary card-btn" onClick={() => {
+                                    moreInfo(listing)
+                                }}>Book</a>
                             </div>
                             
                             
