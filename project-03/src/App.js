@@ -6,7 +6,7 @@ import SignUpPage from './pages/SignUpPage';
 import LoginPage from "./pages/LoginPage"
 import CartPage from './pages/CartPage'
 import MainPage from "./pages/MainPage"
-import ProductInfoPage from "./pages/ProductInfoPage"
+import BookingPage from "./pages/BookingPage"
 import OrdersPage from './pages/OrdersPage';
 import SearchPage from './pages/SearchPage';
 
@@ -52,7 +52,7 @@ function App() {
 
           {/* Start of Product Display Page*/}
           <Route exact path="/products/:product_id">
-            <ProductInfoPage />
+            <BookingPage />
           </Route>
           {/* End of product Display Page */}
 

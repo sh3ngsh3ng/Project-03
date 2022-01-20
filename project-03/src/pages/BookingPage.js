@@ -3,15 +3,18 @@ import { useLocation, useHistory } from "react-router-dom"
 import axios from "axios"
 import { checkIfLogin, getUserId, sendJwt } from "./utils"
 import { motion } from "framer-motion"
-import moment from "../../node_modules/moment/moment.js"
+import moment from "moment"
 import FlashMessage from "react-flash-message"
+import NavBar from "../components/NavBar"
+import ProductDescription from "../components/ProductDescription"
 
 
-export default function ProductInfoPage() {
+export default function BookingPage() {
     const [addedToCart, setAddedToCart] = useState(false)
 
     let location = useLocation()
     let product = location.state.productInfo
+    console.log("this is pushed =>", product)
     const history = useHistory()
 
     const flashMessageAddToCart = () => {
@@ -61,31 +64,31 @@ export default function ProductInfoPage() {
         }
     }
 
-    const animateLetters = () => {
-        let arrayOfLetters = Array.from(product.product_name)
-        return (
-            arrayOfLetters.map(function (letter, i) {
+    // const animateLetters = () => {
+    //     let arrayOfLetters = Array.from(product.product_name)
+    //     return (
+    //         arrayOfLetters.map(function (letter, i) {
 
-                return (
-                    <motion.span
-                        className="product-title-letters"
-                        animate={{
-                            opacity: 1
-                        }}
-                        initial={{
-                            opacity: 0
-                        }}
-                        transition={{
-                            type: "spring",
-                            delay: i * 0.08
-                        }}
-                    >
-                        {letter}
-                    </motion.span>
-                )
-            })
-        )
-    }
+    //             return (
+    //                 <motion.span
+    //                     className="product-title-letters"
+    //                     animate={{
+    //                         opacity: 1
+    //                     }}
+    //                     initial={{
+    //                         opacity: 0
+    //                     }}
+    //                     transition={{
+    //                         type: "spring",
+    //                         delay: i * 0.08
+    //                     }}
+    //                 >
+    //                     {letter}
+    //                 </motion.span>
+    //             )
+    //         })
+    //     )
+    // }
 
 
 
@@ -111,8 +114,10 @@ export default function ProductInfoPage() {
 
     return (
         <div>
+            <NavBar />
+            <ProductDescription product={product}/>
             {flashMessageAddToCart()}
-            <div id="product-title-div">{animateLetters()}</div>
+            {/* <div id="product-title-div">{animateLetters()}</div> */}
 
             <motion.div id="product-info-image-div"
                 animate={{ opacity: 1 }}
