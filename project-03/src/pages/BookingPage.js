@@ -114,38 +114,16 @@ export default function BookingPage() {
 
     return (
         <div>
+            {flashMessageAddToCart()}
             <NavBar />
             <ProductDescription product={product}/>
-            {flashMessageAddToCart()}
-            {/* <div id="product-title-div">{animateLetters()}</div> */}
-
-            <motion.div id="product-info-image-div"
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                transition={{ type: "spring", delay: 2 }}
-            >
-                <img className="product-info-image" src={product.image_url} />
-            </motion.div>
-
-            <motion.div
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                transition={{ type: "spring", delay: 3 }}
-            >
-                <div className="product-info-description-div">
-                    <span id="description-title-text">Description</span>
-                </div>
-
-                <div className="product-info-description-div">
-                    <span>{product.product_description}</span>
-                </div>
-            </motion.div>
+        
 
             {/* slots table */}
             <motion.div id="product-info-slots-table"
                 animate={{ opacity: 1 }}
                 initial={{ opacity: 0 }}
-                transition={{ type: "spring", delay: 4 }}
+                transition={{ type: "spring", delay: 2 }}
             >
                 <table className="table">
                     <thead>

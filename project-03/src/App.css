@@ -12,7 +12,6 @@
 
 
 
-
 /* start of navbar */
 .navbar {
     border-radius: 0px 0px 10px 10px;
@@ -738,6 +737,7 @@ th {
 #pd-img-section {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 10px;
 }
 
@@ -748,10 +748,16 @@ th {
 
 #pd-description-section {
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 #pd-description-title {
     text-align: center;
+}
+
+.pd-paragraph {
+    margin: 5px;
+    line-height: 1.2;
 }
 
 
@@ -986,6 +992,29 @@ th {
     /* end of RoomSlider */
 
 
+
+    /* start of ProductDescription */
+#product-description-div {
+    display: flex;
+}
+
+
+#pd-img {
+    height: 180px;
+    border-radius: 5px;
+}
+
+#pd-description-section {
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#pd-description-title {
+    font-size: 25px;
+}
+
+/* end of ProductDescription */
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1168,6 +1197,35 @@ th {
 
     /* end of RoomSlider */
 
+
+    /* start of ProductDescription */
+
+#product-description-div {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+#pd-img {
+    height: 250px;
+    border-radius: 5px;
+}
+
+#pd-description-title {
+    font-size: 35px;
+}
+
+.pd-paragraph {
+    margin: 10px;
+    font-size: 20px;
+}
+
+#pd-description-title {
+    font-size: 35px;
+}
+
+
+/* end of ProductDescription */
     
 
 }
@@ -1193,6 +1251,22 @@ th {
     }
 
     /* end of RoomSlider */
+
+    /* start of BookingPage */
+    #pd-img {
+        height: 350px;
+        border-radius: 10px;
+    }
+    
+    #pd-description-title {
+        font-size: 40px;
+    }
+    
+    .pd-paragraph {
+        font-size: 20px;
+    }
+    
+    /* end of BookingPage */
 
 
 }
