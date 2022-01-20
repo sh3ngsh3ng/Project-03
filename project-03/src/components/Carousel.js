@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {Animated} from "react-animated-css"
+import StartBtn from "./StartBtn";
 
 
 export default function Carousel() {
@@ -32,8 +33,8 @@ export default function Carousel() {
                 <img id="carousel-brand-name-img" src={"https://res.cloudinary.com/dt7n0rbhy/image/upload/v1642524796/awnlqzcwl8pvdbkvgtug.png"}/>
             </motion.div>
             <div id="carousel-div" className="container">
-            <div id="carousel-text-div-1">
-                <button className="btn btn-sm btn-secondary">Game On!</button>
+            <div id="carousel-btn-div">
+                <StartBtn />
             </div>
             <Slider {...settings}>
                 <div>
