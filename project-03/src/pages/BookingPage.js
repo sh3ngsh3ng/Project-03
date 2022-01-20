@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useLocation, useHistory } from "react-router-dom"
 import axios from "axios"
 import { checkIfLogin, getUserId, sendJwt } from "./utils"
@@ -10,7 +10,7 @@ import ProductDescription from "../components/ProductDescription"
 
 
 export default function BookingPage() {
-    const [addedToCart, setAddedToCart] = useState(false)
+    const [addedToCart, setAddedToCart] = useState(true)
 
     let location = useLocation()
     let product = location.state.productInfo
@@ -23,7 +23,7 @@ export default function BookingPage() {
                 <FlashMessage duration={5000}>
                     <motion.div
                         className="alert-notif-div alert alert-success"
-                        style={{position:"absolute"}}
+                        style={{position:"absolute", "zIndex": "100", "top": "5vh"}}
                         role="alert"
                         animate={{ y: 0 }}
                         initial={{ y: "-100%" }}
@@ -32,6 +32,7 @@ export default function BookingPage() {
                             stiffness: 50,
                             delay: 0.02
                         }}
+                        
                     >
                         <div class="alert-notif-content">
                             <i class="bi bi-check-circle"></i>
@@ -58,6 +59,7 @@ export default function BookingPage() {
             let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us27.gitpod.io/api/cart/"
             + getUserId() + "/" + productSlotId + "/" + "add-item", sendJwt())
             setAddedToCart(true)
+            console.log(addedToCart)
             
         } else {
             history.push("/login")
