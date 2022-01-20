@@ -58,7 +58,7 @@ export default function ProductListing() {
 
                             {/* text div */}
                             <div className="card-text-div" >
-                                <p class="card-text">{listing.product_description}</p>
+                                {listing.product_description}
                             </div>
 
                             {/* button div */}
