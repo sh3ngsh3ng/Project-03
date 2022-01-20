@@ -415,6 +415,8 @@ th {
 
 
 /* start of CartItemsList */
+
+
 .cart-card {
     border: solid black 1px;
     border-radius: 10px;
@@ -422,6 +424,7 @@ th {
     box-shadow: inset 0 0 5px #c2b9b9;
     margin-bottom: 10px;
     z-index: -10!important;
+    height: 100%
 }
 
 .cart-item-header-div {
