@@ -87,7 +87,7 @@ a.nav-link {
 
 /* start of Carousel */
 #carousel-div {
-    margin-top: -35px;
+    margin-top: -37px;
     margin-bottom: 20px;
     position: relative;
 }
@@ -769,11 +769,28 @@ th {
 
 
 .slider-title {
-    position: absolute;
     font-size: 22px;
-    margin-bottom: 0;
+    margin-bottom: -25px;
 }
 
+
+.slick-next:before{
+    font-size: 20px!important;
+    color: rgba(84, 99, 84, 0.575)!important;
+}
+
+.slick-prev:before{
+    font-size: 20px!important;
+    color: rgba(84, 99, 84, 0.575)!important;
+}
+
+.slick-next{
+    width: 25px!important;
+}
+
+.slick-prev{
+    width: 25px!important;
+}
 
 
 /* end of RoomSlider */
@@ -895,6 +912,12 @@ th {
         height: 75px!important;
         width: 120px!important;
     }
+
+    .slider-title {
+        font-size: 22px;
+        margin-bottom: -20px;
+    }
+    
 
     /* end of Room Slider */
 
@@ -1061,6 +1084,29 @@ th {
     .img-slide {
         border-radius: 10px;
     }
+
+    .slider-title {
+        font-size: 28px;
+        margin-bottom: -50px;
+    }
+
+    .slick-next:before{
+        font-size: 30px!important;
+    }
+    
+    .slick-prev:before{
+        font-size: 30px!important;
+    }
+    
+    .slick-next{
+        width: 32px!important;
+    }
+    
+    .slick-prev{
+        width: 32px!important;
+    }
+
+
 
     /* end of RoomSlider */
 
@@ -1348,6 +1394,27 @@ div.card-title {
         border-radius: 15px;
     }
 
+    .slider-title {
+        font-size: 35px;
+        margin-bottom: -50px;
+    }
+
+    .slick-next:before{
+        font-size: 35px!important;
+    }
+    
+    .slick-prev:before{
+        font-size: 35px!important;
+    }
+    
+    .slick-next{
+        width: 20px!important;
+    }
+    
+    .slick-prev{
+        width: 20px!important;
+    }
+
 
     /* end of RoomSlider */
 
@@ -1444,6 +1511,29 @@ div.card-title {
     .img-slide {
         border-radius: 15px;
     }
+
+    .slider-title {
+        font-size: 50px;
+        margin-bottom: -60px;
+    }
+
+    .slick-next:before{
+        font-size: 40px!important;
+    }
+    
+    .slick-prev:before{
+        font-size: 40px!important;
+    }
+    
+    .slick-next{
+        width: 20px!important;
+    }
+    
+    .slick-prev{
+        width: 20px!important;
+        left: -35px!important;
+    }
+
 
     /* end of RoomSlider */
 

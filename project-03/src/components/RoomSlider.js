@@ -7,13 +7,12 @@ import SliderCard from "./SliderCard";
 
 
 
-
-
 export default class RoomSlider extends Component {
 
     
 
     render() {
+        
 
         
 
