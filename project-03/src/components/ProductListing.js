@@ -52,6 +52,7 @@ export default function ProductListing() {
                             {/* tags div */}
                             <div className="card-tags-div">
                                 {listing.tags.map((tag) => {
+                                    console.log(listing)
                                     return <span className={"card-badge badge rounded-pill " +  getBadgeColor(tag.name)}>{tag.name}</span>
                                 })}
                             </div>

@@ -1,10 +1,11 @@
 import React, {useState} from "react"
 import { useSpring, animated } from 'react-spring'
-
+import { useHistory } from "react-router-dom";
 
 
 export default function SliderCard(props) {
 
+    // animation of SliderCard
     const [spring, setSpring] = useSpring(() => ({
         scale: 1,
         boxShadow: "3px 3px 5px rgba(0, 0, 0, 0.62)",
@@ -16,6 +17,7 @@ export default function SliderCard(props) {
         }
     }))
 
+    // displaying of text and button in SliderCard
     const [displayButton, setDisplayButton] = useState(false)
     const showButton = (e) => {
         e.preventDefault()
@@ -25,6 +27,14 @@ export default function SliderCard(props) {
     const hideButton = (e) => {
         e.preventDefault()
         setDisplayButton(false)
+    }
+
+    // push to BookingPage
+    const history = useHistory()
+    const moreInfo = (listing) => {
+        history.push("/products/" + listing.id, {
+            "productInfo": listing
+        })
     }
 
 
@@ -62,7 +72,9 @@ export default function SliderCard(props) {
                 <div className={"slider-card-title-div " + (displayButton ? "d-flex": "d-none")}>
                     <span className="slider-card-title-text">{props.data.product_name}</span>
                 </div>
-                <button className={"btn btn-sm slider-card-btn " + (displayButton ? "d-flex": "d-none")}>
+                <button className={"btn btn-sm slider-card-btn " + (displayButton ? "d-flex": "d-none")}
+                    onClick={() => moreInfo(props.data)}
+                >
                     Go
                 </button>
                 <img className="img-slide" src={props.data.image_url} />
