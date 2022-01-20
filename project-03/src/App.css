@@ -208,7 +208,7 @@ div.card-title {
 }
 
 .card {
-    width: 160px;
+    width: 165px;
     height: 280px;
     margin: 3px;
 }
@@ -234,12 +234,13 @@ div.card-title {
     font-size: 15px;
 }
 
-.cards-tags-div {
-    display: inline-block;
+.card-tags-div {
+    display: flex;
     width: 100%;
     white-space: nowrap;
     overflow-x: auto;
-    height: 15px;
+    height: 20px!important;
+    align-items: center;
 }
 
 .cards-tags-div::-webkit-scrollbar {
@@ -264,24 +265,25 @@ span.card-badge {
     background-color: white;
     display: flex;
     justify-content: center;
+    height: 25px;
 }
 
 .card-btn {
     width: 45%;
-    background-color: #1877f2;
 }
 
-/* .active-listing-card-button-div {
-    background-color: white;
-    display:flex;
-    justify-content: center;
+.card-price-div {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -3px;
+    margin-right: -3px;
+    height: 12px;
 }
 
-.active-listing-card-btn {
-    width: 45%;
-    background: #1877f2;
-} */
-
+.card-price-text {
+    font-size: 12px;
+    font-style: italic
+}
 
 
 

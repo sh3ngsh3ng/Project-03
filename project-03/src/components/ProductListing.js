@@ -63,13 +63,13 @@ export default function ProductListing() {
 
                             {/* button div */}
                             <div className="card-btn-div">
-                                <a class="card-btn" href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-primary card-btn">Book</a>
                             </div>
                             
                             
                             {/* price div */}
-                            <div>
-                            <span className="active-listing-price">{"$" + listing.product_price / 100}/pax</span>
+                            <div className="card-price-div">
+                                <span className="card-price-text">{"$" + listing.product_price / 100}/pax</span>
                             </div>
 
                         </div>
