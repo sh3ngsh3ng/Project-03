@@ -283,46 +283,7 @@ div.offcanvas {
 /* end of SearchForm */
 
 
-/* start of ProductInfoPage */
-#product-title-div {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0px 10px 0px;
-}
-
-.product-title-letters {
-    white-space:pre;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#product-info-image-div {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.product-info-image {
-    height: 200px;
-    width: 100%;
-}
-
-.product-info-description-div {
-    display: flex;
-    justify-content: center;
-}
-
-#description-title-text {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
-    font-size: 20px;
-    text-decoration: underline;
-}
-
-#product-info-slots-table {
-    margin-top: 20px;
-}
+/* start of BookingPage */
 
 th {
     text-align: center!important;
@@ -346,7 +307,7 @@ th {
 }
 
 
-/* end of ProductInfoPage */
+/* end of BookingPage */
 
 
 
@@ -874,23 +835,6 @@ th {
 /* end of SearchFormV2 */
 
 
-    /* start of ProductInfoPage */
-    #product-info-image-div {
-        padding-left: 100px;
-        padding-right: 100px;
-    }
-
-    .product-info-image {
-        height: 250px;
-        border-radius: 20px;
-    }
-
-    .product-info-description-div {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-
-    /* end of ProductInfoPage */
 
     /* start of Cart Page */
     .cart-card {
@@ -1088,24 +1032,6 @@ th {
     /* end of ProductListingtab */
 
 
-    /* start of ProductInfoPage */
-    #product-info-image-div {
-        padding-left: 180px;
-        padding-right: 180px;
-    }
-
-    .product-info-image {
-        height: 300px;
-    }
-
-    .product-info-description-div {
-        padding-right: 50px;
-        padding-left: 50px; 
-    }
-
-   
-    /* end of ProductInfoPage */
-
 
     /* start of OrdersPage */
     #orders-page-container {
@@ -1252,7 +1178,7 @@ th {
 
     /* end of RoomSlider */
 
-    /* start of BookingPage */
+    /* start of ProductDescription */
     #pd-img {
         height: 350px;
         border-radius: 10px;
@@ -1266,7 +1192,7 @@ th {
         font-size: 20px;
     }
     
-    /* end of BookingPage */
+    /* end of ProductDescription */
 
 
 }
