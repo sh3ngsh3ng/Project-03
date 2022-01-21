@@ -34,20 +34,20 @@ The project was designed to improve the social interactions in our increasing di
 
 <h3 align="center">Login & Sign Up Page</h3>
 <div align="center" style="display: flex; justify-content: center;">
-<img src="images/login-page.JPG" style="width:350px; margin-right: 20px;">
-<img src="images/signup-page.JPG" style="width:350px;">
+<!-- <img src="images/login-page.JPG" style="width:350px; margin-right: 20px;">
+<img src="images/signup-page.JPG" style="width:350px;"> -->
 </div>
 <br/>
 
 <h3 align="center" >Product Info Page (for booking)</h3>
 <div align="center">
-    <img src="images/product-info-page.JPG" style="width:400px;">
+    <!-- <img src="images/product-info-page.JPG" style="width:400px;"> -->
 </div>
 <br/>
 
 <h3 align="center" >Cart Page (for checkout)</h3>
 <div align="center">
-    <img src="images/cart-page.JPG" style="width:400px;">
+    <!-- <img src="images/cart-page.JPG" style="width:400px;"> -->
 </div>
 <br/>
 
