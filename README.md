@@ -64,7 +64,7 @@ The project was designed to improve the social interactions in our increasing di
 ### Frontend
 | Technology | Description |
 | --- | --- |
-| React.js | Frontend framework |
+| React.js | Frontend framework &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | Bootstrap (Native & React) | Frontend Library + icons|
 | 1. Framer Motion <br> 2. React Spring | Animation effects for React Components |
 | React Slick | Carousel for React |
@@ -75,7 +75,7 @@ The project was designed to improve the social interactions in our increasing di
 | Technology | Description |
 | --- | --- |
 | Nodejs| 1. Backend runtime environment for RESTful api <br> 2. Vendor's Interface  |
-| Bookshelf | Object-relational mapping (ORM) for db |
+| Bookshelf &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  | Object-relational mapping (ORM) for db |
 | db.migrate| For database migration |
 | MySQL | Database used during development |
 | Handlebars | Template HTML files for Vendor's Interface |
@@ -83,7 +83,7 @@ The project was designed to improve the social interactions in our increasing di
 ### Others
 | Technology | Description |
 | --- | --- |
-| Languages | 1. HTML & CSS <br> 2. Javascript <br> 3. SQL |
+| Languages &nbsp; | 1. HTML & CSS <br> 2. Javascript <br> 3. SQL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  |
 | csurf| Prevention of Cross site Request Forgery |
 | jsonwebtoken, jwt-decode | For authentication of Users |
 | axios | HTTP clinet used for HTTP requests |
