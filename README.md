@@ -54,8 +54,8 @@ The project was designed to improve the social interactions in our increasing di
 
 ## Quick Start
 - Deployed Link:
-    - React (User): https://serene-leavitt-cbe19d.netlify.app/
-    - Express (Vendor & Server): https://escape-rooms-project03.herokuapp.com/
+    - React (User): (pending)
+    - Express (Vendor & Server): (pending)
 - User Guide for Application:
     - (pending)
 
