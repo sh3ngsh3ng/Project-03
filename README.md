@@ -11,12 +11,22 @@ Virtual Rooms is a platform where users can look for virtual activities to parti
 The project was designed to improve the social interactions in our increasing digitalized world. It aims to provide a platform which provides ease of access to virtual activities by users as well as convenience for vendors to advertise their services.
 
 # Index
-<ol>
-    <li>[Technologies Used](#first-look)</li>
-</ol>
 
+1. [First Look](#first-look)
+    - [User](#user)
+    - [Vendor](#vendor)
+2. [Technologies Used](#technologies-used)
+3. [Quick Start](##quick-start)
+4. [UI/UX](#uiux)
+5. [Mobile Responsiveness](#mobile-responsiveness)
+6. [Database Design](#database-design)
+7. [Test Cases](#test-cases)
+8. [Bugs](#bugs)
+9. [Work-In-Progress](#workinprogress)
+10. [Credits & Acknowledgements](#credits-acknowledgements)
 
-# First Look (User)
+# First Look
+## User
 <h3 align="center" >Main Page</h3>
 <div align="center">
     <!-- <img src="images/landing-page.JPG" style="width:400px;"> -->
@@ -43,7 +53,7 @@ The project was designed to improve the social interactions in our increasing di
 <br/>
 
 
-## QuickStart
+## Quick Start
 - Deployed Link:
     - React (User): https://serene-leavitt-cbe19d.netlify.app/
     - Express (Vendor & Server): https://escape-rooms-project03.herokuapp.com/
@@ -143,7 +153,7 @@ For this project, testing was done as much as possible after every major impleme
 
 
 
-# Incomplete + Possible Improvements
+# Work-In-Progress
 Once again, due to the tight timeline, and possibly my own inefficient use of time, the scope of the project have to be narrowed down. Below are some of the incomplete features as well as possible improvements:
 
 - Adding Types of Rooms (Escape, Race, etc)
