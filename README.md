@@ -1,8 +1,7 @@
-# Project: ESC Rooms
+# Project: Virtual Rooms
 <div align="center">
-    <img src="images/landing-page.JPG" style="width:500px;">
+    <img src="https://res.cloudinary.com/dt7n0rbhy/image/upload/v1642524796/awnlqzcwl8pvdbkvgtug.png" style="width:500px;">
 </div>
-<br/>
 <p align="center">"People bond when they are having fun."</p>
 
 # Introduction
@@ -11,7 +10,6 @@ Virtual Rooms is a platform where users can look for virtual activities to parti
 The project was designed to improve the social interactions in our increasing digitalized world. It aims to provide a platform which provides ease of access to virtual activities by users as well as convenience for vendors to advertise their services.
 
 # Index
-
 1. [First Look](#first-look)
     - [User](#user)
     - [Vendor](#vendor)
@@ -23,7 +21,8 @@ The project was designed to improve the social interactions in our increasing di
 7. [Test Cases](#test-cases)
 8. [Bugs](#bugs)
 9. [Work-In-Progress](#work-in-progress)
-10. [Credits & Acknowledgements](#credits--acknowledgements)
+10. Deployment (learning)
+11. [Credits & Acknowledgements](#credits--acknowledgements)
 
 # First Look
 ## User
@@ -62,48 +61,38 @@ The project was designed to improve the social interactions in our increasing di
 
 
 # Technologies Used
+### Frontend
+| Technology | Description |
+| --- | --- |
+| React.js | Frontend framework |
+| Bootstrap (Native & React) | Frontend Library + icons|
+| 1. Framer Motion <br> 2. React Spring | Animation effects for React Components |
+| React Slick | Carousel for React |
+| React Select | Select Input control for React |
+| React Flash Message | Flash Messaging |
+| React Responsive | Media Queries in React Components |
+### Backend
+| Technology | Description |
+| --- | --- |
+| Nodejs| 1. Backend runtime environment for RESTful api <br> 2. Vendor's Interface  |
+| Bookshelf | Object-relational mapping (ORM) for db |
+| db.migrate| For database migration |
+| MySQL | Database used during development |
+| Handlebars | Template HTML files for Vendor's Interface |
+| Fullcalendar (testing) | To be used for calendar viewing of Vendor's appointments |
+### Others
+| Technology | Description |
+| --- | --- |
+| Languages | 1. HTML & CSS <br> 2. Javascript <br> 3. SQL |
+| csurf| Prevention of Cross site Request Forgery |
+| jsonwebtoken, jwt-decode | For authentication of Users |
+| axios | HTTP clinet used for HTTP requests |
+| Stripe | Payment process |
+| Cloudinary | Image storage for uploads |
+| Moment.js | For conversion of date and time |
+| Heroku | Deployment of Express |
+| Netflify | Deployment of React |
 
-- Languages:
-    - HTML & CSS
-    - Javascript
-    - SQL
-- React
-    - Frontend framework
-- Framer Motion
-    - Animation of React Compoenents
-- Node.JS
-    - Backend runtime environment for RESTful API
-- Bookshelf
-    - Object-relational mapping (ORM)
-- db.migrate
-    - For database migration
-- MySql
-    - The database used during development
-- csurf
-    - Prevention of Cross Site Request Forgery
-- jsonwebtoken, jwt-decode
-    - For authentication of users
-- Stripe
-    - Payment Process
-- Cloudinary
-    - uploading of image
-- Moment.js
-    - For conversion of date time.
-- fullcalendar (not implemented yet)
-    - To be used for calendar viewing of Vendor's sessions dates
-- Handlebars 
-    - Template HTML files for Vendor Interface
-- Bootstrap (v5.1) - Frontend Library
-    - Native 
-    - React Version
-    - Bootstrap Icons
-- axios
-    - HTTP client used for HTTP requests (GET, POST, PUT, DELETE)
-- Deployment
-    - Heroku
-        - Used to deploy express
-    - Netlify
-        - Used to deploy react
 
 # UI/UX
 For the full UI/UX, refer to the following link:
@@ -130,6 +119,8 @@ Below are the devices that can be supported:
     <img src="images/database-design.JPG" style="width:600px;">
 </div>
 <br/>
+
+For more information pls refer to ---->
 
 ### Note:
 Due to the time constraints, 'orders' and 'order_items' tables was added but not utilized. The 'orders' tables was designed to keep track of the user's orders after payment is made. On the Vendor's side, it can be used to keep track of users that booked their sessions to facilitate communications.
