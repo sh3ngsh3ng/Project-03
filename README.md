@@ -6,14 +6,20 @@
 <p align="center">"People bond when they are having fun."</p>
 
 # Introduction
-ESC Rooms is a platform where users can look for virtual activities to participate in. In addition, small business owners/vendors can advertise their virtual activities for users to book/purchase as well. Virtual activities can range from Escape Rooms, Murder Mysteries, Amazing Races, etc.
+Virtual Rooms is a platform where users can look for virtual activities to participate in. In addition, small business owners/vendors can advertise their virtual activities for users to book/purchase as well. Virtual activities can range from Escape Rooms, Murder Mysteries, Amazing Races, etc.
 
 The project was designed to improve the social interactions in our increasing digitalized world. It aims to provide a platform which provides ease of access to virtual activities by users as well as convenience for vendors to advertise their services.
 
+# Index
+<ol>
+    <li>[Technologies Used](#first-look)</li>
+</ol>
+
+
 # First Look (User)
-<h3 align="center" >Landing Page</h3>
+<h3 align="center" >Main Page</h3>
 <div align="center">
-    <img src="images/landing-page.JPG" style="width:400px;">
+    <!-- <img src="images/landing-page.JPG" style="width:400px;"> -->
 </div>
 <br/>
 
