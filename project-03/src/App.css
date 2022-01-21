@@ -4,7 +4,8 @@
     /* background-color: #414448; */
     /* background-color: #2b4468; */
     /* background-color: #f5f5f7; */
-    background-color: rgb(231, 214, 214);
+    /* background-color: rgb(231, 214, 214); */
+    background-color: #646060;
     /* background-image: linear-gradient(to bottom, #53575c, #576164, #5f6b69, #6b746c, #7c7c70); */
     /* background-image: linear-gradient(to bottom, #35393f, #3d4548, #48504f, #565b57, #666661); */
 }
@@ -776,6 +777,7 @@ th {
 .slider-title {
     font-size: 22px;
     margin-bottom: -25px;
+    color: rgb(226, 217, 217);
 }
 
 
@@ -811,9 +813,6 @@ th {
     width: 90%;
     top: 3px;
     overflow:hidden;
-    /* padding-left: 10px;
-    padding-right: 10px;
-    box-sizing: border-box; */
 }
 
 .slider-card-title-text {
@@ -821,6 +820,8 @@ th {
     width: 100%;
     transform: translateX(100%);
     animation: horizontalScroll 8s linear infinite;
+    white-space: nowrap;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 
@@ -845,6 +846,13 @@ th {
     justify-content: center;
     align-items: center;
 }
+
+.slider-card-btn:hover {
+    transition: 0.3s;
+    box-shadow: 0px 0px 1px 3px #aaaaaa;
+    background-color: lightgreen !important;
+    cursor: pointer;
+  }
 
 
 /* end of SliderCard */
@@ -1133,6 +1141,14 @@ th {
     /* start of SliderCard */
     .slider-card-title-text {
         font-size: 12px;
+    }
+
+    .slider-card-btn {
+        bottom: 8px;
+        right: 10px;
+        height: 18px;
+        width: 35px;
+        font-size: 15px!important;
     }
     /* end of SliderCard */
 
@@ -1462,6 +1478,14 @@ th {
     .slider-card-title-text {
         font-size: 16px;
     }
+
+    .slider-card-btn {
+        bottom: 10px;
+        right: 12px;
+        height: 22px;
+        width: 38px;
+        font-size: 18px!important;
+    }
     /* end of SliderCard */
 
 
@@ -1517,6 +1541,14 @@ th {
     .slider-card-title-text {
         font-size: 20px;
     }
+
+    .slider-card-btn {
+        bottom: 14px;
+        right: 16px;
+        height: 28px;
+        width: 42px;
+        font-size: 24px!important;
+    }
     /* end of SliderCard */
 
     /* start of ProductDescription */
@@ -1549,6 +1581,12 @@ th {
         height: 200px;
     }
     /* end of Carousel */
+
+
+
+
+
+
 }
 
 
