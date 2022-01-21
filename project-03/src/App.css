@@ -1536,6 +1536,10 @@ th {
     /* end of ProductDescription */
 
     /* start of Carousel */
+    #carousel-div {
+        margin-top: -92px;
+    }
+
     #carousel-btn-div {
         top: 600px;
         left: 38vw;
