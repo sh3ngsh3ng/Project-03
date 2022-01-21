@@ -13,7 +13,6 @@
 
 
 
-
 /* start of navbar */
 .navbar {
     border-radius: 0px 0px 10px 10px;
@@ -733,12 +732,14 @@ th {
 .slider-container {
     margin-top: -12px;
     margin-bottom: 10px;
+    /* height: 121.39px; */
 }
 
 
 .slider-container > .slick-slider > .slick-list > .slick-track {
-    height: 120px;
+    height: 120px!important;
 }
+
 
 
 .slick-slide {
@@ -1104,6 +1105,10 @@ th {
 
 
     /* start of RoomSlider */
+
+    /* .slider-container {
+        height: 103.59px;
+    } */
 
     .slider-container > .slick-slider > .slick-list > .slick-track {
         height: 200px;

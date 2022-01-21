@@ -15,12 +15,30 @@ export default function MainPage () {
 
     useEffect(() => {
         async function getData() {
-            let response = await axios.get(BASE_URL)
-            console.log("data caleed =>", response.data)
-            setFeaturedProducts(response.data)
-            setEscapeRooms(response.data)
-            setMysteryMurders(response.data)
-            setAmazingRaces(response.data)
+            let response1 = await axios.get(BASE_URL, {
+                params: {
+                    room: "escape_room"
+                }
+            })
+            setEscapeRooms(response1.data)
+
+            let response2 = await axios.get(BASE_URL, {
+                params: {
+                    room: "mystery_murder"
+                }
+            })
+            setMysteryMurders(response2.data)
+
+            let response3 = await axios.get(BASE_URL, {
+                params: {
+                    room: "amazing_race"
+                }
+            })
+            setAmazingRaces(response3.data)
+
+            let response4 = await axios.get(BASE_URL)
+            setFeaturedProducts(response4.data)
+            
         }
         getData()
     }, [])
