@@ -732,12 +732,11 @@ th {
 .slider-container {
     margin-top: -12px;
     margin-bottom: 10px;
-    /* height: 121.39px; */
 }
 
 
 .slider-container > .slick-slider > .slick-list > .slick-track {
-    height: 120px!important;
+    height: 120px;
 }
 
 
@@ -1106,9 +1105,6 @@ th {
 
     /* start of RoomSlider */
 
-    /* .slider-container {
-        height: 103.59px;
-    } */
 
     .slider-container > .slick-slider > .slick-list > .slick-track {
         height: 200px;
