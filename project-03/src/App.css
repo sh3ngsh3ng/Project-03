@@ -783,13 +783,19 @@ th {
 
 .slick-next:before{
     font-size: 20px!important;
-    color: rgba(84, 99, 84, 0.575)!important;
+    color: rgba(255, 255, 255, 0.295)!important;
 }
 
 .slick-prev:before{
     font-size: 20px!important;
-    color: rgba(84, 99, 84, 0.575)!important;
+    color: rgba(255, 255, 255, 0.295)!important;
 }
+
+/* .slick-prev:before:hover {
+    transition: 0.3s;
+    box-shadow: 0px 0px 1px 3px #aaaaaa;
+    cursor: pointer;
+} */
 
 .slick-next{
     width: 25px!important;
@@ -821,7 +827,7 @@ th {
     transform: translateX(100%);
     animation: horizontalScroll 8s linear infinite;
     white-space: nowrap;
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-family: Arial, Helvetica, sans-serif!important;
 }
 
 
@@ -845,6 +851,7 @@ th {
     border: 0;
     justify-content: center;
     align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .slider-card-btn:hover {
