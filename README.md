@@ -22,8 +22,8 @@ The project was designed to improve the social interactions in our increasing di
 6. [Database Design](#database-design)
 7. [Test Cases](#test-cases)
 8. [Bugs](#bugs)
-9. [Work-In-Progress](#workinprogress)
-10. [Credits & Acknowledgements](#credits-acknowledgements)
+9. [Work-In-Progress](#work-in-progress)
+10. [Credits & Acknowledgements](#credits--acknowledgements)
 
 # First Look
 ## User
