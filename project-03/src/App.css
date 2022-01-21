@@ -808,13 +808,28 @@ th {
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 100%;
+    width: 90%;
     top: 3px;
+    overflow:hidden;
+    /* padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box; */
 }
 
 .slider-card-title-text {
     font-size: 8px;
+    width: 100%;
+    transform: translateX(100%);
+    animation: horizontalScroll 8s linear infinite;
 }
+
+
+
+@keyframes horizontalScroll {
+    to { transform: translateX(-100%); }
+  }
+
+
 
 .slider-card-btn {
     position: absolute;
@@ -1115,7 +1130,11 @@ th {
 
     /* end of RoomSlider */
 
-
+    /* start of SliderCard */
+    .slider-card-title-text {
+        font-size: 12px;
+    }
+    /* end of SliderCard */
 
     /* start of ProductDescription */
 #product-description-div {
@@ -1439,7 +1458,11 @@ th {
 
 /* end of ProductListing */
 
-
+    /* start of SliderCard */
+    .slider-card-title-text {
+        font-size: 16px;
+    }
+    /* end of SliderCard */
 
 
 }
@@ -1488,6 +1511,13 @@ th {
 
 
     /* end of RoomSlider */
+
+
+    /* start of SliderCard */
+    .slider-card-title-text {
+        font-size: 20px;
+    }
+    /* end of SliderCard */
 
     /* start of ProductDescription */
     #pd-img {

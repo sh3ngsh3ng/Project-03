@@ -10,7 +10,7 @@ import ProductDescription from "../components/ProductDescription"
 
 
 export default function BookingPage() {
-    const [addedToCart, setAddedToCart] = useState(true)
+    const [addedToCart, setAddedToCart] = useState(false)
 
     let location = useLocation()
     let product = location.state.productInfo

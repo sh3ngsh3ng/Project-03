@@ -69,8 +69,10 @@ export default function SliderCard(props) {
                 zIndex: spring.zIndex,
             }}
             >
+                <div style={{"width": "100%", "display": "flex", "justifyContent": "center"}}>
                 <div className={"slider-card-title-div " + (displayButton ? "d-flex": "d-none")}>
                     <span className="slider-card-title-text">{props.data.product_name}</span>
+                </div>
                 </div>
                 <button className={"btn btn-sm slider-card-btn " + (displayButton ? "d-flex": "d-none")}
                     onClick={() => moreInfo(props.data)}
