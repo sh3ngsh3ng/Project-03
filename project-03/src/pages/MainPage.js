@@ -11,7 +11,7 @@ export default function MainPage () {
     const [escapeRooms, setEscapeRooms] = useState([])
     const [mysteryMurders, setMysteryMurders] = useState([])
     const [amazingRaces, setAmazingRaces] = useState([])
-    const BASE_URL = "https://3000-amber-guppy-qbo1ebq4.ws-us27.gitpod.io/api/products/active-listings"
+    const BASE_URL = "https://project-03-virtual-rooms.herokuapp.com/api/products/active-listings"
 
     useEffect(() => {
         async function getData() {

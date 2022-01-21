@@ -2,7 +2,6 @@ import React, { useContext} from 'react'
 // import {Card, Button} from 'react-bootstrap'
 import ProductContext from "../context/ProductContext"
 import {useHistory} from "react-router-dom"
-import {motion} from "framer-motion"
 
 
 export default function ProductListing() {

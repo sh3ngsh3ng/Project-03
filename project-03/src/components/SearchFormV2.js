@@ -18,7 +18,7 @@ export default function SearchFormV2() {
 
     // fetch all tags to render in search form
     useEffect(async ()=> {
-        let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us27.gitpod.io/api/products/tags")
+        let response = await axios.get("https://project-03-virtual-rooms.herokuapp.com/api/products/tags")
         setAllTags(response.data)
     }, [])
 
@@ -40,7 +40,7 @@ export default function SearchFormV2() {
     // event to submit form
     const submitSearchForm = async () => {
         let editedPlayTime = playTime.map(obj => obj.value) // onkly the value
-        let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us27.gitpod.io/api/products/search", {
+        let response = await axios.get("https://project-03-virtual-rooms.herokuapp.com/api/products/search", {
             params: {
                 tags: selectedTags,
                 name: nameSearch,

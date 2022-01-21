@@ -17,7 +17,7 @@ export default function CartPage(){
     
 
     // const BASE_URL = "https://escape-rooms-project03.herokuapp.com/api/cart/"
-    const BASE_URL = "https://3000-amber-guppy-qbo1ebq4.ws-us27.gitpod.io/api/cart/"
+    const BASE_URL = "https://project-03-virtual-rooms.herokuapp.com/api/cart/"
 
     // use effect to fetch cart items on load
     useEffect( async()=> {
@@ -77,7 +77,7 @@ export default function CartPage(){
             setQuantityUpdate(true)
         },
         'checkOut': async () => {
-            let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us27.gitpod.io/api/checkout/" + userId, sendJwt())
+            let response = await axios.get("https://project-03-virtual-rooms.herokuapp.com/api/checkout/" + userId, sendJwt())
             console.log(response.data)
             window.location.assign(response.data.url)
         }

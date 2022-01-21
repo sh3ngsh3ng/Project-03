@@ -16,7 +16,7 @@ export default function OrdersPage () {
         setActiveContent(evt.target.value)
     }
 
-    const BASE_URL = "https://3000-amber-guppy-qbo1ebq4.ws-us27.gitpod.io/api/orders/"
+    const BASE_URL = "https://project-03-virtual-rooms.herokuapp.com/api/orders/"
 
     const renderContent = () => {
         if (activeContent == "pending") {

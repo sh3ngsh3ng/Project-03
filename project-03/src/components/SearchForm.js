@@ -27,7 +27,7 @@ export default function SearchForm() {
 
     // fetch all tags to render in search form
     useEffect(async ()=> {
-        let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us27.gitpod.io/api/products/tags")
+        let response = await axios.get("https://project-03-virtual-rooms.herokuapp.com/api/products/tags")
         setAllTags(response.data)
     }, [])
 

@@ -75,7 +75,7 @@ export default function LoginPage() {
         let check = simpleClientValidation(obj)
         console.log(check)
         if (check) {
-            let result = await axios.post("https://3000-amber-guppy-qbo1ebq4.ws-us27.gitpod.io/api/user/login", {
+            let result = await axios.post("https://project-03-virtual-rooms.herokuapp.com/api/user/login", {
                 ...obj
             })
             

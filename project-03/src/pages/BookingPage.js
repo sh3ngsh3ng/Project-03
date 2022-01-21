@@ -56,7 +56,7 @@ export default function BookingPage() {
         if (checkIfLogin()) {
             // console.log(getUserId())
             // return
-            let response = await axios.get("https://3000-amber-guppy-qbo1ebq4.ws-us27.gitpod.io/api/cart/"
+            let response = await axios.get("https://project-03-virtual-rooms.herokuapp.com/api/cart/"
             + getUserId() + "/" + productSlotId + "/" + "add-item", sendJwt())
             setAddedToCart(true)
             console.log(addedToCart)
