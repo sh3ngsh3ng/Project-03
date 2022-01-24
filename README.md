@@ -23,6 +23,11 @@ The project was designed to improve the social interactions in our increasing di
 9. Deployment (learning)
 10. [Credits & Acknowledgements](#credits--acknowledgements)
 
+
+
+
+
+<video src='project03vid.mp4' width=180 />
 # First Look
 ## User
 <h3 align="center" >Main Page</h3>
