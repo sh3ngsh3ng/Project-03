@@ -109,6 +109,7 @@ Below are the devices that can be supported:
     - iPad & iPad Pro
     - Surface Duo
 - Laptop (1024)
+- Laptop (1440)
 
 # Database Design
 <h3 align="center" >Database</h3>
