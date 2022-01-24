@@ -25,7 +25,7 @@ The project was designed to improve the social interactions in our increasing di
 
 
 <video width="320" height="240">
-  <source src="test1.mp4" type="video/mp4">
+  <source src="https://res.cloudinary.com/dt7n0rbhy/video/upload/v1643010887/zomx9huj3vqnmrm0ttry.mp4" type="video/mp4">
 </video>
 
 
