@@ -54,8 +54,8 @@ The project was designed to improve the social interactions in our increasing di
 
 ## Quick Start
 - Deployed Link:
-    - React (User): (pending)
-    - Express (Vendor & Server): (pending)
+    - React (User): https://nervous-panini-ac3185.netlify.app/
+    - Express (Vendor & Server): https://project-03-virtual-rooms.herokuapp.com/
 - User Guide for Application:
     - (pending)
 
