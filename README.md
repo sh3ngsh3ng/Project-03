@@ -24,37 +24,36 @@ The project was designed to improve the social interactions in our increasing di
 10. [Credits & Acknowledgements](#credits--acknowledgements)
 
 
-<video width="320" height="240">
-  <source src="https://res.cloudinary.com/dt7n0rbhy/video/upload/v1643010887/zomx9huj3vqnmrm0ttry.mp4" type="video/mp4">
-</video>
 
 
 # First Look
 ## User
 <h3 align="center" >Main Page</h3>
 <div align="center">
-    <!-- <img src="images/landing-page.JPG" style="width:400px;"> -->
+
+![Main Page](https://res.cloudinary.com/dt7n0rbhy/image/upload/v1643011222/v0te4xk39ssiwjzuj9k9.gif)
+
 </div>
 <br/>
 
-<h3 align="center">Login & Sign Up Page</h3>
+<!-- <h3 align="center">Login & Sign Up Page</h3>
 <div align="center" style="display: flex; justify-content: center;">
-<!-- <img src="images/login-page.JPG" style="width:350px; margin-right: 20px;">
-<img src="images/signup-page.JPG" style="width:350px;"> -->
+<img src="images/login-page.JPG" style="width:350px; margin-right: 20px;">
+<img src="images/signup-page.JPG" style="width:350px;">
 </div>
 <br/>
 
 <h3 align="center" >Product Info Page (for booking)</h3>
 <div align="center">
-    <!-- <img src="images/product-info-page.JPG" style="width:400px;"> -->
+    <img src="images/product-info-page.JPG" style="width:400px;">
 </div>
 <br/>
 
 <h3 align="center" >Cart Page (for checkout)</h3>
 <div align="center">
-    <!-- <img src="images/cart-page.JPG" style="width:400px;"> -->
+    <img src="images/cart-page.JPG" style="width:400px;">
 </div>
-<br/>
+<br/> -->
 
 
 ## Quick Start
