@@ -24,7 +24,7 @@ The project was designed to improve the social interactions in our increasing di
 10. [Credits & Acknowledgements](#credits--acknowledgements)
 
 
-<video width="320" height="240" controls>
+<video width="320" height="240">
   <source src="test1.mp4" type="video/mp4">
 </video>
 
