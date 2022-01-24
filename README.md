@@ -116,6 +116,7 @@ Below are the devices that can be supported:
 <div align="center">
     <img src="databaseimg.JPG" style="width:600px;">
 </div>
+
 <br/>
 
 <!-- For more information pls refer to ---->
@@ -171,7 +172,7 @@ I would like to acknowledge the lead instructor Mr Paul and the teaching assista
 Last but not least, I would like to thank Google, StackOverflow as well as Paul's lab sheet (A.K.A The Bible) for their unwavering 24/7 support in this project as well.
 
 ### Note:
-For images, icons, css credits, please refer to the UI/UX documents above.
+For images, icons, css credits, please refer to the UI/UX document (resource section) above.
 
 # Disclaimer
 This project is for educational purposes only. Other than the idea/concept/mock products presented, all media files and technologies used in this project belogns to their respective owners and I do not claim any right over them.
