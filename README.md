@@ -2,6 +2,12 @@
 <div align="center">
     <img src="https://res.cloudinary.com/dt7n0rbhy/image/upload/v1642524796/awnlqzcwl8pvdbkvgtug.png" style="width:500px;">
 </div>
+
+<div align="center">
+
+![Main Page](https://res.cloudinary.com/dt7n0rbhy/image/upload/v1643011222/v0te4xk39ssiwjzuj9k9.gif)
+
+</div>
 <p align="center">"People bond when they are having fun."</p>
 
 # Introduction
@@ -10,9 +16,7 @@ Virtual Rooms is a platform where users can look for virtual activities to parti
 The project was designed to improve the social interactions in our increasing digitalized world. It aims to provide a platform which provides ease of access to virtual activities by users as well as a platform that provides convenience for vendors to advertise their services, manage their orders and payments.
 
 # Index
-1. [First Look](#first-look)
-    - [User](#user)
-    - [Vendor](#vendor)
+1. [Quick Start](#quick-start)
 2. [Technologies Used](#technologies-used)
 3. [Quick Start](##quick-start)
 4. [UI/UX](#uiux)
@@ -26,15 +30,11 @@ The project was designed to improve the social interactions in our increasing di
 
 
 
-# First Look
+<!-- # First Look
 ## User
 <h3 align="center" >Main Page</h3>
-<div align="center">
 
-![Main Page](https://res.cloudinary.com/dt7n0rbhy/image/upload/v1643011222/v0te4xk39ssiwjzuj9k9.gif)
-
-</div>
-<br/>
+<br/> -->
 
 <!-- <h3 align="center">Login & Sign Up Page</h3>
 <div align="center" style="display: flex; justify-content: center;">
@@ -56,7 +56,7 @@ The project was designed to improve the social interactions in our increasing di
 <br/> -->
 
 
-## Quick Start
+# Quick Start
 - Deployed Link:
     - React (User): https://nervous-panini-ac3185.netlify.app/
     - Express (Vendor & Server): https://project-03-virtual-rooms.herokuapp.com/
