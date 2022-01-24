@@ -28,8 +28,6 @@ The project was designed to improve the social interactions in our increasing di
 10. [Credits & Acknowledgements](#credits--acknowledgements)
 
 
-
-
 <!-- # First Look
 ## User
 <h3 align="center" >Main Page</h3>
@@ -175,6 +173,9 @@ Below are some of the features that are work in progress:
 I would like to acknowledge the lead instructor Mr Paul and the teaching assistants John and Chen Yun, as well as my classmates for the guidance and emotional support during the duration of this project. Knowing that someone else is coding till wee hours like me is comforting and motivating. Also, special thanks to Trent Global College for conducting the most wonderful and enriching Web Application Course.
 
 Last but not least, I would like to thank Google, StackOverflow as well as Paul's lab sheet (A.K.A The Bible) for their unwavering 24/7 support in this project as well.
+
+### Note:
+For images, icons, css credits, please refer to the UI/UX documents above.
 
 # Disclaimer
 This project is for educational purposes only. Other than the idea/concept/mock products presented, all media files and technologies used in this project belogns to their respective owners and I do not claim any right over them.
