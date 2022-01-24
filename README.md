@@ -24,10 +24,10 @@ The project was designed to improve the social interactions in our increasing di
 10. [Credits & Acknowledgements](#credits--acknowledgements)
 
 
+<video width="320" height="240" controls>
+  <source src="test1.mp4" type="video/mp4">
+</video>
 
-
-
-<video src='project03vid.mp4' width=180 > </video>
 
 # First Look
 ## User
