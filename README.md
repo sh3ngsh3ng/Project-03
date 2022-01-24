@@ -145,6 +145,16 @@ https://docs.google.com/document/d/1HfGUHZ0ztrT8QvytPGuv4wbK7TFVNAb4B8tfm1o9zss/
 
 
 # Work-In-Progress
+Below are some of the features that are work in progress:
+### Users
+- Feature to contact the Vendors for User's ordered item
+- Search Virtual Rooms by available dates
+
+### Vendors
+- Dashboard to show statistics of products
+- Using Fullcalendar to display scheduled sessions in a more visual manner for vendors
+- Built in feature for vendors to contact Users via the application/email
+
 <!-- Once again, due to the tight timeline, and possibly my own inefficient use of time, the scope of the project have to be narrowed down. Below are some of the incomplete features as well as possible improvements:
 
 - Adding Types of Rooms (Escape, Race, etc)
