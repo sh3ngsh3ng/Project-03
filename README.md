@@ -19,10 +19,9 @@ The project was designed to improve the social interactions in our increasing di
 5. [Mobile Responsiveness](#mobile-responsiveness)
 6. [Database Design](#database-design)
 7. [Test Cases](#test-cases)
-8. [Bugs](#bugs)
-9. [Work-In-Progress](#work-in-progress)
-10. Deployment (learning)
-11. [Credits & Acknowledgements](#credits--acknowledgements)
+8. [Work-In-Progress & Bugs](#work-in-progress--bugs)
+9. Deployment (learning)
+10. [Credits & Acknowledgements](#credits--acknowledgements)
 
 # First Look
 ## User
@@ -133,18 +132,7 @@ Test cases can be found in the following link:
 https://docs.google.com/document/d/1HfGUHZ0ztrT8QvytPGuv4wbK7TFVNAb4B8tfm1o9zss/edit?usp=sharing
 
 
-# Bugs
-<!-- For this project, testing was done as much as possible after every major implementation. Due to the tight timeline, minor details and bugs were skipped over to prioritize other things. Below are some of the known bugs:
-
-- Navbar doesn't change immediately to the User-facing (logged-in) after User have signed in. 
-- Cart item to be removed when quantity = 0
-- Display error message when user tries to checkout more than the available quantity
-- Checkout button covered by cart items (change z-index)
-- Cart Items switch around when quantity of first cart item adjusted -->
-
-
-
-# Work-In-Progress
+# Work-In-Progress & Bugs
 Below are some of the features that are work in progress:
 ### Users
 - Feature to contact the Vendors for User's ordered item
@@ -154,6 +142,13 @@ Below are some of the features that are work in progress:
 - Dashboard to show statistics of products
 - Using Fullcalendar to display scheduled sessions in a more visual manner for vendors
 - Built in feature for vendors to contact Users via the application/email
+
+### General
+- Handling of error messages -> to display error pages
+- Adding of loading pages/loading components
+
+### Bugs
+- RoomSlider's formatting is off when the products/items in the carousel is < 6
 
 <!-- Once again, due to the tight timeline, and possibly my own inefficient use of time, the scope of the project have to be narrowed down. Below are some of the incomplete features as well as possible improvements:
 
