@@ -14,13 +14,14 @@ The project was designed to improve the social interactions in our increasing di
 1. [Quick Start](#quick-start)
 2. [Technologies Used](#technologies-used)
 3. [Quick Start](##quick-start)
-4. [UI/UX](#uiux)
-5. [Mobile Responsiveness](#mobile-responsiveness)
-6. [Database Design](#database-design)
-7. [Test Cases](#test-cases)
-8. [Work-In-Progress & Bugs](#work-in-progress--bugs)
-9. Deployment (learning)
-10. [Credits & Acknowledgements](#credits--acknowledgements)
+4. [Features](#features)
+5. [UI/UX](#uiux)
+6. [Mobile Responsiveness](#mobile-responsiveness)
+7. [Database Design](#database-design)
+8. [Test Cases](#test-cases)
+9. [Work-In-Progress & Bugs](#work-in-progress--bugs)
+10. Deployment (learning)
+11. [Credits & Acknowledgements](#credits--acknowledgements)
 
 
 <!-- # First Look
@@ -89,6 +90,31 @@ The project was designed to improve the social interactions in our increasing di
 | Moment.js | For conversion of date and time |
 | Heroku | Deployment of Express |
 | Netflify | Deployment of React |
+
+
+# Features
+### User 
+- To search for online virtual rooms
+- Filter virtual rooms by
+    - Date (yet to implement)
+    - Room Type
+    - Duration
+    - Tags
+    - Age Restriction
+    - Price
+- Search virtual rooms by keywords
+- Create Account
+- Manage orders
+- Make Payment
+- Check Order Status
+
+### Vendor
+- To add virtual rooms to active listing (shown to users)
+- To add sessions to virtual rooms for booking
+- To check order status
+- To change order status once orders made
+- To search for orders based on User’s name, order status
+
 
 
 # UI/UX
