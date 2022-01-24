@@ -7,7 +7,7 @@
 # Introduction
 Virtual Rooms is a platform where users can look for virtual activities to participate in. In addition, small business owners/vendors can advertise their virtual activities for users to book/purchase as well. Virtual activities can range from Escape Rooms, Murder Mysteries, Amazing Races, etc.
 
-The project was designed to improve the social interactions in our increasing digitalized world. It aims to provide a platform which provides ease of access to virtual activities by users as well as convenience for vendors to advertise their services.
+The project was designed to improve the social interactions in our increasing digitalized world. It aims to provide a platform which provides ease of access to virtual activities by users as well as a platform that provides convenience for vendors to advertise their services, manage their orders and payments.
 
 # Index
 1. [First Look](#first-look)
@@ -116,36 +116,36 @@ Below are the devices that can be supported:
 # Database Design
 <h3 align="center" >Database</h3>
 <div align="center">
-    <img src="images/database-design.JPG" style="width:600px;">
+    <!-- <img src="images/database-design.JPG" style="width:600px;"> -->
 </div>
 <br/>
 
-For more information pls refer to ---->
+<!-- For more information pls refer to ---->
 
-### Note:
-Due to the time constraints, 'orders' and 'order_items' tables was added but not utilized. The 'orders' tables was designed to keep track of the user's orders after payment is made. On the Vendor's side, it can be used to keep track of users that booked their sessions to facilitate communications.
+<!-- ### Note:
+Due to the time constraints, 'orders' and 'order_items' tables was added but not utilized. The 'orders' tables was designed to keep track of the user's orders after payment is made. On the Vendor's side, it can be used to keep track of users that booked their sessions to facilitate communications. -->
 
 
 # Test Cases
-Testing is done using test cases. The focus of testing is to ensure that the application allows for creating, reading, updating and deleting of products on the Vendor side. For the User side, checkout function + payment was the priority.
+<!-- Testing is done using test cases. The focus of testing is to ensure that the application allows for creating, reading, updating and deleting of products on the Vendor side. For the User side, checkout function + payment was the priority. -->
 
 Test cases can be found in the following link:
 https://docs.google.com/document/d/1HfGUHZ0ztrT8QvytPGuv4wbK7TFVNAb4B8tfm1o9zss/edit?usp=sharing
 
 
 # Bugs
-For this project, testing was done as much as possible after every major implementation. Due to the tight timeline, minor details and bugs were skipped over to prioritize other things. Below are some of the known bugs:
+<!-- For this project, testing was done as much as possible after every major implementation. Due to the tight timeline, minor details and bugs were skipped over to prioritize other things. Below are some of the known bugs:
 
 - Navbar doesn't change immediately to the User-facing (logged-in) after User have signed in. 
 - Cart item to be removed when quantity = 0
 - Display error message when user tries to checkout more than the available quantity
 - Checkout button covered by cart items (change z-index)
-- Cart Items switch around when quantity of first cart item adjusted
+- Cart Items switch around when quantity of first cart item adjusted -->
 
 
 
 # Work-In-Progress
-Once again, due to the tight timeline, and possibly my own inefficient use of time, the scope of the project have to be narrowed down. Below are some of the incomplete features as well as possible improvements:
+<!-- Once again, due to the tight timeline, and possibly my own inefficient use of time, the scope of the project have to be narrowed down. Below are some of the incomplete features as well as possible improvements:
 
 - Adding Types of Rooms (Escape, Race, etc)
 - Searching of virtual activities by date range
@@ -158,7 +158,7 @@ Once again, due to the tight timeline, and possibly my own inefficient use of ti
 - Calendar view of all the sessions of Vendor's
 - Dashboard for Vendor to track their statistics like outreach, earnings, most popular products, etc.
 - Styling of Vendor's interface + mobile responsiveness
-- Frontend form validations can be more thorough
+- Frontend form validations can be more thorough -->
 
 
 # Credits & Acknowledgements
