@@ -62,10 +62,12 @@ export default function CartPage(){
         },
         'addOne': async (product_slots_id) => {
             let response = await axios.get(BASE_URL +  userId + "/" + product_slots_id + "/add-one", sendJwt())
+            console.log("called")
             setQuantityUpdate(true)
         },
         'deleteOne': async (product_slots_id) => {
             let response = await axios.get(BASE_URL + userId + "/" + product_slots_id + "/delete-one", sendJwt())
+            console.log("called")
             setQuantityUpdate(true)
         },
         'deleteItem': async (product_slots_id) => {
