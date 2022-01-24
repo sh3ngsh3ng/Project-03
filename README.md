@@ -27,7 +27,8 @@ The project was designed to improve the social interactions in our increasing di
 
 
 
-<video src='project03vid.mp4' width=180>
+<video src='project03vid.mp4' width=180 > </video>
+
 # First Look
 ## User
 <h3 align="center" >Main Page</h3>
