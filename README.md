@@ -118,7 +118,7 @@ Below are the devices that can be supported:
 # Database Design
 <h3 align="center" >Database</h3>
 <div align="center">
-    <!-- <img src="images/database-design.JPG" style="width:600px;"> -->
+    <img src="databaseimg.JPG" style="width:600px;">
 </div>
 <br/>
 
