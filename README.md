@@ -1,12 +1,7 @@
 # Project: Virtual Rooms
 <div align="center">
-    <img src="https://res.cloudinary.com/dt7n0rbhy/image/upload/v1642524796/awnlqzcwl8pvdbkvgtug.png" style="width:500px;">
-</div>
-
-<div align="center">
-
-![Main Page](https://res.cloudinary.com/dt7n0rbhy/image/upload/v1643011222/v0te4xk39ssiwjzuj9k9.gif)
-
+    <img src="https://res.cloudinary.com/dt7n0rbhy/image/upload/v1642524796/awnlqzcwl8pvdbkvgtug.png" style="width:400px;">
+    <img src="project-03-gif.gif?raw=true" width="600px">
 </div>
 <p align="center">"People bond when they are having fun."</p>
 
