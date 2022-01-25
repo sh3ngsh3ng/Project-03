@@ -48,7 +48,7 @@ export default function NavBar() {
             </Offcanvas>
             <Navbar expand={true}>
                 <Container>
-                    <Navbar.Brand href="/">
+                    <Navbar.Brand onClick={() => history.push("/")}>
                         <img id="nav-bar-logo" src="https://res.cloudinary.com/dt7n0rbhy/image/upload/v1642524100/lrlymzh1d32dodjmmsgb.png" />
                         {/* <img id="nav-bar-logo" src="https://res.cloudinary.com/dt7n0rbhy/image/upload/v1642524939/wuo6pkolitrvjtjplk82.png" /> */}
                         

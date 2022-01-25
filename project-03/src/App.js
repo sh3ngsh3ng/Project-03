@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
 import SignUpPage from './pages/SignUpPage';
@@ -13,6 +13,7 @@ import SearchPage from './pages/SearchPage';
 
 function App() {
 
+
   return (
     <React.Fragment>
       <div className="container">
@@ -21,7 +22,7 @@ function App() {
         <Switch>
           {/* Start of Main Page */}
             <Route exact path="/">
-              <MainPage />
+              <MainPage/>
             </Route>
           {/* End of Main Page */}
 

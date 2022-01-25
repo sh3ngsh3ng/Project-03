@@ -3,11 +3,10 @@ import Carousel from '../components/Carousel'
 import RoomSlider from '../components/RoomSlider'
 import NavBar from '../components/NavBar'
 import axios from 'axios'
-import {Wave} from "react-animated-text"
 import LoadAnimation from '../components/LoadAnimation'
 import LoadData from '../components/LoadData'
 
-export default function MainPage () {
+export default function MainPage (props) {
 
     const [featuredProducts, setFeaturedProducts] = useState([])
     const [escapeRooms, setEscapeRooms] = useState([])
@@ -45,7 +44,7 @@ export default function MainPage () {
             
             setTimeout(function() {
                 setDataLoaded(true)
-            }, 3000)
+            }, 2000)
         }
         getData()
     }, [])
@@ -79,11 +78,36 @@ export default function MainPage () {
         }
     }
 
+    // render content v2
+    const renderContentV2 = () => {
+        if (!dataLoaded) {
+            return <LoadAnimation />
+        } else {
+            return (
+                <React.Fragment>
+                    <NavBar/>
+            
+                    <Carousel />
+
+                    <RoomSlider data={featuredProducts} title={"Featured Rooms"}/>
+
+                    <RoomSlider data={escapeRooms} title={"Escape Rooms"}/>
+
+                    <RoomSlider data={mysteryMurders} title={"Mystery Murders"}/>
+
+                    <RoomSlider data={amazingRaces} title={"Amazing Races"}/>
+                </React.Fragment>
+            )
+        }
+
+    }
+
 
     
     return (
         <React.Fragment>
-            {renderContent()}
+            {renderContentV2()}
+            
         </React.Fragment>
     )
 
