@@ -14,7 +14,6 @@ export default function BookingPage() {
 
     let location = useLocation()
     let product = location.state.productInfo
-    console.log("this is pushed =>", product)
     const history = useHistory()
 
     const flashMessageAddToCart = () => {

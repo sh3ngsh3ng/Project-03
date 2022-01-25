@@ -1,0 +1,26 @@
+#load-animation-div {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#load-animation-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  #load-animation-img {
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #load-animation-img {
+    height: 200px;
+  }
+}
