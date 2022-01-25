@@ -6,7 +6,7 @@ import axios from 'axios'
 import LoadAnimation from '../components/LoadAnimation'
 import LoadData from '../components/LoadData'
 
-export default function MainPage (props) {
+export default function MainPage () {
 
     const [featuredProducts, setFeaturedProducts] = useState([])
     const [escapeRooms, setEscapeRooms] = useState([])
